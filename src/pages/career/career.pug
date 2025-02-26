@@ -1,0 +1,110 @@
+- 
+  const linksHeader = [
+    {
+      name: 'About', 
+      url: '/#about'
+    },
+    {
+      name: 'Services', 
+      url: '/#whatWeDo'
+    },
+    {
+      name: 'Industries', 
+      url: '/#industries'
+    },
+    {
+      name: 'Our work', 
+      url: '/#ourWork'
+    },
+    {
+      name: 'How we work', 
+      url: '/#howWeWork'
+    },
+    {
+      name: 'Careers', 
+      url: 'career.html'
+    },
+  ]
+
+- 
+  const linksFooter = [
+    {
+      name: 'About', 
+      url: '/#about'
+    },
+    {
+      name: 'Services', 
+      url: '/#whatWeDo'
+    },
+    {
+      name: 'Industries', 
+      url: '/#industries'
+    },
+    {
+      name: 'Our work', 
+      url: '/#ourWork'
+    },
+    {
+      name: 'How we work', 
+      url: '/#howWeWork'
+    },
+    {
+      name: 'Career', 
+      url: 'career.html'
+    },
+  ]
+
+html
+  head 
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1") 
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="mobile-web-app-capable" content="yes")
+
+    <!-- Status bar styles -->
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    meta(name="theme-color" content="#FCFBF8")
+
+    <!-- Title -->
+    title Career ApolloRise Tech
+    meta(name="description" content="We're always open to new talent and fresh perspectives.Tell us about yourself and become a part of our dynamic team driving innovation.")
+
+    <!-- Open Graph -->
+    meta(property="og:type" content="website")
+    meta(property="og:title" content="apollorise.tech")
+    meta(property="og:description" content="We develop IT solutions of any complexity.")
+    meta(property="og:url" content="https://apollorise.tech/")
+    meta(property="og:image" content="https://apollorise.tech/sources/images/picture.png")
+    meta(property="og:site_name" content="apollorise.tech")
+
+    link(rel='stylesheet', href='../../sources/fonts/fonts.css')
+
+    <!-- Favicons -->
+    link(rel="icon" type="image/png" href=require('../../sources/images/favicon.png'))
+    link(rel="shortcut icon" href=require('../../sources/images/favicon.ico'))
+
+    link(rel="apple-touch-icon" sizes="76x76" href=require('../../sources/images/apple-touch-icon-76x76.png'))
+    link(rel="apple-touch-icon" sizes="120x120" href=require('../../sources/images/apple-touch-icon-120x120.png'))
+    link(rel="apple-touch-icon" sizes="152x152" href=require('../../sources/images/apple-touch-icon-152x152.png'))
+    link(rel="apple-touch-icon" sizes="180x180" href=require('../../sources/images/apple-touch-icon-180x180.png'))
+
+    //- Google Tag Manager
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PXHCM38Q');
+    //- End Google Tag Manager
+
+  body 
+    //-Google Tag Manager (noscript) -->
+    iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-PXHCM38Q" height="0" width="0" style="display:none;visibility:hidden")
+    //-  End Google Tag Manager (noscript)
+    
+    include ../../components/header/header
+    +header({ linksHeader: linksHeader, contactUs: '/#contactUs' })
+    main 
+      include ../../components/careerBlock/careerBlock
+    include ../../components/footer/footer
+    +footer({ linksFooter: linksFooter, contactUs: '/#contactUs' })

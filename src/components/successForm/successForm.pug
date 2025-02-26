@@ -1,0 +1,10 @@
+mixin successForm(options)
+
+  section.successForm
+    h1.h1.successForm__title._anim-items._anim-no-hide!= options.successText.title
+    .successForm__container._anim-items._anim-no-hide 
+      .successForm__description 
+        each description in options.successText.description
+          p.text_2= description
+      button.button_black.size_m#go_main
+        p Back to main

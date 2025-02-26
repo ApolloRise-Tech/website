@@ -1,0 +1,402 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+  font-family: 'Cygre-R';
+	font-style: normal;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	background-color: var(--yellowWhite);
+}
+
+button,
+textarea,
+input,
+select {
+	margin: 0;
+	font: inherit;
+}
+
+button {
+	background: transparent;
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+	max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+}
+
+.h1 {
+	font-size: 96px;
+	line-height: 92%;
+	font-weight: 500;
+	font-family: "Cygre-M";
+
+	@media screen and (max-width: 1600px) {
+		font-size: 64px;
+		line-height: 72px;
+	}
+
+	@media screen and (max-width: 1136px) {
+		font-size: 56px;
+		line-height: 64px;
+	}
+
+	@media screen and (max-width: 600px) {
+		font-size: 48px;
+		line-height: 56px;
+	}
+}
+
+.h2 {
+	font-size: 56px;
+	line-height: 64px;
+	font-weight: 500;
+	font-family: "Cygre-M";
+
+	@media screen and (max-width: 1600px) {
+		font-size: 48px;
+		line-height: 56px;
+	}
+
+	@media screen and (max-width: 1136px) {
+		font-size: 40px;
+		line-height: 48px;
+	}
+
+	@media screen and (max-width: 600px) {
+		font-size: 28px;
+		line-height: 32px;
+	}
+}
+
+.h3 {
+	font-size: 44px;
+	line-height: 48px;
+	font-weight: 500;
+	font-family: "Cygre-M";
+
+	@media screen and (max-width: 1600px) {
+		font-size: 32px;
+		line-height: 40px;
+	}
+
+	@media screen and (max-width: 1136px) {
+		font-size: 28px;
+		line-height: 32px;
+	}
+}
+
+.h4 {
+	font-size: 36px;
+	line-height: 48px;
+	font-weight: 500;
+	font-family: "Cygre-M";
+
+	@media screen and (max-width: 1600px) {
+		font-size: 28px;
+		line-height: 32px;
+	}
+
+	@media screen and (max-width: 1136px) {
+		font-size: 24px;
+		line-height: 32px;
+	}
+
+	@media screen and (max-width: 600px) {
+		font-size: 18px;
+		line-height: 136%;
+	}
+}
+
+.subtitle {
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: 500;
+	font-family: "Cygre-M";
+	text-transform: uppercase;
+
+	@media screen and (max-width: 1600px) {
+		font-size: 18px;
+		line-height: 136%;
+	}
+
+	@media screen and (max-width: 600px) {
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+
+.text_1 {
+	font-size: 40px;
+	line-height: 48px;
+	font-weight: 400;
+	font-family: "Cygre-R";
+
+	@media screen and (max-width: 1600px) {
+		font-size: 32px;
+		line-height: 40px;
+	}
+
+	@media screen and (max-width: 1136px) {
+		font-size: 24px;
+		line-height: 32px;
+	}
+
+	@media screen and (max-width: 600px) {
+		font-size: 18px;
+		line-height: 136%;
+	}
+}
+
+.text_2 {
+	font-size: 32px;
+	line-height: 40px;
+	font-weight: 400;
+	font-family: "Cygre-R";
+
+	@media screen and (max-width: 1600px) {
+		font-size: 24px;
+		line-height: 32px;
+	}
+
+	@media screen and (max-width: 1136px) {
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	@media screen and (max-width: 600px) {
+		font-size: 18px;
+		line-height: 136%;
+	}
+}
+
+.text_3 {
+	font-size: 32px;
+	line-height: 40px;
+	font-weight: 500;
+	font-family: "Cygre-M";
+
+	@media screen and (max-width: 1600px) {
+		font-size: 24px;
+		line-height: 24px;
+	}
+
+	@media screen and (max-width: 600px) {
+		font-size: 16px;
+		line-height: 16px;
+	}
+}
+
+.text_4 {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 400;
+	font-family: "Cygre-R";
+
+	@media screen and (max-width: 1600px) {
+		font-size: 18px;
+		line-height: 136%;
+	}
+}
+
+.text_5 {
+	font-size: 14px;
+	line-height: 102%;
+	font-weight: 400;
+	font-family: "Cygre-R";
+}
+
+.text_6 {
+	font-size: 16px;
+	line-height: 102%;
+	font-weight: 400;
+	font-family: "Cygre-R";
+}
+
+.menu_link {
+	font-size: 16px;
+	line-height: 102%;
+	font-weight: 500;
+	font-family: "Cygre-M";
+}
+
+.button_black {
+	display: flex;
+	align-items: flex-end;
+	gap: 10px;
+	background-color: var(--black);
+
+	color: var(--yellowWhite);
+
+	font-weight: 600;
+	font-family: "Cygre-SB";
+
+	transition: all 0.3s;
+
+	&:hover {
+		background-color: var(--black5);
+	}
+
+	&:active {
+		background-color: var(--black);
+	}
+
+	&:disabled {
+		background-color: var(--textGray);
+		pointer-events: none;
+	}
+
+	&.size_m {
+		padding: 16px 36px;
+
+		border-radius: 12px;
+
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	&.size_s {
+		padding: 10px 24px;
+
+		border-radius: 8px;
+
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	p {
+		position: relative;
+		top: -2px;
+	}
+}
+
+.button_yellow {
+	display: flex;
+	align-items: flex-end;
+	gap: 10px;
+	background-color: var(--yellowLight);
+
+	color: var(--black);
+
+	font-weight: 600;
+	font-family: "Cygre-SB";
+
+	transition: all 0.3s;
+
+	&:hover {
+		background-color: var(--yellowLight2);
+	}
+
+	&:active {
+		background-color: var(--yellowLight);
+	}
+
+	&:disabled {
+		color: var(--gray);
+		background-color: var(--darkGray);
+		pointer-events: none;
+	}
+
+	&.size_m {
+		padding: 16px 36px;
+
+		border-radius: 12px;
+
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	&.size_s {
+		padding: 10px 24px;
+
+		border-radius: 8px;
+
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	p {
+		position: relative;
+		top: -2px;
+	}
+}
+
+.linkWithUnderline {
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 2px;
+		display: block;
+		width: 0px;
+		height: 2px;
+		background: var(--black);
+		transition: 0.3s;
+	}
+
+	&:hover::after {
+		width: 100%;
+	}
+}
+
+.wrapper {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+

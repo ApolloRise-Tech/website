@@ -1,0 +1,45 @@
+mixin casesContent({casesContent})
+  section.caseContent.wrapper.colorSection 
+    .caseContent__wrapper 
+      each item in casesContent
+        if(item.contentType !== 'title')
+          .caseContent__item
+            h2.h2._anim-items._anim-no-hide= item.title
+            if(item.contentType === 'withoutTitle')
+              .caseContent__itemWithoutTitle._anim-items._anim-no-hide
+                each contentItem in item.content
+                  .itemWithoutTitle__wrapper 
+                    p.text_4= contentItem.name 
+                    != contentItem.text 
+
+            if(item.contentType === 'text')
+              .caseContent__itemText._anim-items._anim-no-hide
+                each contentItem in item.content
+                  if(contentItem.type === 'text')
+                    p.text_4!= contentItem.text
+                  if(contentItem.type === 'image')
+                    img(src=contentItem.image alt=contentItem.alt)
+            if(item.contentType === 'list')
+              ul.caseContent__itemList._anim-items._anim-no-hide
+                each contentItem in item.content
+                  li
+                    p.text_4.itemListBold!= contentItem.itemTitle
+                    p.text_4= contentItem.itemDescription
+            if(item.contentType === 'tag')
+              include ../../components/tags/tags
+              +tags({ tags: item.content })
+                  
+            if(item.contentType === 'citation')
+              include ../../components/citation/citation
+              +citation({ citation: item })
+
+        if(item.contentType === 'title')
+          h2.h1._anim-items._anim-no-hide= item.content
+
+        if(item.images) 
+          div(class=`${item.images.length > 1 ? 'caseContent__images' : 'caseContent__image'}`)
+            each image in item.images
+              picture._anim-items._anim-no-hide
+                source(media="(min-width: 1137px)" srcset=image.image_1920)
+                source(media="(min-width: 491px)" srcset=image.image_1024)
+                img(src=image.image_600 alt="caseImage" loading="lazy")

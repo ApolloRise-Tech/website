@@ -1,0 +1,10 @@
+mixin tags({tags})
+
+  .tags
+    each tagItem in tags
+      .tag._anim-items._anim-no-hide 
+        .tag__thumbnails   
+          each thumbnail in tagItem.icons
+            .tag__thumbnail   
+              img(src=thumbnail alt="thumbnail")
+        p.text_4= tagItem.position

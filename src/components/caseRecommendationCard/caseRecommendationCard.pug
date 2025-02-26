@@ -1,0 +1,27 @@
+mixin caseRecommendationCard({card})
+  section.caseRecommendationCard._anim-items._anim-no-hide
+  
+    //- target может быть _self и _blank, по умолчанию _blank, если его не задать в конфиге
+    a(href=card.link target=`${card.targetLink ? card.targetLink : '_blank'}`).caseRecommendationCard__imageWrapper(class=`${card.link ? '' : 'withoutLink'}`)
+      .caseRecommendationCard__image
+        if(card.picture)
+          img(src=card.picture alt="case picture")
+        if(!card.picture)
+          img(src=require('../../sources/images/caseRecommendation.png') alt="case picture")
+        if(!card.link)
+          .caseRecommendationCard__caseWithoutLink
+            h4.h3 Coming soon
+      if(card.link && card.info.length > 0)
+        .caseRecommendationCard__infoWrapper 
+          each info in card.info 
+            .caseRecommendationCard__info
+              p.text_3= info.text
+              p.text_6= info.title
+
+    .caseRecommendationCard__titleWrapper
+      a(href=card.link target="_blank" class=`${card.link ? '' : 'withoutLink'}`).h3= card.title 
+      p.text_4= card.description 
+    .caseRecommendationCard__tagsWrapper 
+      each tag in card.tags 
+        .caseRecommendationCard__tag
+          p.menu_link= tag

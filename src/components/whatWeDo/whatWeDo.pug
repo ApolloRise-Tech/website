@@ -1,0 +1,38 @@
+-
+  const cards = [
+    {
+      number: '01',
+      title: 'Web App Development',
+      description: 'We create web applications to address specific business needs and challenges.',
+    },
+    {
+      number: '02',
+      title: 'AI Integration',
+      description: 'We integrate artificial intelligence into your business processes to enhance efficiency and improve analytics.',
+    },
+    {
+      number: '03',
+      title: 'Digital Product Design and Development',
+      description: 'We specialize in designing and developing digital products, including user interface (UI) and user experience (UX) design.',
+    },
+    {
+      number: '04',
+      title: 'Custom Automation Solutions',
+      description: 'We develop customized solutions to automate routine tasks and enhance operational efficiency',
+    },
+    {
+      number: '05',
+      title: 'End-to-End Client Support',
+      description: 'We provide comprehensive support to our clients from project inception to completion, including consultation, development, and technical assistance.',
+    },
+  ]
+
+section(data-color="dark" id="whatWeDo").whatWeDo.colorSection
+  .whatWeDo__wrapper 
+    h1.h1.whatWeDo__title._anim-items._anim-no-hide Services we provide
+    each card in cards
+      .whatWeDo__container._anim-items._anim-no-hide
+        .whatWeDo__card
+          h3.h3= card.title
+          p.text_4.whatWeDo__card_description= card.description
+          .whatWeDo__card_number= card.number

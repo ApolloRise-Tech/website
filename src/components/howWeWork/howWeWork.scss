@@ -1,0 +1,298 @@
+.howWeWork {
+  display: grid;
+  grid-template-rows: 1fr repeat(6, 380px);
+  grid-row-gap: 320px;
+  padding: 64px 24px 0;
+  margin: 24px;
+  background-color: var(--yellowLight);
+  border-radius: 12px;
+
+  @media screen and (max-width: 1600px) {
+    margin: 16px;
+  }
+  @media screen and (max-width: 1280px) {
+    grid-row-gap: 230px;
+  }
+  @media screen and (max-width: 1024px) {
+    grid-template-rows: 1fr repeat(6, 320px);
+  }
+  @media screen and (max-width: 834px) {
+    display: block;
+    overflow: hidden;
+    padding: 30px 16px 24px;
+  }
+  @media screen and (max-width: 600px) {
+    margin: 0;
+  }
+
+  &__title {
+    position: sticky;
+    top: 64px;
+    color: var(--black, #23221F);
+  
+    transition: 0.3s all;  
+
+    @media screen and (max-width: 834px) {
+      position: static;
+      margin-bottom: 150px;
+      transform: translate(0px, 32px);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
+    }
+    @media screen and (max-width: 600px) {
+      margin-bottom: 124px;
+    }
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+
+  &__card {
+    position: sticky;
+    top: calc( 64px + 230px);
+
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    grid-template-rows: 56px 1fr;
+    grid-column-gap: 32px;
+    grid-row-gap: 56px;
+    width: 79vw;
+    padding: 40px;
+    margin: 0 auto;
+
+    border-radius: 12px;
+    background: var(--black, #23221F);
+    transform-origin: center top;
+
+    @media screen and (max-width: 1600px) {
+      grid-row-gap: 40px;
+      width: 100%;
+      max-width: 1230px;
+    }
+    @media screen and (max-width: 1280px) {
+      max-width: 1180px;
+    }
+    @media screen and (max-width: 834px) {
+      display: none;
+      position: static;
+    }
+  }
+
+  &__card_number {
+    grid-area: 1 / 1 / 2 / 2;
+
+    display: flex;
+    width: 56px;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    background: var(--yellowLight, #FFF2C4);
+
+    span {
+      position: relative;
+      top: -4px;
+      color: var(--black, #23221F);
+
+      @media screen and (max-width: 600px) {
+        top: -2px;
+      }
+    }
+    @media screen and (max-width: 1600px) {
+      width: 48px;
+      height: 48px;
+      margin: auto 0 auto 0;
+    }
+    @media screen and (max-width: 600px) {
+      width: 32px;
+      height: 32px;
+      margin: 0;
+    }
+  }
+
+  &__card_title {
+    grid-area: 1 / 2 / 2 / 3;
+
+    line-height: 90%;
+
+    color: var(--yellowLight);
+
+    @media screen and (max-width: 1600px) {
+      font-size: 48px;
+      line-height: 48px;
+    }
+    @media screen and (max-width: 1136px) {
+      font-size: 40px;
+      line-height: 48px;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+
+  &__card_description {
+    grid-area: 2 / 2 / 3 / 3;
+
+    color: var(--yellowLight, #FFF2C4);
+    font-size: 40px;
+    line-height: 48px;
+
+    @media screen and (max-width: 1600px) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+    @media screen and (max-width: 1136px) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+    @media screen and (max-width: 600px) {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      font-size: 16px;
+      line-height: 136%;
+    }
+  }
+
+  &__cards_swiper {
+    display: none;
+
+    @media screen and (max-width: 834px) {
+      display: block;
+
+      .howWeWork__card {
+        display: grid;
+        height: 100%;
+        padding: 32px;
+
+        @media screen and (max-width: 600px) {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          padding: 16px;
+        }
+      }
+    }
+  }
+
+  .swiper-wrapper {
+    height: 412px;
+    margin-bottom: 24px;
+
+    @media screen and (max-width: 600px) {
+      height: 360px;
+    }
+  }
+
+  .swiper-slide {
+    height: 100%;
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+
+    @media screen and (max-width: 834px) {
+      &:nth-child(1) {
+        transform: translate(0px, 32px);
+      }
+      &:nth-child(2) {
+        transform: translate(0px, 64px);
+      }
+      &:nth-child(3) {
+        transform: translate(0px, 96px);
+      }
+      &:nth-child(4) {
+        transform: translate(0px, 128px);
+      }
+      &:nth-child(5) {
+        transform: translate(0px, 160px);
+      }
+      &:nth-child(6) {
+        transform: translate(0px, 192px);
+      }
+    }
+    @media screen and (max-width: 600px) {
+      &:nth-child(1) {
+        transform: translate(0px, 24px);
+      }
+      &:nth-child(2) {
+        transform: translate(0px, 36px);
+      }
+      &:nth-child(3) {
+        transform: translate(0px, 48px);
+      }
+      &:nth-child(4) {
+        transform: translate(0px, 64px);
+      }
+      &:nth-child(5) {
+        transform: translate(0px, 88px);
+      }
+      &:nth-child(6) {
+        transform: translate(0px, 104px);
+      }
+    }
+
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+
+  .swiper-slide-next, 
+  .swiper-slide-prev {
+    .howWeWork__card {
+      background-color: var(--black5);
+    }
+
+    .howWeWork__card_number,
+    .howWeWork__card_title,
+    .howWeWork__card_description {
+      opacity: 0.1;
+    }
+  }
+
+  &__cards_navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      padding: 16px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      &:active {
+        background-color: var(--yellowLight2);
+      }
+    }
+
+    .swiper-button-disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+
+    .swiper-pagination {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+
+      .swiper-pagination-bullet {
+        flex: 1;
+        display: block;
+        height: 8px;
+
+        border-radius: 100px;
+        background-color: var(--black1);
+
+        &.swiper-pagination-bullet-active {
+          background-color: var(--darkGray);
+        }
+      }
+    }
+  }
+
+}

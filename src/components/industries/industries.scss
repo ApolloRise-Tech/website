@@ -1,0 +1,128 @@
+.industries {
+  height: 100vh;
+  min-height: 1080px;
+  padding: 13.3vw 48px 136px;
+  background-color: var(--yellowWhite);
+
+  @media screen and (max-width: 1600px) {
+    min-height: 786px;
+    padding: 13.3vw 48px 64px;
+  }
+  @media screen and (max-width: 1136px) {
+    height: 786px;
+    padding: 200px 48px 64px;
+  }
+  @media screen and (max-width: 834px) {
+    height: 1000px;
+    padding: 200px 48px 64px;
+  }
+  @media screen and (max-width: 600px) {
+    height: unset;
+    min-height: unset;
+    padding: 88px 16px 44px;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 8%;
+    height: 100%;
+
+    @media screen and (max-width: 1600px) {
+      gap: 12%;
+    }
+    @media screen and (max-width: 1024px) {
+      gap: 5%;
+    }
+    @media screen and (max-width: 834px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 8px;
+    color: var(--textGray);
+
+    transform: translate(0px, 64px);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+
+    @media screen and (max-width: 834px) {
+      transform: translate(0px, 32px);
+    }
+    @media screen and (max-width: 600px) {
+      margin-bottom: 22px;
+    }
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+
+  &__title {
+    color: var(--black);
+
+    transform: translate(0px, 104px);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+
+    span {
+      color: var(--yellowDark);
+    }
+    
+    @media screen and (max-width: 834px) {
+      max-width: 70%;
+      transform: translate(0px, 64px);
+    }
+    @media screen and (max-width: 670px) {
+      max-width: unset;
+    }
+    @media screen and (max-width: 600px) {
+      max-width: unset;
+      font-size: 28px;
+      line-height: 32px;
+    }
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 44%;
+    margin: auto 0 0 0;
+
+    color: var(--black);
+
+    transform: translate(0px, 208px);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+
+    @media screen and (max-width: 1600px) {
+      max-width: 42%;
+      gap: 28px;
+      line-height: 28px;
+    }
+    @media screen and (max-width: 1136px) {
+      line-height: 28px;
+    }
+    @media screen and (max-width: 834px) {
+      max-width: 60%;
+      margin: auto 0 0 auto;
+      transform: translate(0px, 104px);
+    }
+    @media screen and (max-width: 600px) {
+      max-width: 75%;
+      margin: 64px 0 0 auto;
+      line-height: 24px;
+      transform: translate(0px, 80px);
+    }
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+}

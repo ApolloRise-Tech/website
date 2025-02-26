@@ -1,0 +1,110 @@
+section.careerBlock
+  .careerBlock__top 
+    h6.subtitle.careerBlock__subtitle._anim-items._anim-no-hide Career
+    h1.h1.careerBlock__title._anim-items._anim-no-hide We're always open to new talent and fresh perspectives. 
+  .careerBlock__bottom
+    .text_1.careerBlock__description._anim-items._anim-no-hide 
+      p Tell us about yourself and become a part of our dynamic team driving innovation.
+    form(id='careerBlockForm' action='/submit' method='post').careerBlock__form._anim-items._anim-no-hide
+      label(for="name").careerBlock__label
+        span Name*
+        input(type="text" name="name")  
+        .careerBlock__label_error.text_5
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <g clip-path="url(#clip0_389_5665)">
+              <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#FF6A6A" stroke-width="1.25" stroke-miterlimit="10"/>
+              <path d="M10 10.625V6.25" stroke="#FF6A6A" stroke-width="1.25" stroke-linecap="square" stroke-linejoin="round"/>
+              <path d="M9.99805 14.5178C10.4759 14.5178 10.8633 14.1304 10.8633 13.6526C10.8633 13.1747 10.4759 12.7874 9.99805 12.7874C9.52019 12.7874 9.13281 13.1747 9.13281 13.6526C9.13281 14.1304 9.52019 14.5178 9.99805 14.5178Z" fill="#FF6A6A"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_389_5665">
+                <rect width="20" height="20" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>  
+          span This field is required
+      label(for="email").careerBlock__label 
+        span E-mail*
+        input(type="email" name="email")  
+        .careerBlock__label_error.text_5
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <g clip-path="url(#clip0_389_5665)">
+              <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#FF6A6A" stroke-width="1.25" stroke-miterlimit="10"/>
+              <path d="M10 10.625V6.25" stroke="#FF6A6A" stroke-width="1.25" stroke-linecap="square" stroke-linejoin="round"/>
+              <path d="M9.99805 14.5178C10.4759 14.5178 10.8633 14.1304 10.8633 13.6526C10.8633 13.1747 10.4759 12.7874 9.99805 12.7874C9.52019 12.7874 9.13281 13.1747 9.13281 13.6526C9.13281 14.1304 9.52019 14.5178 9.99805 14.5178Z" fill="#FF6A6A"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_389_5665">
+                <rect width="20" height="20" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>  
+          span This field is required
+      label(for="linkedin").careerBlock__label 
+        span LinkedIn profile
+        input(type="text" name="linkedin") 
+      label(for="url").careerBlock__label 
+        span Website/Portfolio/Github
+        input(type="text" name="url")  
+      label(for="details").careerBlock__label 
+        span Cover letter*
+        textarea(name="details", cols="1", rows="6" )
+        .careerBlock__label_error.text_5
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <g clip-path="url(#clip0_389_5665)">
+              <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#FF6A6A" stroke-width="1.25" stroke-miterlimit="10"/>
+              <path d="M10 10.625V6.25" stroke="#FF6A6A" stroke-width="1.25" stroke-linecap="square" stroke-linejoin="round"/>
+              <path d="M9.99805 14.5178C10.4759 14.5178 10.8633 14.1304 10.8633 13.6526C10.8633 13.1747 10.4759 12.7874 9.99805 12.7874C9.52019 12.7874 9.13281 13.1747 9.13281 13.6526C9.13281 14.1304 9.52019 14.5178 9.99805 14.5178Z" fill="#FF6A6A"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_389_5665">
+                <rect width="20" height="20" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>  
+          span This field is required
+      label(for="attachment" id="attachment_label").careerBlock__label 
+        .careerBlock__label_wrapper
+          span Click here or drag to add a CV file
+          span.careerBlock__fileFormat .doc, .docx, .txt, or .pdf, maximum 10 MB
+        .careerBlock__file 
+          .careerBlock__fileName.text_5
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+              <path d="M4.375 3V3.75V3ZM11.875 3L12.4053 2.46967L12.1857 2.25H11.875V3ZM16.25 7.375H17V7.06434L16.7803 6.84467L16.25 7.375ZM15.625 17.25H4.375V18.75H15.625V17.25ZM4.375 17.25C4.40815 17.25 4.43995 17.2632 4.46339 17.2866L3.40273 18.3473C3.66059 18.6051 4.01033 18.75 4.375 18.75V17.25ZM4.46339 17.2866C4.48683 17.3101 4.5 17.3418 4.5 17.375H3C3 17.7397 3.14487 18.0894 3.40273 18.3473L4.46339 17.2866ZM4.5 17.375V3.625H3V17.375H4.5ZM4.5 3.625C4.5 3.65815 4.48683 3.68995 4.46339 3.71339L3.40273 2.65273C3.14487 2.91059 3 3.26033 3 3.625H4.5ZM4.46339 3.71339C4.43995 3.73683 4.40815 3.75 4.375 3.75V2.25C4.01033 2.25 3.66059 2.39487 3.40273 2.65273L4.46339 3.71339ZM4.375 3.75H11.875V2.25H4.375V3.75ZM11.3447 3.53033L15.7197 7.90533L16.7803 6.84467L12.4053 2.46967L11.3447 3.53033ZM15.5 7.375V17.375H17V7.375H15.5ZM15.5 17.375C15.5 17.3419 15.5132 17.3101 15.5366 17.2866L16.5973 18.3473C16.8551 18.0894 17 17.7397 17 17.375H15.5ZM15.5366 17.2866C15.5601 17.2632 15.5919 17.25 15.625 17.25V18.75C15.9897 18.75 16.3394 18.6051 16.5973 18.3473L15.5366 17.2866Z" fill="#23221F"/>
+              <path d="M11.875 3V7.375H16.25" stroke="#23221F" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            p /
+          button(type="button").careerBlock__removeFile 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+              <g clip-path="url(#clip0_134_5965)">
+                <path d="M12.5 4L3.5 13" stroke="#23221F" stroke-width="1.5" stroke-linecap="square"/>
+                <path d="M12.5 13L3.5 4" stroke="#23221F" stroke-width="1.5" stroke-linecap="square"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_134_5965">
+                  <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
+                </clipPath>
+              </defs>
+            </svg>
+        input(type="file" name="attachment" id="attachment" accept=".doc, .docx, .txt, .pdf") 
+        .careerBlock__label_error.text_5
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <g clip-path="url(#clip0_389_5665)">
+              <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#FF6A6A" stroke-width="1.25" stroke-miterlimit="10"/>
+              <path d="M10 10.625V6.25" stroke="#FF6A6A" stroke-width="1.25" stroke-linecap="square" stroke-linejoin="round"/>
+              <path d="M9.99805 14.5178C10.4759 14.5178 10.8633 14.1304 10.8633 13.6526C10.8633 13.1747 10.4759 12.7874 9.99805 12.7874C9.52019 12.7874 9.13281 13.1747 9.13281 13.6526C9.13281 14.1304 9.52019 14.5178 9.99805 14.5178Z" fill="#FF6A6A"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_389_5665">
+                <rect width="20" height="20" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>  
+          span The file exceeds 10MB in size or is in an unsupported format
+      label(for="policy").careerBlock__label 
+        input(type="checkbox" name="policy")
+        span Accept the 
+        a(href="#") privacy policy
+      button(type="submit" id="careerBlockFormSubmit" disabled).careerBlock__submit.button_black.size_m
+        p Send
+          

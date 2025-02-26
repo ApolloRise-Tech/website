@@ -1,0 +1,28 @@
+.notFound {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  @media screen and (max-width: 1600px) {
+    gap: 32px;
+  }
+
+  &__title {
+    color: var(--textGray, #888);
+    text-align: center;
+    font-size: 200px;
+    line-height: 102%;
+
+    @media screen and (max-width: 600px) {
+      font-size: 100px;
+    }
+  }
+
+  &__description {
+    color: var(--black, #23221F);
+    text-align: center;
+  }
+}

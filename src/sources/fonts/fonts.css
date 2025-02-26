@@ -1,0 +1,28 @@
+
+@font-face {
+  font-family: 'Cygre-L';
+  font-weight: 300;
+  font-style: italic;
+  src: url('./Cygre-LightIt-BF63eeebf5788b8.ttf');
+}
+
+@font-face {
+  font-family: 'Cygre-R';
+  font-weight: 400;
+  font-style: normal;
+  src: url('./Cygre-Regular-BF63eeebf4df0b6.ttf');
+}
+
+@font-face {
+  font-family: 'Cygre-M';
+  font-weight: 500;
+  font-style: normal;
+  src: url('./Cygre-Medium-BF63eeebf75cc00.ttf');
+}
+
+@font-face {
+  font-family: 'Cygre-SB';
+  font-weight: 600;
+  font-style: normal;
+  src: url('./Cygre-SemiBold-BF63eeebf60aa18.ttf');
+}

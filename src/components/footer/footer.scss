@@ -1,0 +1,173 @@
+.footer {
+  background-color: var(--black);
+  padding: 24px;
+
+  @media screen and (max-width: 1440px) {
+    padding: 16px;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 8px;
+  }
+
+  &__background {
+    max-height: 640px;
+    height: 34vw;
+    background-image: url('../../sources/images/footerBackground.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    overflow: hidden;
+
+    @media screen and (max-width: 1440px) {
+      max-height: 536px;
+      height: 45vw;
+      background-position: right;
+    }
+
+    @media screen and (max-width: 1280px) {
+      max-height: 520px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      max-height: 448px;
+      height: 60vw;
+      background-position: right;
+    }
+
+    @media screen and (max-width: 744px) {
+      height: 65vw;
+      background-position: right;
+    }
+
+    @media screen and (max-width: 600px) {
+      height: 408px;
+      max-height: 408px;
+      background-position: right;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 32px;
+    background-image: url('../../sources/svg/footerApollorise.svg');
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: center;
+    background-size: 95%;
+
+    @media screen and (max-width: 744px) {
+      padding: 32px 16px;
+    }
+
+    @media screen and (max-width: 600px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 48px 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 32px;
+      padding: 24px 16px;
+    }
+  }
+
+  &__logo {
+    @media screen and (max-width: 600px) {
+      display: flex;
+      align-items: center;
+      grid-area: 1 / 1 / 2 / 2;
+    }
+  }
+
+  &__navigate {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @media screen and (max-width: 1440px) {
+      gap: 6px;
+    }
+  }
+
+  &__link a {
+    position: relative;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--black);
+
+    @media screen and (max-width: 1600px) {
+      &::after {
+        height: 1px;
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 18px;
+      line-height: 136%;
+    }
+  }
+
+  &__contactsWrapper {
+    @media screen and (max-width: 744px) {
+      display: none;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @media screen and (max-width: 1440px) {
+      gap: 8px;
+    }
+
+    a {
+      color: var(--black);
+    }
+  }
+
+  &__socials  {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+
+    @media screen and (max-width: 1440px) {
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  &__button {
+    @media screen and (max-width: 600px) {
+      grid-area: 1 / 2 / 2 / 3;
+      margin: 0 0 0 auto;
+    }
+  }
+
+  &__button_toTop {
+
+    @media screen and (max-width: 600px) {
+      padding: 16px!important;
+
+      p {
+        display: none;
+      }
+    }
+  }
+
+  nav {
+    @media screen and (max-width: 600px) {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+  }
+}

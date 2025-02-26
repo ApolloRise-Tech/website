@@ -1,0 +1,517 @@
+- 
+  const linksHeader = [
+    {
+      name: 'About', 
+      url: '/#about'
+    },
+    {
+      name: 'Services', 
+      url: '/#whatWeDo'
+    },
+    {
+      name: 'Industries', 
+      url: '/#industries'
+    },
+    {
+      name: 'Our work', 
+      url: '/#ourWork'
+    },
+    {
+      name: 'How we work', 
+      url: '/#howWeWork'
+    },
+    {
+      name: 'Careers', 
+      url: 'career.html'
+    },
+  ]
+
+  const linksFooter = [
+    {
+      name: 'About', 
+      url: '/#about'
+    },
+    {
+      name: 'Services', 
+      url: '/#whatWeDo'
+    },
+    {
+      name: 'Industries', 
+      url: '/#industries'
+    },
+    {
+      name: 'Our work', 
+      url: '/#ourWork'
+    },
+    {
+      name: 'How we work', 
+      url: '/#howWeWork'
+    },
+    {
+      name: 'Career', 
+      url: 'career.html'
+    },
+  ]
+
+  const pageContent = [
+    {
+      contentType: 'withoutTitle',
+      content: [{
+        name: 'Services',
+        text: `<ul>
+          <li class="h4">Web app  development</li>
+          <li class="h4">AI integration</li> 
+          <li class="h4">Product design</li> 
+          <li class="h4">Quality Assurance</li>
+        </ul>`
+        },
+        {
+          name: 'Industries',
+          text: `<div class="h4">AI, B2B, B2C, SaaS</div>`
+        }
+      ],
+    },
+    {
+      title: 'About',
+      contentType: 'text',
+      content: [{
+        type: 'text',
+        text: 'DocsDNA is a web application that assists individuals involved in creating or reviewing documents, such as contracts and agreements, by using AI to streamline their tasks and extract valuable insights efficiently and cost-effectively.'
+      }],
+      images: [
+        {
+          image_1920: require('../../../sources/images/about_1920.png'),
+          image_1024: require('../../../sources/images/about_1024.png'),
+          image_600: require('../../../sources/images/about_600.png'),
+        }
+      ]
+    },
+    {
+      title: 'Project goals and challenges',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Contract managers in various fields, such as real estate, supply chain, licensing, etc., spend a significant amount of time overseeing a large volume of documents to extract valuable insights.`
+        },
+        {
+          type: 'text',
+          text: `DocsDNA decided to save contract managers' time by creating a web application powered by AI that helps them handle more documents cost-effectively, and quickly identify potential issues and discrepancies that could lead to financial losses.`
+        }
+      ],
+    },
+    {
+      title: 'Team',
+      contentType: 'tag',
+      content: [
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_1.png')
+          ],
+          position: 'Product designer'
+        },
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_2.png'),
+            require('../../../sources/images/thumbnail_3.png')
+          ],
+          position: '2 Backend Developers'
+        },
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_4.png'),
+            require('../../../sources/images/thumbnail_5.png')
+          ],
+          position: '2 Frontend Developers'
+        },
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_6.png')
+          ],
+          position: 'QA Engineer'
+        },
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_7.png')
+          ],
+          position: 'DevOps Engineer'
+        },
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_8.png')
+          ],
+          position: 'Project Manager'
+        },
+      ]
+    },
+    {
+      title: 'Our task',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `To build a user-friendly web application that meets the needs of enterprise customers by creating an easy-to-use interface, adding AI features for automated document analysis, and making sure the application is scalable and performs well.`
+          },
+        {
+          type: 'text',
+          text: `The app should include strong security and compliance features, support real-time collaboration and workflow management, and allow for customization to fit different client needs. By focusing on these goals, we aim to deliver a solution that helps contract managers work more efficiently, reduce risks, and save time.`
+          }
+      ],
+    },
+    {
+      title: 'Project workflow',
+      contentType: 'list',
+      content: [
+        {
+          itemTitle: `Client Consultation & Goal Definition <span>(1 week)</span>`,
+          itemDescription: `Engaged with the client to thoroughly understand their business goals and requirements, ensuring the project was aligned with their objectives and future vision.`
+        },
+        {
+          itemTitle: `Solution Design & Technical Specification <span>(2 weeks)</span>`,
+          itemDescription: `Designed innovative solutions and prepared a comprehensive technical specification, capturing all functional requirements, workflows, and the technical architecture necessary for the project.`
+        },
+        {
+          itemTitle: `MVP Development <span>(2 months)</span>`,
+          itemDescription: `Focused on rapid development of a Minimum Viable Product to bring the core functionalities to market quickly. This included the essential document analysis and AI features to validate the concept.`
+        },
+        {
+          itemTitle: `Website Development <span>(3 weeks)</span>`,
+          itemDescription: `Built a professional website to promote DocsDNA, ensuring a seamless user experience and effective integration with the app's backend.`
+        },
+        {
+          itemTitle: `Version 1.0 Development <span>(3 months)</span>`,
+          itemDescription: `Expanded the application with enhanced features, focusing on scalability, performance optimization, and core AI functionalities.`
+        },
+        {
+          itemTitle: `Zoho CRM Integration <span>(3 weeks)</span>`,
+          itemDescription: `Integrated the application and website with Zoho CRM to streamline client relationship management, enabling smooth data flow between the systems.`
+        },
+        {
+          itemTitle: `Version 2.0 Development & SOC2 Type 1 Certification <span>(4 months)</span>`,
+          itemDescription: `Developed Version 2.0 of the application, introducing real-time collaboration tools and advanced AI capabilities. Simultaneously, we completed the SOC2 Type 1 certification, focusing on AWS server configurations and code enhancements to meet security and compliance standards.`
+        },
+        {
+          itemTitle: `Ongoing Support & Localization`,
+          itemDescription: `Continuous support for DocsDNA, including localization efforts to adapt the app for different regions and languages, while ensuring ongoing performance optimization and feature enhancements.`
+        },
+      ]
+    },
+    {
+      title: 'Design',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Our product designer conducted market and user research to create a clear structure for the entire application and each individual page. From scratch, designer developed a comprehensive design system and a unique visual language for the app’s interface, ensuring a cohesive and user-friendly experience across all features and platforms, with full responsiveness for all device sizes.`
+        }
+      ],  
+      images: [
+        {
+          image_1920: require('../../../sources/images/design1_1920.png'),
+          image_1024: require('../../../sources/images/design1_1024.png'),
+          image_600: require('../../../sources/images/design1_600.png'),
+        },
+        {
+          image_1920: require('../../../sources/images/design2_1920.png'),
+          image_1024: require('../../../sources/images/design2_1024.png'),
+          image_600: require('../../../sources/images/design2_600.png'),
+        }
+      ]
+    },
+    {
+      contentType: 'title', 
+      content: 'Key features',
+    },
+    {
+      title: 'Handling large amount of docs',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `The core feature of the entire app is handling large amounts of documents efficiently. We developed a workspace where users can easily organize, view, and analyze big document collections.`
+        },
+        {
+          type: 'text',
+          text: `To help users get started quickly, we added templates that demonstrate how to use the AI assistant effectively. Additionally, we introduced a sidebar where documents can be stored, allowing users to quickly see the full list of documents and open the ones they need with a single click.`
+        },
+        {
+          type: 'text',
+          text: `One key feature is document summarization, which provides a brief overview of large documents, helping users quickly grasp the main content.`
+        },
+        {
+          type: 'text',
+          text: `Since many users need to create formal documents, like reports, contracts, or letters, we also included a feature that generates documents automatically. These generated documents can be quickly attached to the next message or easily found in the chat list for future use.`
+        },
+        {
+          type: 'text',
+          text: `Our solution simplifies document management, saving time and boosting productivity.`
+        }
+      ],
+      images: [
+        {
+          image_1920: require('../../../sources/images/largeAmount_1920.png'),
+          image_1024: require('../../../sources/images/largeAmount_1024.png'),
+          image_600: require('../../../sources/images/largeAmount_600.png'),
+        }
+      ]
+    },
+    {
+      title: 'OCR capabilities',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Integrated Optical Character Recognition (OCR) to handle scanned documents and extract text, which is then processed for insights. The OCR solution was designed to handle various document formats, from PDFs to images, ensuring that DocsDNA can process both digital and physical documents.`
+        }
+      ],
+    },
+    { 
+      title: 'User management',
+      contentType: 'list',
+      content: [
+        {
+          itemTitle: `Admin`,
+          itemDescription: `This type of user not only works with documents in the chat but also manages other users, their subscriptions, documents, and tasks. Typically, these are managers, directors, or senior colleagues.`
+        },
+        {
+          itemTitle: `User`,
+          itemDescription: `Regular users primarily focus on working with documents in the chat. They upload, organize, and analyze files, as well as collaborate with others. These users don't manage subscriptions or other users but are essential for day-to-day document handling and communication.`
+        },
+      ],
+      images: [
+        {
+          image_1920: require('../../../sources/images/userManaging_1920.png'),
+          image_1024: require('../../../sources/images/userManaging_1024.png'),
+          image_600: require('../../../sources/images/userManaging_600.png'),
+        }
+      ]
+    },
+    {
+      title: 'Account & Industry settings',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Here, you'll find a familiar section where users can manage their personal information, account settings, subscription, and industry settings.`
+        },
+        {
+          type: 'text',
+          text: `<span class="bold">Industry settings</span> allow users to specify the industry they work in. The AI adapts to this setting, providing context-specific responses for industries like HR, Legal, Sourcing, Real Estate, and more. The AI Assistant takes the chosen industry into account when analyzing documents and answering questions. Users can further personalize the AI Assistant by adding new industries tailored to their specific needs.`
+        }
+      ],
+      images: [
+        {
+          image_1920: require('../../../sources/images/accountSettings_1920.png'),
+          image_1024: require('../../../sources/images/accountSettings_1024.png'),
+          image_600: require('../../../sources/images/accountSettings_600.png'),
+        }
+      ]
+    },
+    {
+      title: 'Transactions & Payments',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `These pages provide a comprehensive overview of all user-related financial information, including expenses, reports, balance, and payment history. Users can track their spending, review detailed reports, and monitor their account balance, whether in dollars or the platform’s internal currency. Additionally, users can access historical payment records and set up automatic payments for better budget management and planning. These features help ensure users have full control and transparency over their financial activities within the platform.`
+        }
+      ],
+      images: [
+        {
+          image_1920: require('../../../sources/images/transaction_1920.png'),
+          image_1024: require('../../../sources/images/transaction_1024.png'),
+          image_600: require('../../../sources/images/transaction_600.png'),
+        }
+      ]
+    },
+    {
+      title: 'SOC2 Type 1 compliance',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `To ensure security and privacy, we implemented all necessary measures to comply with SOC2 Type 1 standards, focusing on data protection, availability, and confidentiality. This involved encrypted data transmission, multi-factor authentication, and continuous monitoring for potential security breaches`
+        },
+        {
+          type: 'image',
+          image: require('../../../sources/images/soctype.png'), 
+          alt: 'SOC2 Type 1 compliance'
+        }
+      ],
+    },
+    {
+      title: 'Results & What now?',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `DocsDNA has grown to 600 B2C users and secured over 20 enterprise contracts. The product is expanding into the South American market while continuing to thrive in USA. It has achieved SOC2 Type 1 certification, with automated testing and autoscaling processes fully established.`
+        },
+        {
+          type: 'text',
+          text: `The DocsDNA team is now preparing for a Series A listing and SOC2 Type 2 certification, while also focusing on developing custom solutions for enterprise clients and a tool for batch processing hundreds and thousands of documents.`
+        }
+      ],
+    },
+    {
+      title: 'Client review',
+      contentType: 'citation',
+      content: [
+        `At DocsDNA, partnering with Apollorise has been a game-changer. They transformed our vision into a dynamic, user-friendly website and developed the innovative DocsDNA tool, providing comprehensive IT solutions from A-Z. Their professionalism, creativity, and technical expertise are unmatched.`,
+        `The exceptional customer service from Apollorise stood out the most. Their team was always responsive, attentive, and supportive, turning complex ideas into functional, beautiful designs.`,
+        `The impact of Apollorise’s work on our business has been significant. Our new website and the DocsDNA tool have enhanced our online presence and set us apart in the market. We trust Apollorise completely and look forward to future collaborations.`,
+        `We highly recommend Apollorise to any business seeking a reliable and innovative digital partner. Their dedication and outstanding service make them a true asset.`,
+        `Thank you, Apollorise, for your exceptional work and support.`
+      ],
+      writer: {
+        photo: require('../../../sources/images/writer.png'),
+        name: 'Irina Zakharchenko',
+        position: 'Chief Operations & People Officer , Orlando FL, USA',
+        companyLogo: `<svg xmlns="http://www.w3.org/2000/svg" width="125" height="28" viewBox="0 0 125 28" fill="none">
+          <g clip-path="url(#clip0_6_12709)">
+            <path d="M90.8718 4.65652H90.1914V4.34863H91.9254V4.65652H91.2439V6.38559H90.8718V4.65652Z" fill="#262324"/>
+            <path d="M92.1836 4.34863H92.7291L93.3505 5.9103H93.3794L94.0007 4.34863H94.5522V6.38559H94.1862V4.81807H94.1548L93.5263 6.38559H93.2035L92.5822 4.82041H92.5509V6.38559H92.1836V4.34863Z" fill="#262324"/>
+            <path d="M1.93639 17.602V6.04462H4.80889C8.8091 6.04462 11.5325 8.25121 11.5325 11.8126C11.5325 15.3979 8.83022 17.602 4.80889 17.602H1.93639ZM13.4476 11.8126C13.4476 7.29708 10.0005 4.34863 4.80889 4.34863H0V19.298H4.80889C10.0005 19.298 13.4476 16.3283 13.4476 11.8126Z" fill="#262324"/>
+            <path d="M20.1061 17.9185C17.7656 17.9185 16.1059 16.1581 16.1059 13.7201C16.1059 11.3037 17.7656 9.54323 20.1061 9.54323C22.4253 9.54323 24.1064 11.3037 24.1064 13.7201C24.1064 16.1581 22.4253 17.9185 20.1061 17.9185ZM25.8724 13.7201C25.8724 10.3496 23.4679 7.95215 20.1061 7.95215C16.723 7.95215 14.3398 10.3496 14.3398 13.7201C14.3398 17.1122 16.723 19.5096 20.1061 19.5096C23.4679 19.5096 25.8724 17.1122 25.8724 13.7201Z" fill="#262324"/>
+            <path d="M37.619 15.608L35.8743 15.3741C35.4488 16.8794 34.0232 17.9195 32.3422 17.9195C30.1507 17.9195 28.5124 16.2019 28.5124 13.7211C28.491 11.2617 30.172 9.5442 32.3636 9.5442C34.0019 9.5442 35.4701 10.5843 35.8529 12.13L37.5767 11.8987C37.1723 9.6086 34.9806 7.95312 32.3422 7.95312C29.087 7.95312 26.7462 10.372 26.7462 13.7211C26.725 17.0702 29.087 19.5105 32.3422 19.5105C34.9169 19.5105 37.1297 17.8765 37.619 15.608Z" fill="#262324"/>
+            <path d="M43.4931 12.8743C41.8974 12.6835 40.4505 12.5761 40.4505 11.2402C40.4505 10.1382 41.5143 9.43683 43.0676 9.43683C44.7272 9.43683 45.8549 10.2646 45.8763 11.579H47.5997C47.5997 9.3749 45.7698 7.95312 43.0886 7.95312C40.5142 7.95312 38.7695 9.22702 38.7695 11.3047C38.7695 13.7425 41.0888 14.2721 43.0886 14.5059C44.706 14.7182 46.1742 14.8232 46.1742 16.2235C46.1742 17.3469 45.1315 18.0245 43.5144 18.0245C41.4928 18.0245 40.3014 16.9868 40.28 15.4601H38.5781C38.5781 18.0054 40.3655 19.5105 43.4507 19.5105C46.1955 19.5105 47.8338 18.3012 47.8338 16.2019C47.8338 13.6376 45.5143 13.1271 43.4931 12.8743Z" fill="#262324"/>
+            <path d="M51.6863 17.602V6.04462H54.5588C58.5591 6.04462 61.2825 8.25121 61.2825 11.8126C61.2825 15.3979 58.5801 17.602 54.5588 17.602H51.6863ZM63.1976 11.8126C63.1976 7.29708 59.7505 4.34863 54.5588 4.34863H49.75V19.298H54.5588C59.7505 19.298 63.1976 16.3283 63.1976 11.8126Z" fill="#262324"/>
+            <path d="M77.0961 4.34863H75.1599V16.7528H74.9686L67.8616 4.34863H65.0742V19.298H67.0104V6.89395H67.2231L74.33 19.298H77.0961V4.34863Z" fill="#262324"/>
+            <path d="M85.349 6.04462H85.5408L88.6897 14.3579H82.1791L85.349 6.04462ZM86.7749 4.34863H84.1365L78.4766 19.298H80.3277L81.6045 15.9489H89.2429L90.5198 19.298H92.3709L86.7749 4.34863Z" fill="#262324"/>
+            <path d="M120.19 9.11523H105.883V10.7015H120.19V9.11523Z" fill="#262324"/>
+            <path d="M120.19 4.34863H105.883V5.93725H120.19V4.34863Z" fill="#262324"/>
+            <path d="M120.19 19.2998H105.883V20.8861H120.19V19.2998Z" fill="#262324"/>
+            <path d="M113.149 0.00390625H105.883V1.59041H113.149V0.00390625Z" fill="#262324"/>
+            <path d="M125.002 14.2934H122.899C124.188 13.1483 125.002 11.481 125.002 9.62984L125.003 4.34857H123.409L123.409 9.62984C123.409 12.2014 121.309 14.2934 118.727 14.2934H102.699V0H101.105V15.882H103.208C101.919 17.0294 101.105 18.6945 101.105 20.5478V26.2108H102.699V20.5478C102.699 17.9741 104.799 15.882 107.38 15.882H123.409L123.408 28H125.001L125.002 14.2934Z" fill="#262324"/>
+            <path d="M120.19 24.0645H105.883V25.6531H120.19V24.0645Z" fill="#262324"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_6_12709">
+              <rect width="125" height="28" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>`,
+      }
+    },
+    {
+      title: 'Tech Stack',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `PHP, Laravel, TypeScript, ReactJS, Redux, ChatGPT, Docker, Kubernetes, Helm, Terraform, AWS, Playwright, PostgreSQL`
+        }
+      ],
+    },
+  ]
+
+  const caseRecommendationsList = [
+    {
+      picture: '',
+      link: '',
+      title: 'Header',
+      description: 'Description',
+      info: [
+        {
+          title: 'active users',
+          text: '8M',
+        },
+        {
+          title: 'active users',
+          text: '8M',
+        }
+      ],
+      tags: ['Text', 'Text', 'Text', 'Text'],
+    },
+    {
+      picture: '',
+      link: '/',
+      title: 'Header',
+      description: 'Description',
+      info: [
+        {
+          title: 'active users',
+          text: '8M',
+        },
+        {
+          title: 'active users',
+          text: '8M',
+        }
+      ],
+      tags: ['Text', 'Text', 'Text', 'Text'],
+    },
+  ]
+
+html
+  head 
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1") 
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="mobile-web-app-capable" content="yes")
+
+    <!-- Status bar styles -->
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    meta(name="theme-color" content="#FCFBF8")
+
+    <!-- Title -->
+    title DocsDNA case
+    meta(name="description" content="DocsDNA | AI-powered document review web application")
+    meta(name="keywords" content="AI integration, Web app development, B2B, B2C, SaaS, AI")
+    meta(name="author" content="ApolloRise Tech")
+
+    link(rel='stylesheet', href='../../../sources/fonts/fonts.css')
+
+    <!-- Favicons -->
+    link(rel="icon" type="image/png" href=require('../../../sources/images/favicon.png'))
+    link(rel="shortcut icon" href=require('../../../sources/images/favicon.ico'))
+
+    link(rel="apple-touch-icon" sizes="76x76" href=require('../../../sources/images/apple-touch-icon-76x76.png'))
+    link(rel="apple-touch-icon" sizes="120x120" href=require('../../../sources/images/apple-touch-icon-120x120.png'))
+    link(rel="apple-touch-icon" sizes="152x152" href=require('../../../sources/images/apple-touch-icon-152x152.png'))
+    link(rel="apple-touch-icon" sizes="180x180" href=require('../../../sources/images/apple-touch-icon-180x180.png'))
+  
+    //- Google Tag Manager
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PXHCM38Q');
+    //- End Google Tag Manager
+  body 
+
+    //-Google Tag Manager (noscript) -->
+    iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-PXHCM38Q" height="0" width="0" style="display:none;visibility:hidden")
+    //-  End Google Tag Manager (noscript)
+
+    include ../../../components/header/header
+    +header({ linksHeader: linksHeader, contactUs: '#contactUs' })
+
+    main 
+      section.caseHeader.wrapper.colorSection
+        .caseHeader__wrapper
+          .caseHeader__image._anim-items._anim-no-hide 
+            picture
+              source(media="(min-width: 1601px)" srcset=require('../../../sources/images/header_case_1920.png'))
+              source(media="(min-width: 1137px)" srcset=require('../../../sources/images/header_case_1600.png'))
+              source(media="(min-width: 491px)" srcset=require('../../../sources/images/header_case_1136.png'))
+              img(src=require('../../../sources/images/header_case_600.png') alt="caseImage" loading="lazy")
+          .caseHeader__text 
+            p.subtitle._anim-items._anim-no-hide Web application, USA, 2023-2024
+            h1.h1._anim-items._anim-no-hide DocsDNA | AI-powered document review web application
+            
+      include ../../../components/casesContent/casesContent
+      +casesContent({ casesContent: pageContent })
+
+      //- section.caseRecommendations.wrapper.colorSection 
+      //-   .caseRecommendations__wrapper
+      //-     h2.h1._anim-items._anim-no-hide More case studies
+      //-     .caseRecommendations__recommendationList
+      //-       each card in caseRecommendationsList
+      //-         include ../../../components/caseRecommendationCard/caseRecommendationCard
+      //-         +caseRecommendationCard({ card: card })
+
+      include ../../../components/contactUs/contactUs
+
+    include ../../../components/footer/footer
+    +footer({ linksFooter: linksFooter, contactUs: '#contactUs' })

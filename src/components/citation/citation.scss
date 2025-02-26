@@ -1,0 +1,66 @@
+.citation {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  transform: translate(0px, 48px);
+  opacity: 0;
+  transition: all 0.6s ease 0s;
+
+  @media screen and (max-width: 1600px) {
+    gap: 32px;
+  }
+
+  &._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-style: italic;
+  }
+
+  &__writerWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__writer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__writerImage {
+    max-width: 64px;
+    height: 64px;
+    border-radius: 1000px;
+    overflow: hidden;
+
+    @media screen and (max-width: 1600px) {
+      max-width: 56px;
+      height: 56px;
+    }
+
+    @media screen and (max-width: 600px) {
+      min-width: 56px;
+      min-height: 56px;
+    }
+  }
+
+  &__writerName {
+    .text_4 {
+      margin-bottom: 8px;
+      font-family: "Cygre-SB";
+    }
+  }
+
+  .text_5 {
+    color: var(--black3);
+  }
+}

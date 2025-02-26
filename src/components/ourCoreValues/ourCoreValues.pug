@@ -1,0 +1,91 @@
+-
+ const swiperCards = [
+  {
+    title: 'Client-Centric Excellence',
+    description: 'We prioritize our clients and strive to provide them with exceptional service and results',
+  },
+  {
+    title: 'Quality Assurance',
+    description: 'We prioritize our clients and strive to provide them with exceptional service and results',
+  },
+  {
+    title: 'Integrity & Transparency',
+    description: 'We prioritize our clients and strive to provide them with exceptional service and results',
+  },
+  {
+    title: 'Collaborative Partnership',
+    description: 'We prioritize our clients and strive to provide them with exceptional service and results',
+  },
+  {
+    title: 'Innovation & Adaptability',
+    description: 'We prioritize our clients and strive to provide them with exceptional service and results',
+  },
+ ]
+
+section(data-color="white").ourCoreValues.colorSection
+  .ourCoreValues__header
+    h1.ourCoreValues__title._anim-items._anim-no-hide Our core values
+    h6.text_1.ourCoreValues__description._anim-items._anim-no-hide
+     | We pride ourselves on 
+     span our ability to turn your vision into reality
+     | , no matter how intricate the challenge is.
+  .ourCoreValues__swiper
+    .ourCoreValues__buttons._anim-items._anim-no-hide
+      .swiper-button-prev.ourCoreValues-button-prev
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <g clip-path="url(#clip0_1_2308)">
+            <path d="M20.25 12H3.75" stroke="#23221F" stroke-width="1.5"/>
+            <path d="M10.5 5.25L3.75 12L10.5 18.75" stroke="#23221F" stroke-width="1.5"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_1_2308">
+              <rect width="24" height="24" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+      .swiper-button-next.ourCoreValues-button-next
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <g clip-path="url(#clip0_1_2514)">
+            <path d="M3.75 12H20.25" stroke="#23221F" stroke-width="1.5"/>
+            <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="#23221F" stroke-width="1.5"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_1_2514">
+              <rect width="24" height="24" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+    .swiper-wrapper
+      each swiperCard in swiperCards
+        .swiper-slide._anim-items._anim-no-hide
+          .ourCoreValues__card
+            h3.h3= swiperCard.title
+            p.text_4= swiperCard.description
+    .ourCoreValues__navigation
+      .swiper-button-prev.ourCoreValues-button-prev
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <g clip-path="url(#clip0_1_3106)">
+            <path d="M20.25 12H3.75" stroke="#23221F" stroke-width="1.5"/>
+            <path d="M10.5 5.25L3.75 12L10.5 18.75" stroke="#23221F" stroke-width="1.5"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_1_3106">
+              <rect width="24" height="24" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+      .swiper-pagination.ourCoreValues-pagination
+      .swiper-button-next.ourCoreValues-button-next
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <g clip-path="url(#clip0_1_3118)">
+            <path d="M3.75 12H20.25" stroke="#23221F" stroke-width="1.5"/>
+            <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="#23221F" stroke-width="1.5"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_1_3118">
+              <rect width="24" height="24" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+      
+

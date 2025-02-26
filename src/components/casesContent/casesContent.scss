@@ -1,0 +1,229 @@
+.caseContent {
+  
+  &__wrapper {
+    padding: 88px 48px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+
+    @media screen and (max-width: 1600px) {
+      padding: 72px 16px 60px;
+      gap: 88px;
+    }
+    @media screen and (max-width: 1136px) {
+      padding: 64px 16px 48px;
+      gap: 72px;
+    }
+    @media screen and (max-width: 836px) {
+      padding: 48px 16px 48px;
+      gap: 88px;
+    }
+    @media screen and (max-width: 600px) {
+      padding: 16px 16px 48px;
+      gap: 64px;
+    }
+
+    .h1 {
+      transform: translate(0px, 48px);
+      opacity: 0;
+      transition: all 0.6s ease 0s;
+
+      @media screen and (max-width: 1600px) {
+        margin-left: 32px;
+      }
+      @media screen and (max-width: 836px) {
+        margin-left: 16px;
+      }
+      @media screen and (max-width: 600px) {
+        margin-left: unset;
+      }
+      
+      &._active {
+        transform: translate(0px, 0px);
+        opacity: 1;
+      }
+    }
+  }
+  
+  &__item {
+    display: grid;
+    grid-template-columns: 31% 1fr;
+    column-gap: 152px;
+
+    @media screen and (max-width: 1600px) {
+      column-gap: 96px;
+      padding: 0 32px;
+    }
+    @media screen and (max-width: 1136px) {
+      column-gap: 7.6%;
+    }
+    @media screen and (max-width: 836px) {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 0 16px;
+    }
+    @media screen and (max-width: 600px) {
+      padding: unset;
+    }
+
+    .h2 {
+      transform: translate(0px, 32px);
+      opacity: 0;
+      transition: all 0.6s ease 0s;
+
+      &._active {
+        transform: translate(0px, 0px);
+        opacity: 1;
+      }
+    }
+
+  }
+
+  &__itemWithoutTitle {
+    display: flex;
+    gap: 74px;
+
+    transform: translate(0px, 48px);
+    opacity: 0;
+    transition: all 0.6s ease 0s;
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .itemWithoutTitle__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+
+      @media screen and (max-width: 1600px) {
+        gap: 24px;
+      }
+
+      .text_4 {
+        color: var(--black3);
+      }
+    }
+
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+
+  &__itemText {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    transform: translate(0px, 48px);
+    opacity: 0;
+    transition: all 0.6s ease 0s;
+
+    @media screen and (max-width: 1600px) {
+      gap: 18px;
+    }
+    @media screen and (max-width: 600px) {
+      gap: 0;
+    }
+
+    .bold {
+      font-weight: 600;
+	    font-family: "Cygre-SB";
+    }
+
+    img {
+      margin-top: 16px;
+      width: fit-content;
+
+      @media screen and (max-width: 1600px) {
+        margin-top: 22px;
+      }
+      @media screen and (max-width: 600px) {
+        margin-top: 40px;
+      }
+    }
+
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+
+  &__itemList {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    transform: translate(0px, 48px);
+    opacity: 0;
+    transition: all 0.6s ease 0s;
+
+    @media screen and (max-width: 1600px) {
+      gap: 18px;
+    }
+    @media screen and (max-width: 600px) {
+      gap: 0;
+    }
+
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+
+    .itemListBold {
+      font-weight: 600;
+	    font-family: "Cygre-SB";
+
+      span {
+        font-weight: 400;
+	      font-family: 'Cygre-R';
+        color: var(--black3);
+      }
+    }
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+
+    picture {
+      max-width: 1824px;
+
+      transform: translate(0px, 48px);
+      opacity: 0;
+      transition: all 0.6s ease 0s;
+
+      &._active {
+        transform: translate(0px, 0px);
+        opacity: 1;
+      }
+    }
+  }
+
+  &__images {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+    @media screen and (max-width: 836px) {
+      flex-direction: column;
+    }
+
+    picture { 
+      flex: 1;
+      max-width: 904px;
+
+      transform: translate(0px, 48px);
+      opacity: 0;
+      transition: all 0.6s ease 0s;
+
+      &._active {
+        transform: translate(0px, 0px);
+        opacity: 1;
+      }
+    }
+  }
+}
