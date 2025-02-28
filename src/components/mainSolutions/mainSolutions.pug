@@ -2,7 +2,7 @@
   const solutions = [
     {
       title: 'Contract Performance & Compliance',
-      image: '../../../sources/images/solution_1.png',
+      image: require('../../sources/images/solution_1.png'),
       url: '#',
       button: 'Ensure Compliance',
       items: [
@@ -15,7 +15,7 @@
     },
     {
       title: 'Procurement Intelligence',
-      image: '../../../sources/images/solution_2.png',
+      image: require('../../sources/images/solution_2.png'),
       url: '#',
       button: 'Optimize Strategy',
       items: [
@@ -27,7 +27,7 @@
     },
     {
       title: 'Strategic Consulting',
-      image: '../../../sources/images/solution_3.png',
+      image: require('../../sources/images/solution_3.png'),
       url: '#',
       button: 'Talk to an Expert',
       items: [
@@ -39,7 +39,7 @@
     },
     {
       title: 'Execution Development',
-      image: '../../../sources/images/solution_4.png',
+      image: require('../../sources/images/solution_4.png'),
       url: '#',
       button: 'Automate Procurement',
       items: [
@@ -51,7 +51,7 @@
     },
     {
       title: 'Mergers & Acquisitions Due Diligence',
-      image: '../../../sources/images/solution_5.png',
+      image: require('../../sources/images/solution_5.png'),
       url: '#',
       button: 'Strengthen M&A',
       items: [
@@ -72,10 +72,15 @@ section(data-color="white" id="about").about.colorSection
         br
         | Smarter, Faster, Future-Ready.
     h6.text_1.about__description._anim-items._anim-no-hide ApolloRise Tech empowers procurement and sourcing teams with AI-powered insights, automation, and strategic execution to optimize contracts, reduce costs, and future-proof supply networks.
-    each solution in solutions
-      h3.h3= solution.title
-      p.text_4= solution.description
-      button= solution.button
-      ul
-        each item in solutions.items
-          li= item
+
+    .solutions
+      each solution in solutions
+        .solution-card
+          .solution-card__image
+            img(src=solution.image alt=solution.title)
+          .solution-card__content
+            h2.h2=solution.title
+            ul
+              each item in solution.items
+                li=item
+            button(type="button").button_yellow.size_m.solution-card__button=solution.button
