@@ -1,0 +1,81 @@
+-
+  const solutions = [
+    {
+      title: 'Contract Performance & Compliance',
+      image: '../../../sources/images/solution_1.png',
+      url: '#',
+      button: 'Ensure Compliance',
+      items: [
+        'Ensure Every Contract Delivers Maximum Value',
+        'AI-driven contract tracking to monitor performance & compliance.',
+        'Automated risk detection to minimize financial exposure.',
+        'Real-time analytics to optimize supplier agreements.',
+        'Make every contract a strategic asset, not a liability.',
+      ]
+    },
+    {
+      title: 'Procurement Intelligence',
+      image: '../../../sources/images/solution_2.png',
+      url: '#',
+      button: 'Optimize Strategy',
+      items: [
+        'Smarter sourcing starts with real-time insights.',
+        'AI-powered supplier selection for better negotiations.',
+        'Predictive analytics to anticipate cost-saving opportunities.',
+        'Spend optimization tools to uncover hidden savings.',
+      ]
+    },
+    {
+      title: 'Strategic Consulting',
+      image: '../../../sources/images/solution_3.png',
+      url: '#',
+      button: 'Talk to an Expert',
+      items: [
+        'Transforming Procurement from a Cost Center to a Value Engine.',
+        'Procurement strategy alignment with business goals.',
+        'Supplier risk assessments & cost reduction insights.',
+        'Operational efficiency modeling for smarter sourcing.',
+      ]
+    },
+    {
+      title: 'Execution Development',
+      image: '../../../sources/images/solution_4.png',
+      url: '#',
+      button: 'Automate Procurement',
+      items: [
+        'From insights to action—execution at scale.',
+        'AI-driven automation for streamlined procurement workflows.',
+        'Dynamic supplier management to increase agility & resilience.',
+        'Scalable execution models that adapt as your business grows.',
+      ]
+    },
+    {
+      title: 'Mergers & Acquisitions Due Diligence',
+      image: '../../../sources/images/solution_5.png',
+      url: '#',
+      button: 'Strengthen M&A',
+      items: [
+        'Procurement intelligence for high-stakes M&A.',
+        'Comprehensive contract audits for risk & compliance.',
+        'Spend analysis to optimize post-merger procurement strategies.',
+        'Supplier continuity planning to prevent disruptions.',
+      ]
+    },
+  ]
+
+section(data-color="white" id="about").about.colorSection
+  .about__wrapper 
+    div
+      h6.subtitle.about__subtitle._anim-items._anim-no-hide Solutions
+      h1.h1.about__title._anim-items._anim-no-hide
+        | AI-Driven Procurement.
+        br
+        | Smarter, Faster, Future-Ready.
+    h6.text_1.about__description._anim-items._anim-no-hide ApolloRise Tech empowers procurement and sourcing teams with AI-powered insights, automation, and strategic execution to optimize contracts, reduce costs, and future-proof supply networks.
+    each solution in solutions
+      h3.h3= solution.title
+      p.text_4= solution.description
+      button= solution.button
+      ul
+        each item in solutions.items
+          li= item

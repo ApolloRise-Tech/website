@@ -1,0 +1,33 @@
+- 
+  const cards = [
+    {
+      name: 'Product design', 
+    },
+    {
+      name: 'AI integrations', 
+    },
+    {
+      name: 'Web Development', 
+    },
+    {
+      name: 'End-to-End Client Support', 
+    },
+    {
+      name: 'Mobile Development',
+    }
+  ]
+
+section(data-color="white").main.colorSection
+  .main__container
+    .main__wrapper._anim-items._anim-no-hide 
+      h1.h1.main__title._anim-items._anim-no-hide 
+        | We develop IT solutions 
+        br
+        | of any complexity.
+      button.button_black.size_m.main__button._anim-items._anim-no-hide(id="main__button")
+        p Start your project
+    .main__cards._anim-items._anim-no-hide 
+      each card in cards
+        .main__card._anim-items._anim-no-hide 
+          h4.h4= card.name
+

@@ -1,0 +1,94 @@
+-
+ const swiperCards = [
+  {
+    title: 'AI-Powered Supplier Intelligence',
+    description: 'Make smarter, faster decisions with real-time insights.',
+  },
+  {
+    title: 'Automation that Works for you',
+    description: 'Streamline RFQs, negotiations, and contract management.',
+  },
+  {
+    title: 'Future-Proof Procurement',
+    description: 'Stay ahead with predictive analytics.',
+  },
+  {
+    title: 'Enterprise-Scale Performance',
+    description: 'Small teams, big impact.',
+  },
+  {
+    title: 'Measurable Cost Savings',
+    description: 'Cut procurement costs by 7-10%+ while strengthening supplier relationships.',
+  },
+ ]
+
+section(data-color="white").ourCoreValues.colorSection
+  .ourCoreValues__header
+    h1.ourCoreValues__title._anim-items._anim-no-hide
+     | Why Choose
+     br
+     | ApolloRise Tech?
+    h6.text_1.ourCoreValues__description._anim-items._anim-no-hide
+     | We don’t just optimize procurement — we transform it.
+     span  Our AI-powered platform combines intelligence, automation, and strategy
+     |  to shift you from cost-cutting to competitive advantage.
+  .ourCoreValues__swiper
+    .ourCoreValues__buttons._anim-items._anim-no-hide
+      .swiper-button-prev.ourCoreValues-button-prev
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <g clip-path="url(#clip0_1_2308)">
+            <path d="M20.25 12H3.75" stroke="#23221F" stroke-width="1.5"/>
+            <path d="M10.5 5.25L3.75 12L10.5 18.75" stroke="#23221F" stroke-width="1.5"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_1_2308">
+              <rect width="24" height="24" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+      .swiper-button-next.ourCoreValues-button-next
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <g clip-path="url(#clip0_1_2514)">
+            <path d="M3.75 12H20.25" stroke="#23221F" stroke-width="1.5"/>
+            <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="#23221F" stroke-width="1.5"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_1_2514">
+              <rect width="24" height="24" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+    .swiper-wrapper
+      each swiperCard in swiperCards
+        .swiper-slide._anim-items._anim-no-hide
+          .ourCoreValues__card
+            h3.h3= swiperCard.title
+            p.text_4= swiperCard.description
+    .ourCoreValues__navigation
+      .swiper-button-prev.ourCoreValues-button-prev
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <g clip-path="url(#clip0_1_3106)">
+            <path d="M20.25 12H3.75" stroke="#23221F" stroke-width="1.5"/>
+            <path d="M10.5 5.25L3.75 12L10.5 18.75" stroke="#23221F" stroke-width="1.5"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_1_3106">
+              <rect width="24" height="24" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+      .swiper-pagination.ourCoreValues-pagination
+      .swiper-button-next.ourCoreValues-button-next
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <g clip-path="url(#clip0_1_3118)">
+            <path d="M3.75 12H20.25" stroke="#23221F" stroke-width="1.5"/>
+            <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="#23221F" stroke-width="1.5"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_1_3118">
+              <rect width="24" height="24" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+      
+

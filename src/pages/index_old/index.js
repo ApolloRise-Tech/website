@@ -1,13 +1,13 @@
 import "../../style/index.scss";
 
 import '../../components/header/header';
-import '../../components/main/main';
-import '../../components/mainSolutions/mainSolutions';
+import '../../components/main_old/main';
+import '../../components/about/about';
 import '../../components/whatWeDo/whatWeDo';
 import '../../components/industries/industries';
 import '../../components/caseRecommendationCard/caseRecommendationCard';
 import '../../components/howWeWork/howWeWork';
-import '../../components/whyChooseApolloRise/whyChooseApolloRise';
+import '../../components/ourCoreValues/ourCoreValues';
 import '../../components/contactUs/contactUs';
 import '../../components/footer/footer';
 

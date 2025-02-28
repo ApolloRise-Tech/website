@@ -1,4 +1,4 @@
--
+- 
   const linksHeader = [
     {
       name: 'About', 
@@ -143,13 +143,21 @@ html
     include ../../components/header/header
     +header({ linksHeader: linksHeader, contactUs: '#contactUs' })
     main 
-      include ../../components/main/main
-      //include ../../components/whatWeDo/whatWeDo
-      //include ../../components/industries/industries
-      //
-      //include ../../components/howWeWork/howWeWork
-      include ../../components/whyChooseApolloRise/whyChooseApolloRise
-      include ../../components/mainSolutions/mainSolutions
+      include ../../components/main_old/main
+      include ../../components/about/about
+      include ../../components/whatWeDo/whatWeDo
+      include ../../components/industries/industries
+
+      section(data-color="white" id="ourWork").cases.wrapper.colorSection 
+        .cases__wrapper
+          h2.h1._anim-items._anim-no-hide Our work
+          .cases__casesList
+            each card in caseRecommendationsList
+              include ../../components/caseRecommendationCard/caseRecommendationCard
+              +caseRecommendationCard({ card: card })
+
+      include ../../components/howWeWork/howWeWork
+      include ../../components/ourCoreValues/ourCoreValues
       include ../../components/contactUs/contactUs
     include ../../components/footer/footer
     +footer({ linksFooter: linksFooter, contactUs: '#contactUs' })

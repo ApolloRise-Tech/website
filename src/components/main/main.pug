@@ -1,16 +1,16 @@
-- 
+-
   const cards = [
     {
-      name: 'Product design', 
+      name: 'Product design',
     },
     {
-      name: 'AI integrations', 
+      name: 'AI integrations',
     },
     {
-      name: 'Web Development', 
+      name: 'Web Development',
     },
     {
-      name: 'End-to-End Client Support', 
+      name: 'End-to-End Client Support',
     },
     {
       name: 'Mobile Development',
@@ -18,16 +18,14 @@
   ]
 
 section(data-color="white").main.colorSection
-  .main__container
+  .main__container.main__cards._anim-items._anim-no-hide
     .main__wrapper._anim-items._anim-no-hide 
       h1.h1.main__title._anim-items._anim-no-hide 
-        | We develop IT solutions 
+        | Procurement, Rewired.
         br
-        | of any complexity.
+        | From Chains to Intelligent Networks.
+      h6.text_1.main__description._anim-items._anim-no-hide AI-driven procurement intelligence that empowers sourcing and procurement leaders to drive measurable impact at scale.
       button.button_black.size_m.main__button._anim-items._anim-no-hide(id="main__button")
-        p Start your project
-    .main__cards._anim-items._anim-no-hide 
-      each card in cards
-        .main__card._anim-items._anim-no-hide 
-          h4.h4= card.name
+        p Future-Proof Your Strategy
+
 
