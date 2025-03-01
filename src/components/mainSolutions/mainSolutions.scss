@@ -123,7 +123,7 @@
     align-items: center;
     width: 100%;
     position: relative;
-
+    min-height: 50vh;
 
     &:nth-child(2n) {
       flex-direction: row-reverse;

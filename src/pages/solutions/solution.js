@@ -1,7 +1,7 @@
 import "../../style/index.scss";
 
 import '../../components/header/header';
-import '../../components/main/main';
+import '../../components/upperGradientMain/upperGradientMain';
 import '../../components/mainSolutions/mainSolutions';
 import '../../components/whatWeDo/whatWeDo';
 import '../../components/industries/industries';
@@ -11,7 +11,7 @@ import '../../components/whyChooseApolloRise/whyChooseApolloRise';
 import '../../components/contactUs/contactUs';
 import '../../components/footer/footer';
 
-import './index.scss';
+import './solution.scss';
 
 import { animateItems } from '../../utils/animateItems';
 import { sectionActivation } from '../../utils/sectionActivation';

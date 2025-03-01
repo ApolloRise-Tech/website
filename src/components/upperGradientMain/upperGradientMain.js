@@ -1,4 +1,4 @@
-import "./main.scss";
+import "./upperGradientMain.scss";
 
 document.addEventListener("DOMContentLoaded", function() {
   const startYourProjectButton = document.getElementById('main__button');
