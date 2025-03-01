@@ -1,0 +1,207 @@
+.solutions {
+  //height: 100vh;
+  overflow-y: auto;
+  padding: 24px;
+
+  @media screen and (max-width: 1600px) {
+    padding: 16px;
+  }
+  @media screen and (max-width: 834px) {
+    height: unset;
+    overflow-y: visible;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 8px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 24px;
+    background-color: var(--yellowLight);
+    color: var(--black);
+  }
+}
+
+.solutions_wrapper.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media screen and (max-width: 1024px) {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+.solutions_content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background: var(--black);
+  border-radius: 12px;
+  height: 70vh;
+
+  overflow-y: hidden; // По умолчанию скролл отключён
+  position: relative; // Для позиционирования фиксированных элементов
+
+  &.scroll-enabled {
+    overflow-y: auto; // Включаем скролл, когда карточка полностью видна
+  }
+
+  .case_messageContainer {
+    order: 1;
+  }
+
+  .case_block {
+    order: 2;
+  }
+
+  &__mobile {
+    display: none;
+  }
+  @media screen and (max-width: 1024px) {
+    display: none;
+    &__mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+      width: 100%;
+      height: auto;
+      overflow-y: auto;
+    }
+  }
+}
+
+.case_messageContainer {
+  position: sticky;
+  top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  max-width: 674px;
+  height: 500px;
+  margin-right: 40px;
+
+  @media screen and (max-width: 1280px) {
+    width: 40%;
+    margin-right: 16px;
+  }
+  @media screen and (max-width: 1024px) {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+  }
+}
+
+.case_messageWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+
+  &.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media screen and (max-width: 1024px) {
+    position: static;
+    transform: translateX(0);
+    opacity: 1;
+    transition: none;
+  }
+}
+
+.case_block {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  width: 50%;
+  max-width: 560px;
+
+  @media screen and (max-width: 1280px) {
+    width: 60%;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    gap: 40px;
+    max-width: unset;
+  }
+  @media screen and (max-width: 600px) {
+    gap: 56px;
+  }
+}
+
+.case_textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 56px;
+  opacity: 1;
+  min-height: calc(70vh - 48px);
+  justify-content: center;
+
+  @media screen and (max-width: 1440px) {
+    gap: 40px;
+  }
+  @media screen and (max-width: 1024px) {
+    max-width: 560px;
+  }
+}
+
+.case_subTitle {
+  color: var(--grey-500);
+  font-size: 16px;
+  line-height: 1.4;
+}
+.case_title {
+  color: #fff;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.case_description {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.case_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: #fff;
+    &::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+
+.black_button {
+  background-color: #fff;
+  color: #000;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+}

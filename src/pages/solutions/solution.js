@@ -2,6 +2,8 @@ import "../../style/index.scss";
 
 import '../../components/header/header';
 import '../../components/upperGradientMain/upperGradientMain';
+import '../../components/solutions/solutions';
+
 import '../../components/mainSolutions/mainSolutions';
 import '../../components/whatWeDo/whatWeDo';
 import '../../components/industries/industries';
