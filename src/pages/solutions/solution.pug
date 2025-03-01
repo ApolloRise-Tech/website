@@ -1,0 +1,139 @@
+-
+  const linksHeader = [
+    {
+      name: 'About',
+      url: 'about.html'
+    },
+    {
+      name: 'Solutions',
+      url: 'solutions.html'
+    },
+    {
+      name: 'Why ApolloRise Tech',
+      url: 'why.html'
+    },
+    {
+      name: 'Careers',
+      url: 'career.html'
+    },
+  ]
+
+  const linksFooter = [
+    {
+      name: 'About',
+      url: 'about.html'
+    },
+    {
+      name: 'Solutions',
+      url: 'solutions.html'
+    },
+    {
+      name: 'Why ApolloRise Tech',
+      url: 'why.html'
+    },
+    {
+      name: 'Careers',
+      url: 'career.html'
+    },
+  ]
+
+  const caseRecommendationsList = [
+    {
+      picture: require('../../sources/images/design1_1920.png'),
+      link: '/cases/docsdna-app.html',
+      targetLink: '_self',
+      title: 'DocsDNA | AI-powered document review web application',
+      description: 'DocsDNA is revolutionizing document analysis from being time-consuming, labor-intensive, and error-prone to offering rapid, precise, and efficient document analysis, creation and processing — all at a fraction of the cost.',
+      info: [],
+      tags: ['AI development', 'MVP development', 'UX/UI', 'SaaS'],
+    },
+    //- {
+    //-   picture: require('../../sources/images/pulsar_preview.png'),
+    //-   link: '',
+    //-   title: 'Pulsar | AI-powered solution for procurement optimization',
+    //-   description: 'Analyze invoices with AI and find the best offers. Save time and money with Pulsar.',
+    //-   info: [
+    //-     {
+    //-       title: 'active users',
+    //-       text: '8M',
+    //-     },
+    //-     {
+    //-       title: 'active users',
+    //-       text: '8M',
+    //-     }
+    //-   ],
+    //-   tags: ['AI development', 'UX/UI', 'SaaS'],
+    //- },
+    {
+      picture: require('../../sources/images/docsdna_preview.png'),
+      link: 'https://www.behance.net/gallery/210120265/DocsDNA-AI-Powered-Document-Analysis-Website',
+      title: 'DocsDNA | Stylish multilingual website',
+      description: 'A stylish, multilingual website showcasing the DocsDNA application with a powerful, modern design.',
+      info: [],
+      tags: ['UX/UI', 'Web development', 'Multilingual'],
+    },
+  ]
+
+html
+  head 
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1") 
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="mobile-web-app-capable" content="yes")
+
+    <!-- Status bar styles -->
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    meta(name="theme-color" content="#FCFBF8")
+
+    <!-- Title -->
+    title ApolloRise Tech: AI-Powered Solutions for Business Growth
+    meta(name="description" content="We develop IT solutions of any complexity.")
+    meta(name="keywords" content="IT solutions, software development, web development, AI integration")
+    meta(name="author" content="Yurii Kapkov")
+
+    <!-- Open Graph -->
+    meta(property="og:type" content="website")
+    meta(property="og:title" content="ApolloRise Tech: AI-Powered Solutions for Business Growth")
+    meta(property="og:description" content="We develop IT solutions of any complexity.")
+    meta(property="og:url" content="https://apollorise.tech/")
+    meta(property="og:image" content="https://apollorise.tech/sources/images/picture.png")
+    meta(property="og:site_name" content="apollorise.tech")
+
+    link(rel='stylesheet', href='../../sources/fonts/fonts.css')
+
+    <!-- Favicons -->
+    link(rel="icon" type="image/png" href=require('../../sources/images/favicon.png'))
+    link(rel="shortcut icon" href=require('../../sources/images/favicon.ico'))
+
+    link(rel="apple-touch-icon" sizes="76x76" href=require('../../sources/images/apple-touch-icon-76x76.png'))
+    link(rel="apple-touch-icon" sizes="120x120" href=require('../../sources/images/apple-touch-icon-120x120.png'))
+    link(rel="apple-touch-icon" sizes="152x152" href=require('../../sources/images/apple-touch-icon-152x152.png'))
+    link(rel="apple-touch-icon" sizes="180x180" href=require('../../sources/images/apple-touch-icon-180x180.png'))
+  
+    //- Google Tag Manager
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PXHCM38Q');
+    //- End Google Tag Manager
+  body 
+
+    //-Google Tag Manager (noscript) -->
+    iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-PXHCM38Q" height="0" width="0" style="display:none;visibility:hidden")
+    //-  End Google Tag Manager (noscript)
+
+    include ../../components/header/header
+    +header({ linksHeader: linksHeader, contactUs: '#contactUs' })
+    main 
+      include ../../components/main/main
+      //include ../../components/whatWeDo/whatWeDo
+      //include ../../components/industries/industries
+      //
+      //include ../../components/howWeWork/howWeWork
+      include ../../components/whyChooseApolloRise/whyChooseApolloRise
+      include ../../components/mainSolutions/mainSolutions
+      include ../../components/contactUs/contactUs
+    include ../../components/footer/footer
+    +footer({ linksFooter: linksFooter, contactUs: '#contactUs' })
