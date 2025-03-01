@@ -2,8 +2,8 @@
   const solutionsList = [
     {
       textBlock: {
-        subTitle: 'Optimize Every Contract. Minimize Risk. Maximize Value.',
         title: 'Contract Performance & Compliance',
+        subTitle: 'Optimize Every Contract. Minimize Risk. Maximize Value.',
         description: 'Contracts should work for you, not against you. ApolloRise Tech leverages AI-driven insights to help procurement leaders monitor compliance, track performance, and unlock cost efficiencies, ensuring that every contract delivers its full potential.',
         bulletPoints: [
           'Real-time risk detection to prevent compliance failures.',
@@ -20,8 +20,8 @@
     },
     {
       textBlock: {
-        subTitle: 'Procurement Intelligence',
-        title: 'Smarter Sourcing Starts with Smarter Data',
+        title: 'Procurement Intelligence',
+        subTitle: 'Smarter Sourcing Starts with Smarter Data',
         description: 'Procurement isn’t just about cutting costs—it’s about gaining a competitive edge. We help you with AI-driven intelligence to forecast risks, optimize supplier relationships, and make data-driven decisions in real-time.',
         bulletPoints: [
           'AI-powered insights to streamline supplier selection.',
@@ -38,8 +38,8 @@
     },
     {
       textBlock: {
-        subTitle: 'Strategic Consulting',
-        title: 'Align Procurement with Business Strategy',
+        title: 'Strategic Consulting',
+        subTitle: 'Align Procurement with Business Strategy',
         description: 'We don’t just advise—we execute. Our procurement consulting services combine deep expertise with AI-driven insights to help businesses reduce costs, manage risks, and drive transformative growth.',
         bulletPoints: [
           'Data-backed procurement strategies tailored to your industry.',
@@ -56,8 +56,8 @@
     },
     {
       textBlock: {
-        subTitle: 'Execution Development',
-        title: 'From Insights to Action. Execution at Scale.',
+        title: 'Execution Development',
+        subTitle: 'From Insights to Action. Execution at Scale.',
         description: 'Strategy is nothing without execution. We empower procurement teams to operationalize insights, automate key processes, and drive measurable impact.',
         bulletPoints: [
           'AI-driven automation to streamline procurement workflows.',
@@ -74,8 +74,8 @@
     },
     {
       textBlock: {
-        subTitle: 'Mergers & Acquisitions Due Diligence',
-        title: 'Procurement Intelligence for High-Stakes Decisions.',
+        title: 'Mergers & Acquisitions Due Diligence',
+        subTitle: 'Procurement Intelligence for High-Stakes Decisions.',
         description: 'Mergers and acquisitions demand deep visibility into procurement risks, supplier contracts, and cost structures. Our AI-powered due diligence solutions help businesses assess risk, uncover synergies, and make informed decisions faster.',
         bulletPoints: [
           'Comprehensive contract audits for risk assessment.',
@@ -105,13 +105,14 @@ section.block_wrapper.solutions_blockWrapper
         .case_block
           each caseItem, index in solutionsList
             .case_textContainer(id=`case${index+1}`)
-              h2.case_title= caseItem.textBlock.title
-              h3.case_subTitle= caseItem.textBlock.subTitle
-              p.case_description= caseItem.textBlock.description
-              ul.case_list
-                each bullet in caseItem.textBlock.bulletPoints
-                  li= bullet
-              a.black_button.case_button(href=caseItem.textBlock.buttonLink)= caseItem.textBlock.buttonText
+              h2.h2.case_title= caseItem.textBlock.title
+              div
+                h3.h3.case_subTitle= caseItem.textBlock.subTitle
+                p.text_4.case_description= caseItem.textBlock.description
+                ul.case_list.text_4
+                  each bullet in caseItem.textBlock.bulletPoints
+                    li= bullet
+              a.button_yellow.size_m.case_button(href=caseItem.textBlock.buttonLink)= caseItem.textBlock.buttonText
 
       // Мобильная версия – вывод карточки в один блок (без слайдера)
       .solutions_content.solutions_content__mobile
