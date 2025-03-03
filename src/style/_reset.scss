@@ -162,6 +162,28 @@ h6 {
 	}
 }
 
+h5 {
+	font-size: 32px;
+	line-height: 40px;
+	font-weight: 500;
+	font-family: "Cygre-M";
+
+	@media screen and (max-width: 1600px) {
+		font-size: 24px;
+		line-height: 28px;
+	}
+
+	@media screen and (max-width: 1136px) {
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+	@media screen and (max-width: 600px) {
+		font-size: 18px;
+		line-height: 136%;
+	}
+}
+
 .subtitle {
 	font-size: 24px;
 	line-height: 24px;

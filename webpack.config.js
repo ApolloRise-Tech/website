@@ -15,6 +15,7 @@ module.exports = (env) => {
     entry: {
       index: path.resolve(__dirname, 'src', 'pages',  'index', 'index.js'),
       solutions: path.resolve(__dirname, 'src', 'pages',  'solutions', 'solution.js'),
+      why: path.resolve(__dirname, 'src', 'pages',  'why', 'why.js'),
       docsdnaApp: path.resolve(__dirname, 'src', 'pages', 'cases', 'docsdnaApp', 'cases.js'),
       career: path.resolve(__dirname, 'src', 'pages', 'career', 'career.js'),
       successCareer: path.resolve(__dirname, 'src', 'pages', 'successCareer', 'successCareer.js'),
@@ -40,6 +41,11 @@ module.exports = (env) => {
         template: path.resolve(__dirname, 'src', 'pages', 'solutions', 'solution.pug'),
         filename: 'solutions.html',
         chunks: ['solutions'],
+      }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src', 'pages', 'why', 'why.pug'),
+        filename: 'why.html',
+        chunks: ['why'],
       }),
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, 'src', 'pages', 'cases', 'docsdnaApp', 'cases.pug'),

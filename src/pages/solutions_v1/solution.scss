@@ -1,0 +1,50 @@
+.cases {
+  &__wrapper {
+    padding: 48px 48px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+
+    @media screen and (max-width: 1600px) {
+      padding: 48px 48px 80px;
+      gap: 64px;
+    }
+    @media screen and (max-width: 1136px) {
+      padding: 48px 48px 94px;
+      gap: 56px;
+    }
+    @media screen and (max-width: 836px) {
+      padding: 48px 32px 76px;
+      gap: 64px;
+    }
+    @media screen and (max-width: 600px) {
+      padding: 36px 16px 136px;
+      gap: 60px;
+    }
+
+    .h1 {
+      transform: translate(0px, 32px);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
+
+      &._active {
+        transform: translate(0px, 0px);
+        opacity: 1;
+      }
+    }
+  }
+
+  &__casesList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (max-width: 836px) {
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+    }
+    @media screen and (max-width: 600px) {
+      gap: 40px;
+    }
+  }
+}

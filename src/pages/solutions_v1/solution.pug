@@ -34,50 +34,13 @@
     {
       name: 'Careers',
       url: 'career.html'
-    }
-  ]
-
-  const caseRecommendationsList = [
-    {
-      picture: require('../../sources/images/design1_1920.png'),
-      link: '/cases/docsdna-app.html',
-      targetLink: '_self',
-      title: 'DocsDNA | AI-powered document review web application',
-      description: 'DocsDNA is revolutionizing document analysis from being time-consuming, labor-intensive, and error-prone to offering rapid, precise, and efficient document analysis, creation and processing — all at a fraction of the cost.',
-      info: [],
-      tags: ['AI development', 'MVP development', 'UX/UI', 'SaaS'],
-    },
-    //- {
-    //-   picture: require('../../sources/images/pulsar_preview.png'),
-    //-   link: '',
-    //-   title: 'Pulsar | AI-powered solution for procurement optimization',
-    //-   description: 'Analyze invoices with AI and find the best offers. Save time and money with Pulsar.',
-    //-   info: [
-    //-     {
-    //-       title: 'active users',
-    //-       text: '8M',
-    //-     },
-    //-     {
-    //-       title: 'active users',
-    //-       text: '8M',
-    //-     }
-    //-   ],
-    //-   tags: ['AI development', 'UX/UI', 'SaaS'],
-    //- },
-    {
-      picture: require('../../sources/images/docsdna_preview.png'),
-      link: 'https://www.behance.net/gallery/210120265/DocsDNA-AI-Powered-Document-Analysis-Website',
-      title: 'DocsDNA | Stylish multilingual website',
-      description: 'A stylish, multilingual website showcasing the DocsDNA application with a powerful, modern design.',
-      info: [],
-      tags: ['UX/UI', 'Web development', 'Multilingual'],
     },
   ]
 
 html
-  head 
+  head
     meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1") 
+    meta(name="viewport" content="width=device-width, initial-scale=1")
     meta(name="apple-mobile-web-app-capable" content="yes")
     meta(name="mobile-web-app-capable" content="yes")
 
@@ -109,7 +72,7 @@ html
     link(rel="apple-touch-icon" sizes="120x120" href=require('../../sources/images/apple-touch-icon-120x120.png'))
     link(rel="apple-touch-icon" sizes="152x152" href=require('../../sources/images/apple-touch-icon-152x152.png'))
     link(rel="apple-touch-icon" sizes="180x180" href=require('../../sources/images/apple-touch-icon-180x180.png'))
-  
+
     //- Google Tag Manager
     script.
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -118,7 +81,7 @@ html
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-PXHCM38Q');
     //- End Google Tag Manager
-  body 
+  body
 
     //-Google Tag Manager (noscript) -->
     iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-PXHCM38Q" height="0" width="0" style="display:none;visibility:hidden")
@@ -126,19 +89,15 @@ html
 
     include ../../components/header/header
     +header({ linksHeader: linksHeader, contactUs: '#contactUs' })
-    main 
-      include ../../components/main/main
+    main
+      include ../../components/upperGradientMain/upperGradientMain
+      include ../../components/solutions_v1/solutions
+      include ../../components/contactUs/contactUs
+      +contactUs({title: 'Optimize Your Procurement with ApolloRise Tech', subtitle: 'Contact us to explore AI solutions for smarter sourcing.'})
       //include ../../components/whatWeDo/whatWeDo
       //include ../../components/industries/industries
-      //
       //include ../../components/howWeWork/howWeWork
-      include ../../components/whyChooseApolloRise/whyChooseApolloRise
-      include ../../components/mainSolutions/mainSolutions
-      include ../../components/contactUs/contactUs
-
-      +contactUs({
-        title: 'Ready to Future-Proof Procurement?',
-        subtitle: 'Let’s discuss how AI-driven intelligence can optimize spending, enhance supplier management, and deliver measurable impact.'
-      })
+      //  include ../../components/whyChooseApolloRise/whyChooseApolloRise
+      //  include ../../components/mainSolutions/mainSolutions
     include ../../components/footer/footer
     +footer({ linksFooter: linksFooter, contactUs: '#contactUs' })

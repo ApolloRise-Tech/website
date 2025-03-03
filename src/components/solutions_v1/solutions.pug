@@ -22,7 +22,7 @@
       textBlock: {
         title: 'Procurement Intelligence',
         subTitle: 'Smarter Sourcing Starts with Smarter Data',
-        description: 'Procurement isn’t just about cutting costs — it’s about gaining a competitive edge. We help you with AI-driven intelligence to forecast risks, optimize supplier relationships, and make data-driven decisions in real-time.',
+        description: 'Procurement isn’t just about cutting costs—it’s about gaining a competitive edge. We help you with AI-driven intelligence to forecast risks, optimize supplier relationships, and make data-driven decisions in real-time.',
         bulletPoints: [
           'AI-powered insights to streamline supplier selection.',
           'Predictive analytics to anticipate market shifts.',
@@ -40,7 +40,7 @@
       textBlock: {
         title: 'Strategic Consulting',
         subTitle: 'Align Procurement with Business Strategy',
-        description: 'We don’t just advise — we execute. Our procurement consulting services combine deep expertise with AI-driven insights to help businesses reduce costs, manage risks, and drive transformative growth.',
+        description: 'We don’t just advise—we execute. Our procurement consulting services combine deep expertise with AI-driven insights to help businesses reduce costs, manage risks, and drive transformative growth.',
         bulletPoints: [
           'Data-backed procurement strategies tailored to your industry.',
           'Supplier risk assessments to mitigate exposure.',
@@ -92,19 +92,35 @@
     },
   ];
 
-section.solutions_section
-  .solutions_section__wrapper
-    .solutions
-      each caseItem, index in solutionsList
-        .solution-card
-          .solution-card__image
-            img(src=caseItem.imageBlock.image alt=`Solution: ${caseItem.textBlock.title}`)
-          .solution-card__content
-            h2.h2= caseItem.textBlock.title
-            div.solution-card__content_inner
-              h5.h5= caseItem.textBlock.subTitle
+section.block_wrapper.solutions_blockWrapper
+  .solutions
+    .solutions__wrapper.wrapper
+      .solutions_content
+        .case_messageContainer
+          each caseItem, index in solutionsList
+            .case_messageWrapper.message(id=`message${index+1}`)
+              img(src=caseItem.imageBlock.image alt=`Solution ${index}`)
+        .case_block
+          each caseItem, index in solutionsList
+            .case_textContainer(id=`case${index+1}`)
+              h2.h2.case_title= caseItem.textBlock.title
+              div
+                h3.h3.case_subTitle= caseItem.textBlock.subTitle
+                p.text_4.case_description= caseItem.textBlock.description
+                ul.case_list.text_4
+                  each bullet in caseItem.textBlock.bulletPoints
+                    li= bullet
+              a.button_yellow.size_m.case_button(href=caseItem.textBlock.buttonLink)= caseItem.textBlock.buttonText
+
+      .solutions_content.solutions_content__mobile
+        each caseItem, index in solutionsList
+          .case_textContainer(id=`case${index + 1}`)
+            h2.h2.case_title= caseItem.textBlock.title
+            div
+              h3.h3.case_subTitle= caseItem.textBlock.subTitle
               p.text_4.case_description= caseItem.textBlock.description
-              ul
+              ul.case_list.text_4
                 each bullet in caseItem.textBlock.bulletPoints
-                  li.text_4= bullet
-            button(type="button").button_yellow.size_m.solution-card__button=caseItem.textBlock.buttonText
+                  li= bullet
+            a.button_yellow.size_m.case_button(href=caseItem.textBlock.buttonLink)= caseItem.textBlock.buttonText
+

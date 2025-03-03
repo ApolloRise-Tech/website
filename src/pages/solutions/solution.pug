@@ -38,9 +38,9 @@
   ]
 
 html
-  head 
+  head
     meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1") 
+    meta(name="viewport" content="width=device-width, initial-scale=1")
     meta(name="apple-mobile-web-app-capable" content="yes")
     meta(name="mobile-web-app-capable" content="yes")
 
@@ -72,7 +72,7 @@ html
     link(rel="apple-touch-icon" sizes="120x120" href=require('../../sources/images/apple-touch-icon-120x120.png'))
     link(rel="apple-touch-icon" sizes="152x152" href=require('../../sources/images/apple-touch-icon-152x152.png'))
     link(rel="apple-touch-icon" sizes="180x180" href=require('../../sources/images/apple-touch-icon-180x180.png'))
-  
+
     //- Google Tag Manager
     script.
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -81,7 +81,7 @@ html
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-PXHCM38Q');
     //- End Google Tag Manager
-  body 
+  body
 
     //-Google Tag Manager (noscript) -->
     iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-PXHCM38Q" height="0" width="0" style="display:none;visibility:hidden")
@@ -89,10 +89,11 @@ html
 
     include ../../components/header/header
     +header({ linksHeader: linksHeader, contactUs: '#contactUs' })
-    main 
+    main
       include ../../components/upperGradientMain/upperGradientMain
       include ../../components/solutions/solutions
       include ../../components/contactUs/contactUs
+      +contactUs({title: 'Optimize Your Procurement with ApolloRise Tech', subtitle: 'Contact us to explore AI solutions for smarter sourcing.'})
       //include ../../components/whatWeDo/whatWeDo
       //include ../../components/industries/industries
       //include ../../components/howWeWork/howWeWork

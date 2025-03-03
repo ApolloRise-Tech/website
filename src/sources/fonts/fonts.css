@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Cygre-Light';
+  font-weight: 300;
+  font-style: normal;
+  src: url('./Cygre-Light-BF63eeebf809d3d.ttf');
+}
 
 @font-face {
   font-family: 'Cygre-L';
