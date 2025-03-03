@@ -1,0 +1,121 @@
+-
+  const workCards = [
+    {
+      number: '1',
+      title: 'Discover & Assess — Understand your Procurement Landscape',
+      subTitle: 'We start with a deep dive into your current procurement challenges, supplier networks, and contract performance.',
+      items: [
+        {
+          'text': 'AI-powered data assessment to identify inefficiencies and risks.',
+        },
+        {
+          'text': 'Spend analytics to uncover hidden cost-saving opportunities.',
+        },
+        {
+          'text': 'Compliance evaluation to reduce exposure and strengthen supplier relationships.',
+        }
+      ],
+      description: 'Your procurement data holds the answers — our AI helps you find them.',
+      buttonText: 'Assess now',
+      buttonLink: '#',
+    },
+    {
+      number: '2',
+      title: 'Optimize & Automate — Turn Insights into Action',
+      subTitle: 'Once we understand your procurement operations, we transform them.',
+      items: [
+        {
+          'text': 'Automated RFQs & contract workflows to eliminate manual bottlenecks.',
+        },
+        {
+          'text': 'AI-driven supplier intelligence for better negotiations and risk management.',
+        },
+        {
+          'text': 'Predictive analytics to move from reactive to proactive procurement.',
+        }
+      ],
+      description: 'Procurement should work at the speed of business. We make sure it does.',
+      buttonText: 'Optimize now',
+      buttonLink: '#',
+    },
+    {
+      number: '3',
+      title: 'Execute & Scale — Procurement that Grows with you',
+      subTitle: 'Execution is where strategies succeed or fail. We don’t just recommend — we implement.',
+      items: [
+        {
+          'text': 'Real-time visibility into supplier performance & contract execution.',
+        },
+        {
+          'text': 'Continuous optimization powered by AI-driven insights.',
+        },
+        {
+          'text': 'Scalable procurement models designed for agility and growth.',
+        }
+      ],
+      description: 'We help procurement teams scale like enterprises — without the complexity.',
+      buttonText: 'Scale now',
+      buttonLink: '#',
+    },
+
+  ]
+
+section(data-color="white" id="ourProcesses").howWeWork.colorSection
+  h6.subtitle.howWeWork__subtitle._anim-items._anim-no-hide Our Process
+  h2.h1.howWeWork__title._anim-items._anim-no-hide
+    | Intelligent Procurement
+    br
+    | in Action
+  each workCard in workCards
+    .howWeWork__card
+      .howWeWork__card_title
+        .howWeWork__card_number
+          span.text_3= workCard.number
+        h3.h2= workCard.title
+      .howWeWork__body
+        h4.h4= workCard.subTitle
+        ul
+          each item in workCard.items
+            li.text_4= item.text
+        .howWeWork__bottom_container
+          .howWeWork__bottom
+            img(src=require('../../sources/images/decor_sphere.png'), alt='decor sphere')
+            p.text_4.howWeWork__card_description= workCard.description
+          button(type="button").button_yellow.size_m.solution-card__button=workCard.buttonText
+
+  .howWeWork__cards_swiper
+    .swiper-wrapper
+      each workCard in workCards
+        .swiper-slide._anim-items._anim-no-hide
+          .howWeWork__card
+            .howWeWork__card_number
+              span.text_3= workCard.number
+            h3.h2.howWeWork__card_title= workCard.title
+            p.howWeWork__card_description= workCard.description
+    .howWeWork__cards_navigation
+      .swiper-button-prev.howWeWork-button-prev
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <g clip-path="url(#clip0_1_3106)">
+            <path d="M20.25 12H3.75" stroke="#23221F" stroke-width="1.5"/>
+            <path d="M10.5 5.25L3.75 12L10.5 18.75" stroke="#23221F" stroke-width="1.5"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_1_3106">
+              <rect width="24" height="24" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+      .swiper-pagination.howWeWork-pagination
+      .swiper-button-next.howWeWork-button-next
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <g clip-path="url(#clip0_1_3118)">
+            <path d="M3.75 12H20.25" stroke="#23221F" stroke-width="1.5"/>
+            <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="#23221F" stroke-width="1.5"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_1_3118">
+              <rect width="24" height="24" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+      

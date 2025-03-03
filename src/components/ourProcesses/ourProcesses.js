@@ -1,4 +1,4 @@
-import "./howWeWork.scss";
+import "./ourProcesses.scss";
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';

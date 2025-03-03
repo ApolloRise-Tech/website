@@ -2,6 +2,7 @@ import "../../style/index.scss";
 
 import '../../components/header/header';
 import '../../components/upperHalfGradient/upperHalfGradient';
+import '../../components/ourProcesses/ourProcesses';
 import '../../components/whyChooseApolloRise/whyChooseApolloRise';
 import '../../components/contactUs/contactUs';
 import '../../components/footer/footer';
