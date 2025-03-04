@@ -88,10 +88,20 @@ section(data-color="white" id="ourProcesses").howWeWork.colorSection
       each workCard in workCards
         .swiper-slide._anim-items._anim-no-hide
           .howWeWork__card
-            .howWeWork__card_number
-              span.text_3= workCard.number
-            h3.h2.howWeWork__card_title= workCard.title
-            p.howWeWork__card_description= workCard.description
+            .howWeWork__card_title
+              .howWeWork__card_number
+                span.text_3= workCard.number
+              h3.h2.howWeWork__card_title= workCard.title
+            .howWeWork__body
+              h4.h4= workCard.subTitle
+              ul
+                each item in workCard.items
+                  li.text_4= item.text
+            .howWeWork__bottom_container
+              .howWeWork__bottom
+                img(src=require('../../sources/images/decor_sphere.png'), alt='decor sphere')
+                p.text_4.howWeWork__card_description= workCard.description
+              button(type="button").button_yellow.size_m.solution-card__button=workCard.buttonText
     .howWeWork__cards_navigation
       .swiper-button-prev.howWeWork-button-prev
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

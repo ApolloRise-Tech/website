@@ -44,6 +44,7 @@ const StackCards = function(element) {
   this.items = this.element.getElementsByClassName('howWeWork__card');
   this.scrollingListener = false;
   this.scrolling = false;
+  this.threshold = 0.7;
   initStackCardsEffect(this);
 };
 
@@ -55,7 +56,7 @@ function initStackCardsEffect(element) { // use Intersection Observer to trigger
 
 function setStackCards(element) {
   // store wrapper properties
-  element.marginY = 30;
+  element.marginY = 90;
   // getIntegerFromProperty(element); // convert element.marginY to integer (px value)
   element.elementHeight = element.element.offsetHeight;
 
@@ -71,7 +72,7 @@ function setStackCards(element) {
   if(isNaN(element.marginY)) {
     element.element.style.paddingBottom = '0px';
   } else {
-    element.element.style.paddingBottom = (element.marginY*(element.items.length - 1))+'px';
+    element.element.style.paddingBottom = (element.marginY*(element.items.length - 1) - 200)+'px';
   }
 
   for(var i = 0; i < element.items.length; i++) {
@@ -116,7 +117,7 @@ function animateStackCards() {
   // cardTop/cardHeight/marginY are the css values for the card top position/height/Y offset
     const scrolling = this.cardTop - top - i*(this.cardHeight+this.marginY);
     if(scrolling > 0) { // card is fixed - we can scale it down
-      this.items[i].setAttribute('style', 'transform: translateY('+this.marginY*i+'px) scale('+(this.cardHeight - scrolling*0.05)/this.cardHeight+'); opacity: '+(this.cardHeight - scrolling*0.005)/this.cardHeight+';');
+      this.items[i].setAttribute('style', 'transform: translateY('+this.marginY*i+'px) scale('+(this.cardHeight - scrolling*0.05)/this.cardHeight+'); opacity: '+(this.cardHeight - scrolling*0.025)/this.cardHeight+';');
     }
 
     if(i === 5) {
