@@ -13,6 +13,7 @@ import './why.scss';
 import { animateItems } from '../../utils/animateItems';
 import { sectionActivation } from '../../utils/sectionActivation';
 import { navigateToAnchorBlock } from '../../utils/navigateToAnchorBlock';
+import { bindActionScroll } from '../../utils/bindActionScroll';
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -65,4 +66,5 @@ document.addEventListener("DOMContentLoaded", function() {
   navigateToAnchorBlock(anchorHeaderLinks);
   navigateToAnchorBlock(anchorHeaderMobileLinks);
   navigateToAnchorBlock(anchorFooterLinks);
+  bindActionScroll();
 })
