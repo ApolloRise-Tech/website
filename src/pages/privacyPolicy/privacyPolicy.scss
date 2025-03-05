@@ -1,0 +1,27 @@
+.privacy-policy {
+  padding: 64px 48px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media screen and (max-width: 1600px) {
+    padding: 48px 48px 80px;
+    gap: 16px;
+  }
+  @media screen and (max-width: 1136px) {
+    padding: 48px 48px 94px;
+    gap: 16px;
+  }
+  @media screen and (max-width: 836px) {
+    padding: 48px 32px 76px;
+    gap: 8px;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 36px 16px 136px;
+    gap: 8px;
+  }
+
+  .h1 {
+    margin-bottom: 24px;
+  }
+}
