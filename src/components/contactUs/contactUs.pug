@@ -128,6 +128,21 @@ mixin contactUs(options)
       //  span What are you interested in?
       //  input(type="text" name="interest")
 
+      label(for="why").contactUs__label
+        span What are you interested in?
+        input(type="hidden" name="why")
+        div.contactUs__customSelect.custom-select
+          div.select-selected 
+            p Select
+            svg(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+              path(d="M1 1.5L6 6.5L11 1.5" stroke="#FFF2C4" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round")
+          div.select-items.select-hide
+            div Contract Performance & Compliance
+            div Procurement Intelligence
+            div Execution Development
+            div M&A Due Diligence
+            div General Inquiry
+
       label(for="details").contactUs__label
         span Describe your needs
         textarea(name="details", cols="1", rows="6" )

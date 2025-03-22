@@ -2,10 +2,54 @@ import "./contactUs.scss";
 
 const url = 'https://apollorise.tech/contact.php';
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const contactUsForm = document.getElementById('contactUsForm');
   const policyInput = document.getElementsByName('policy')[0];
   const buttonSubmit = document.getElementById('contactUsButtonSubmit')
+
+  const select = document.querySelector('.custom-select');
+  const selected = select.querySelector('.select-selected');
+  const items = select.querySelector('.select-items');
+  const hiddenInput = document.getElementsByName('why')?.[0];
+
+  // Показать / скрыть список при клике
+  selected.addEventListener('click', function (e) {
+    e.stopPropagation();
+    items.classList.toggle('select-hide');
+    selected.classList.toggle('select-arrow-active');
+  });
+
+  // Клик на элемент списка
+  items.querySelectorAll('div').forEach(item => {
+    item.addEventListener('click', function (e) {
+      const value = this.textContent;
+      const paragraf = selected.getElementsByTagName('p')[0];
+
+      if (paragraf) {
+        paragraf.textContent = value;
+      }
+
+      hiddenInput.value = value;
+
+      items.querySelectorAll('div').forEach(el => {
+        el.classList.remove('active');
+      });
+
+      this.classList.add('active');
+
+      closeSelect()
+    });
+  });
+
+  // Закрытие селекта при клике вне его
+  document.addEventListener('click', closeSelect);
+
+  function closeSelect() {
+    if (selected.classList.contains('select-arrow-active')) {
+      selected.classList.remove('select-arrow-active');
+      items.classList.add('select-hide');
+    }
+  }
 
   const checkValidForm = () => {
     const fieldsToCheck = ['name', 'email', 'company', 'title'];
@@ -27,27 +71,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const submitForm = async () => {
     const isCanSubmit = checkValidForm();
-  
+
     if (isCanSubmit) {
       const formData = new FormData(contactUsForm);
       const headers = new Headers();
       headers.append("Accept", "application/json");
-  
-      const requestOptions = {
-        method: 'POST',
-        mode: "cors",
-        headers,
-        body: formData,
-        redirect: 'follow'
-      };
-      buttonSubmit.disabled = true;
-      try {
-        await fetch(url, requestOptions);
-        window.location.href = '/successContact.html';
-      } catch (e) {
-        buttonSubmit.disabled = false;
-        alert("Please try again");
+
+      for (let [name, value] of formData) {
+        console.log(`${name} = ${value}`); // key1=value1, потом key2=value2
       }
+      // const requestOptions = {
+      //   method: 'POST',
+      //   mode: "cors",
+      //   headers,
+      //   body: formData,
+      //   redirect: 'follow'
+      // };
+      // buttonSubmit.disabled = true;
+      // try {
+      //   await fetch(url, requestOptions);
+      //   window.location.href = '/successContact.html';
+      // } catch (e) {
+      //   buttonSubmit.disabled = false;
+      //   alert("Please try again");
+      // }
     }
   }
 
@@ -55,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
     event.preventDefault();
     await submitForm();
   });
-  
+
 
   policyInput.addEventListener('change', (event) => {
     if (event.currentTarget.checked) {
@@ -66,3 +113,4 @@ document.addEventListener("DOMContentLoaded", function() {
   })
 
 })
+
