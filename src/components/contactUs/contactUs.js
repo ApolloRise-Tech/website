@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const buttonSubmit = document.getElementById('contactUsButtonSubmit')
 
   const checkValidForm = () => {
-    const fieldsToCheck = ['name', 'email', 'company', 'details'];
+    const fieldsToCheck = ['name', 'email', 'company', 'title'];
     let isCanSubmit = true;
 
     fieldsToCheck.forEach(field => {
