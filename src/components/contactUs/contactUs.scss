@@ -159,6 +159,15 @@
     display: flex;
     gap: 20px;
 
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    transform: translate(0px, 160px);
+
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+
     @media screen and (max-width: 1440px) {
       gap: 16px;
 
@@ -166,6 +175,9 @@
         width: 40px;
         height: 40px;
       }
+    }
+    @media screen and (max-width: 900px) {
+      transform: translate(0px, 96px);
     }
   }
 

@@ -96,7 +96,7 @@ section.solutions_section
   .solutions_section__wrapper
     .solutions
       each caseItem, index in solutionsList
-        .solution-card
+        .solution-card._anim-items._anim-no-hide
           .solution-card__image
             img(src=caseItem.imageBlock.image alt=`Solution: ${caseItem.textBlock.title}`)
           .solution-card__content

@@ -18,7 +18,7 @@ import { sectionActivation } from '../../utils/sectionActivation';
 import { navigateToAnchorBlock } from '../../utils/navigateToAnchorBlock';
 import { bindActionScroll } from '../../utils/bindActionScroll';
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
   const DELAY = 300;
   const HEADER_HEIGHT = 55;
@@ -32,11 +32,11 @@ document.addEventListener("DOMContentLoaded", function() {
   const anchorHeaderMobileLinks = document.querySelectorAll(".header__mobile_link");
   const anchorFooterLinks = document.querySelectorAll(".footer__link");
 
-  if(animItems.length > 0 && header) {
+  if (animItems.length > 0 && header) {
     window.addEventListener('scroll', animOnScroll);
     function animOnScroll() {
 
-      if(pageYOffset > HEADER_HEIGHT) {
+      if (pageYOffset > HEADER_HEIGHT) {
         header.classList.add('header-scroll');
       } else {
         header.classList.remove('header-scroll');
@@ -45,10 +45,10 @@ document.addEventListener("DOMContentLoaded", function() {
       const activeSection = document.querySelector('.colorSection.activeSection');
       if (activeSection && activeSection.getAttribute('data-color') === 'dark') {
         header.classList.add('dark');
-        metaTheme.setAttribute('content',  '#23221F');
+        metaTheme.setAttribute('content', '#23221F');
       } else {
         header.classList.remove('dark');
-        metaTheme.setAttribute('content',  '#FCFBF8');
+        metaTheme.setAttribute('content', '#FCFBF8');
       }
 
       if (activeSection && !activeSection.classList.contains("main")) {
