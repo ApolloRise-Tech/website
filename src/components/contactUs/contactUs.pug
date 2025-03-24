@@ -75,13 +75,13 @@ mixin contactUs(options)
         input(type="email" name="email")
         .contactUs__label_error.text_5
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <g clip-path="url(#clip0_389_5665)">
+            <g clip-path="url(#clip0_389_5666)">
               <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#FF6A6A" stroke-width="1.25" stroke-miterlimit="10"/>
               <path d="M10 10.625V6.25" stroke="#FF6A6A" stroke-width="1.25" stroke-linecap="square" stroke-linejoin="round"/>
               <path d="M9.99805 14.5178C10.4759 14.5178 10.8633 14.1304 10.8633 13.6526C10.8633 13.1747 10.4759 12.7874 9.99805 12.7874C9.52019 12.7874 9.13281 13.1747 9.13281 13.6526C9.13281 14.1304 9.52019 14.5178 9.99805 14.5178Z" fill="#FF6A6A"/>
             </g>
             <defs>
-              <clipPath id="clip0_389_5665">
+              <clipPath id="clip0_389_5666">
                 <rect width="20" height="20" fill="white"/>
               </clipPath>
             </defs>
@@ -92,13 +92,13 @@ mixin contactUs(options)
         input(type="text" name="title")
         .contactUs__label_error.text_5
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <g clip-path="url(#clip0_389_5665)">
+          <g clip-path="url(#clip0_389_5667)">
           <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#FF6A6A" stroke-width="1.25" stroke-miterlimit="10"/>
           <path d="M10 10.625V6.25" stroke="#FF6A6A" stroke-width="1.25" stroke-linecap="square" stroke-linejoin="round"/>
           <path d="M9.99805 14.5178C10.4759 14.5178 10.8633 14.1304 10.8633 13.6526C10.8633 13.1747 10.4759 12.7874 9.99805 12.7874C9.52019 12.7874 9.13281 13.1747 9.13281 13.6526C9.13281 14.1304 9.52019 14.5178 9.99805 14.5178Z" fill="#FF6A6A"/>
           </g>
           <defs>
-          <clipPath id="clip0_389_5665">
+          <clipPath id="clip0_389_5667">
           <rect width="20" height="20" fill="white"/>
           </clipPath>
           </defs>
@@ -109,25 +109,35 @@ mixin contactUs(options)
         input(type="text" name="company")
         .contactUs__label_error.text_5
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <g clip-path="url(#clip0_389_5665)">
+            <g clip-path="url(#clip0_389_5668)">
               <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#FF6A6A" stroke-width="1.25" stroke-miterlimit="10"/>
               <path d="M10 10.625V6.25" stroke="#FF6A6A" stroke-width="1.25" stroke-linecap="square" stroke-linejoin="round"/>
               <path d="M9.99805 14.5178C10.4759 14.5178 10.8633 14.1304 10.8633 13.6526C10.8633 13.1747 10.4759 12.7874 9.99805 12.7874C9.52019 12.7874 9.13281 13.1747 9.13281 13.6526C9.13281 14.1304 9.52019 14.5178 9.99805 14.5178Z" fill="#FF6A6A"/>
             </g>
             <defs>
-              <clipPath id="clip0_389_5665">
+              <clipPath id="clip0_389_5668">
                 <rect width="20" height="20" fill="white"/>
               </clipPath>
             </defs>
           </svg>
           span This field is required
-      //label(for="phone").contactUs__label
-      //  span Phone number
-      //  input(type="text" name="phone")
-      //label(for="interest").contactUs__label
-      //  span What are you interested in?
-      //  input(type="text" name="interest")
-
+      label.contactUs__label.phone(for="phone")
+        span Phone number
+        input(type="tel" id="phone" name='phone' autocomplete="new-password")
+        .contactUs__label_error.text_5
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <g clip-path="url(#clip0_389_5669)">
+              <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#FF6A6A" stroke-width="1.25" stroke-miterlimit="10"/>
+              <path d="M10 10.625V6.25" stroke="#FF6A6A" stroke-width="1.25" stroke-linecap="square" stroke-linejoin="round"/>
+              <path d="M9.99805 14.5178C10.4759 14.5178 10.8633 14.1304 10.8633 13.6526C10.8633 13.1747 10.4759 12.7874 9.99805 12.7874C9.52019 12.7874 9.13281 13.1747 9.13281 13.6526C9.13281 14.1304 9.52019 14.5178 9.99805 14.5178Z" fill="#FF6A6A"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_389_5669">
+                <rect width="20" height="20" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+          span Enter a valid phone
       label(for="why").contactUs__label
         span What are you interested in?
         input(type="hidden" name="why")

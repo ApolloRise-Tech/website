@@ -1,3 +1,6 @@
+import intlTelInput from 'intl-tel-input';
+
+import 'intl-tel-input/build/css/intlTelInput.css';
 import "./contactUs.scss";
 
 const url = 'https://apollorise.tech/contact.php';
@@ -11,6 +14,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const selected = select.querySelector('.select-selected');
   const items = select.querySelector('.select-items');
   const hiddenInput = document.getElementsByName('why')?.[0];
+
+  let iti = undefined;
+
+  const phone = document.querySelector("#phone");
+
+  if (phone) {
+    iti = intlTelInput(phone, {
+      initialCountry: "us",
+      preferredCountries: ['us', 'gb'],
+      separateDialCode: true,
+      placeholderNumberType: "MOBILE",
+      countrySearch: false,
+      useFullscreenPopup: false,
+      utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/utils.js'
+    });
+  }
 
   // Показать / скрыть список при клике
   selected.addEventListener('click', function (e) {
@@ -51,6 +70,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  const EMAIL_REGEXP = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/gm;
+  const validatePhoneNumber = (phoneNumber) => {
+    // This regex covers international phone numbers with optional + and country code
+    const regex = /^\+?[1-9]\d{0,2}[\s-]?\(?\d{1,3}\)?[\s-]?\d{3}[\s-]?\d{4}$|^\d{10}$/;
+    return regex.test(phoneNumber);
+  }
+
   const checkValidForm = () => {
     const fieldsToCheck = ['name', 'email', 'company', 'title'];
     let isCanSubmit = true;
@@ -66,6 +92,15 @@ document.addEventListener("DOMContentLoaded", function () {
         label.classList.remove('error');
       }
     });
+
+    const label = document.querySelector(`.contactUs__label[for="phone"]`);
+    if (Boolean(phone.value) && !validatePhoneNumber(`+${iti.selectedCountryData.dialCode}${phone?.value}`)) {
+      isCanSubmit = false;
+      label.classList.add('error');
+    } else {
+      label.classList.remove('error');
+    }
+
     return isCanSubmit;
   }
 
@@ -75,6 +110,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isCanSubmit) {
       const formData = new FormData(contactUsForm);
       const headers = new Headers();
+      if (phone) {
+        formData.delete('phone');
+        const phoneValue = `+${iti.selectedCountryData.dialCode}${phone?.value || ''}`;
+        formData.append('phone', phoneValue)
+      }
       headers.append("Accept", "application/json");
 
       for (let [name, value] of formData) {
