@@ -228,6 +228,14 @@
   .swiper-wrapper {
     height: 266px;
     margin-bottom: 24px;
+
+    @media screen and (max-width: 836px) {
+      height: 364px;
+    }
+
+    @media screen and (max-width: 600px) {
+      height: 266px;
+    }
   }
 
   &__navigation {
@@ -290,6 +298,7 @@
   .swiper-slide {
     position: relative;
     opacity: 0;
+    transition: all 0.8s ease 0s;
 
     &:hover {
       z-index: 1;

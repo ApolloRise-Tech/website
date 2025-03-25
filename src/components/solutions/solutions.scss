@@ -46,6 +46,10 @@
     position: relative;
     min-height: 50vh;
 
+    transform: translate(0px, 104px);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+
     &:nth-child(2n) {
       flex-direction: row-reverse;
 
@@ -74,6 +78,11 @@
           filter: blur(2px);
         }
       }
+    }
+
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
     }
   }
 

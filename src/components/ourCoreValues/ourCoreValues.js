@@ -3,9 +3,9 @@ import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   new Swiper(".ourCoreValues__swiper", {
-    modules: [ Navigation, Pagination ],
+    modules: [Navigation, Pagination],
     slidesPerView: 1.1,
     spaceBetween: 8,
     touchEventsTarget: 'container',

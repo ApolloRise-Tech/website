@@ -15,7 +15,9 @@
         buttonLink: '#'
       },
       imageBlock: {
-        image: require('../../sources/images/solution_1.png')
+        image_1920: require('../../sources/images/solution_1_1920.png'),
+        image_1024: require('../../sources/images/solution_1_1024.png'),
+        image_600: require('../../sources/images/solution_1_600.png'),
       }
     },
     {
@@ -33,7 +35,9 @@
         buttonLink: '#'
       },
       imageBlock: {
-        image: require('../../sources/images/solution_2.png')
+        image_1920: require('../../sources/images/solution_2_1920.png'),
+        image_1024: require('../../sources/images/solution_2_1024.png'),
+        image_600: require('../../sources/images/solution_2_600.png'),
       }
     },
     {
@@ -51,7 +55,9 @@
         buttonLink: '#'
       },
       imageBlock: {
-        image: require('../../sources/images/solution_3.png')
+        image_1920: require('../../sources/images/solution_3_1920.png'),
+        image_1024: require('../../sources/images/solution_3_1024.png'),
+        image_600: require('../../sources/images/solution_3_600.png'),
       }
     },
     {
@@ -69,7 +75,9 @@
         buttonLink: '#'
       },
       imageBlock: {
-        image: require('../../sources/images/solution_4.png')
+        image_1920: require('../../sources/images/solution_4_1920.png'),
+        image_1024: require('../../sources/images/solution_4_1024.png'),
+        image_600: require('../../sources/images/solution_4_600.png'),
       }
     },
     {
@@ -87,7 +95,9 @@
         buttonLink: '#'
       },
       imageBlock: {
-        image: require('../../sources/images/solution_5.png')
+        image_1920: require('../../sources/images/solution_5_1920.png'),
+        image_1024: require('../../sources/images/solution_5_1024.png'),
+        image_600: require('../../sources/images/solution_5_600.png'),
       }
     },
   ];
@@ -96,9 +106,12 @@ section.solutions_section
   .solutions_section__wrapper
     .solutions
       each caseItem, index in solutionsList
-        .solution-card
+        .solution-card._anim-items._anim-no-hide
           .solution-card__image
-            img(src=caseItem.imageBlock.image alt=`Solution: ${caseItem.textBlock.title}`)
+            picture
+              source(media="(min-width: 1024px)" srcset=caseItem.imageBlock.image_1920)
+              source(media="(min-width: 600px)" srcset=caseItem.imageBlock.image_1024)
+              img(src=caseItem.imageBlock.image_600 alt=`Solution: ${caseItem.textBlock.title}` loading="lazy")
           .solution-card__content
             h2.h2= caseItem.textBlock.title
             div.solution-card__content_inner
