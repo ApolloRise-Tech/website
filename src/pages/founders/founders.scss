@@ -91,6 +91,7 @@
     max-width: 50%;
     margin: 0 0 0 auto;
     color: var(--black3);
+    text-align: left;
 
     transform: translate(0px, 128px);
     opacity: 0;
@@ -131,12 +132,12 @@
     display: grid;
     grid-template-columns: 1fr 160px;
     gap: 48px;
-    padding: 80px;
+    padding: 48px;
     border-radius: 12px;
     background: var(--black);
 
     @media screen and (max-width: 1280px) {
-      padding: 64px 48px;
+      padding: 48px 32px;
     }
 
     @media screen and (max-width: 834px) {
@@ -145,7 +146,7 @@
     }
 
     @media screen and (max-width: 600px) {
-      padding: 32px 20px;
+      padding: 32px 16px;
       gap: 32px;
     }
 
@@ -299,15 +300,11 @@
     align-items: center;
     justify-content: center;
     gap: 32px;
-    padding: 120px 100px;
+    padding: 80px 48px;
     border-radius: 12px;
     background: var(--black);
     text-align: center;
     color: var(--yellowWhite);
-
-    @media screen and (max-width: 1280px) {
-      padding: 80px 48px;
-    }
 
     @media screen and (max-width: 834px) {
       padding: 64px 32px;
@@ -315,7 +312,7 @@
     }
 
     @media screen and (max-width: 600px) {
-      padding: 48px 20px;
+      padding: 48px 16px;
       text-align: left;
       align-items: flex-start;
     }
@@ -334,7 +331,6 @@
   }
 
   &__title {
-    max-width: 720px;
     color: var(--yellowLight);
     transform: translate(0px, 48px);
     opacity: 0;
@@ -347,11 +343,15 @@
   }
 
   &__text {
-    max-width: 600px;
+    max-width: 70%;
     color: var(--black1);
     transform: translate(0px, 48px);
     opacity: 0;
     transition: all 0.6s ease 0.15s;
+
+    @media screen and (max-width: 600px) {
+      max-width: unset;
+    }
 
     &._active {
       transform: translate(0px, 0px);
