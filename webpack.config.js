@@ -13,9 +13,11 @@ module.exports = (env) => {
     mode,
 
     entry: {
-      index: path.resolve(__dirname, 'src', 'pages',  'index', 'index.js'),
+      index: path.resolve(__dirname, 'src', 'pages', 'index', 'index.js'),
       docsdnaApp: path.resolve(__dirname, 'src', 'pages', 'cases', 'docsdnaApp', 'cases.js'),
       career: path.resolve(__dirname, 'src', 'pages', 'career', 'career.js'),
+      founders: path.resolve(__dirname, 'src', 'pages', 'founders', 'founders.js'),
+      portfolio: path.resolve(__dirname, 'src', 'pages', 'portfolio', 'portfolio.js'),
       successCareer: path.resolve(__dirname, 'src', 'pages', 'successCareer', 'successCareer.js'),
       successContact: path.resolve(__dirname, 'src', 'pages', 'successContact', 'successContact.js'),
       notFound: path.resolve(__dirname, 'src', 'pages', 'notFound', '404.js'),
@@ -59,6 +61,16 @@ module.exports = (env) => {
         template: path.resolve(__dirname, 'src', 'pages', 'notFound', '404.pug'),
         filename: '404.html',
         chunks: ['notFound'],
+      }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src', 'pages', 'founders', 'founders.pug'),
+        filename: 'founders.html',
+        chunks: ['founders'],
+      }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src', 'pages', 'portfolio', 'portfolio.pug'),
+        filename: 'portfolio.html',
+        chunks: ['portfolio'],
       }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].[contenthash:8].css',
@@ -130,13 +142,13 @@ module.exports = (env) => {
 
     devServer: isDev
       ? {
-          watchFiles: ['build/**/*'],
-          port: PORT,
-          open: true,
-          historyApiFallback: true,
-          hot: true,
-          liveReload: true,
-        }
+        watchFiles: ['build/**/*'],
+        port: PORT,
+        open: true,
+        historyApiFallback: true,
+        hot: true,
+        liveReload: true,
+      }
       : undefined,
   };
 };

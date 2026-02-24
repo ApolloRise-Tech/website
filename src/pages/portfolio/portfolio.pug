@@ -1,0 +1,210 @@
+- 
+  const linksHeader = [
+    {
+      name: 'About', 
+      url: '/#about'
+    },
+    {
+      name: 'Services', 
+      url: '/#whatWeDo'
+    },
+    {
+      name: 'Our Work', 
+      url: 'portfolio.html'
+    },
+    {
+      name: 'Founders', 
+      url: 'founders.html'
+    },
+    {
+      name: 'Careers', 
+      url: 'career.html'
+    },
+  ]
+
+- 
+  const linksFooter = [
+    {
+      name: 'About', 
+      url: '/#about'
+    },
+    {
+      name: 'Services', 
+      url: '/#whatWeDo'
+    },
+    {
+      name: 'Our Work', 
+      url: 'portfolio.html'
+    },
+    {
+      name: 'Founders', 
+      url: 'founders.html'
+    },
+    {
+      name: 'Career', 
+      url: 'career.html'
+    },
+  ]
+
+-
+  const projects = [
+    {
+      picture: require('../../sources/images/design1_1920.png'),
+      link: '/cases/docsdna-app.html',
+      targetLink: '_self',
+      title: 'DocsDNA | Agentic AI Document Review',
+      description: 'Turns hours of manual contract review into minutes. Agentic OCR + AI extraction — built from scratch, shipped as SaaS.',
+      info: [],
+      tags: ['Agentic AI', 'LegalTech', 'MVP → SaaS', 'UX/UI'],
+    },
+    {
+      picture: require('../../sources/images/docsdna_preview.png'),
+      link: 'https://www.behance.net/gallery/210120265/DocsDNA-AI-Powered-Document-Analysis-Website',
+      title: 'DocsDNA | Multilingual Brand Website',
+      description: 'A premium multilingual marketing website for the DocsDNA product, built with attention to detail and conversion in mind.',
+      info: [],
+      tags: ['UX/UI', 'Web Development', 'Multilingual'],
+    },
+    {
+      picture: require('../../sources/images/docsdna_preview.png'),
+      link: '',
+      title: 'Pulsar | GenAI Price Intelligence',
+      description: 'A GenAI-powered system that analyzes supplier invoices, detects anomalies, and surfaces cost-saving alternatives. Built for enterprise procurement.',
+      info: [],
+      tags: ['GenAI', 'Supply Chain', 'Algorithm Design', 'Enterprise'],
+    },
+    {
+      picture: require('../../sources/images/design1_1920.png'),
+      link: '',
+      title: 'Parseon | Agentic AI OCR Engine',
+      description: 'Converts complex multi-page document scans into structured, machine-readable data with near-perfect accuracy using multi-agent AI workflows.',
+      info: [],
+      tags: ['Agentic AI', 'OCR', 'Document AI', 'Enterprise'],
+    },
+    {
+      picture: require('../../sources/images/design1_1920.png'),
+      link: '',
+      title: 'Oriona | HealthTech Mobile App',
+      description: 'A full-featured mobile health platform built for the US market — patient flows, care coordination, and a modern UX for both patients and providers.',
+      info: [],
+      tags: ['HealthTech', 'Mobile', 'React Native', 'UX/UI'],
+    },
+    {
+      picture: require('../../sources/images/docsdna_preview.png'),
+      link: '',
+      title: 'Supply Chain Event Intelligence',
+      description: 'Real-time event aggregation and intelligent chatbot for supply chain disruption monitoring — built for a US logistics enterprise.',
+      info: [],
+      tags: ['Supply Chain', 'Chatbot', 'AI', 'Enterprise'],
+    },
+    {
+      picture: require('../../sources/images/design1_1920.png'),
+      link: '',
+      title: 'German Language Learning Platform',
+      description: 'An MVP that grew to 1000+ active users. Gamified lessons, progress tracking, and a delightful UX — for the European EdTech market.',
+      info: [],
+      tags: ['EdTech', 'MVP', 'Angular', '1000+ Users'],
+    },
+    {
+      picture: require('../../sources/images/docsdna_preview.png'),
+      link: '',
+      title: 'Hospitality RFP Sales Tool',
+      description: 'AI-powered RFP generator and response engine built for hotel sales teams — reduces proposal creation time from hours to minutes.',
+      info: [],
+      tags: ['Hospitality', 'AI', 'SaaS', 'GenAI'],
+    },
+    {
+      picture: require('../../sources/images/design1_1920.png'),
+      link: '',
+      title: 'Predictive Analytics Platform | Hospitality',
+      description: 'A revenue intelligence platform using ML to forecast demand, optimize pricing, and surface competitive insights for hotel revenue managers.',
+      info: [],
+      tags: ['Hospitality', 'Predictive Analytics', 'ML', 'Python'],
+    },
+    {
+      picture: require('../../sources/images/docsdna_preview.png'),
+      link: '',
+      title: 'Custom MCP Tools',
+      description: 'Bespoke Model Context Protocol integrations enabling enterprise teams to drive AI models with proprietary data and workflows — securely, at scale.',
+      info: [],
+      tags: ['Agentic AI', 'MCP', 'LLM', 'Enterprise'],
+    },
+    {
+      picture: require('../../sources/images/design1_1920.png'),
+      link: '',
+      title: 'AI Literacy Program',
+      description: 'An interactive online AI education program built for non-technical professionals — helping them understand and apply AI tools in their daily work.',
+      info: [],
+      tags: ['EdTech', 'AI Education', 'Online Course', 'Product'],
+    },
+  ]
+
+html
+  head 
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1") 
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="mobile-web-app-capable" content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    meta(name="theme-color" content="#FCFBF8")
+
+    title Our Work | ApolloRise Tech Portfolio
+    meta(name="description" content="10+ products shipped. MVPs, Enterprise AI platforms, HealthTech apps, GenAI tools. Every project a story we are proud of. Browse ApolloRise Tech's portfolio.")
+    meta(name="author" content="Yurii Kapkov")
+
+    meta(property="og:type" content="website")
+    meta(property="og:title" content="Our Work | ApolloRise Tech Portfolio")
+    meta(property="og:description" content="10+ shipped products. Every one of them a story we're proud of.")
+    meta(property="og:url" content="https://apollorise.tech/portfolio")
+    meta(property="og:image" content="https://apollorise.tech/sources/images/picture.png")
+    meta(property="og:site_name" content="apollorise.tech")
+
+    link(rel='stylesheet', href='../../sources/fonts/fonts.css')
+
+    link(rel="icon" type="image/png" href=require('../../sources/images/favicon.png'))
+    link(rel="shortcut icon" href=require('../../sources/images/favicon.ico'))
+    link(rel="apple-touch-icon" sizes="76x76" href=require('../../sources/images/apple-touch-icon-76x76.png'))
+    link(rel="apple-touch-icon" sizes="120x120" href=require('../../sources/images/apple-touch-icon-120x120.png'))
+    link(rel="apple-touch-icon" sizes="152x152" href=require('../../sources/images/apple-touch-icon-152x152.png'))
+    link(rel="apple-touch-icon" sizes="180x180" href=require('../../sources/images/apple-touch-icon-180x180.png'))
+
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PXHCM38Q');
+
+  body
+    iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-PXHCM38Q" height="0" width="0" style="display:none;visibility:hidden")
+
+    include ../../components/header/header
+    +header({ linksHeader: linksHeader, contactUs: '/#contactUs' })
+
+    main
+
+      //- HERO — yellowLight background, full height
+      section(data-color="white").portfolioHero.colorSection
+        .portfolioHero__wrapper
+          h6.subtitle.portfolioHero__subtitle._anim-items._anim-no-hide Our Work
+          h1.h1.portfolioHero__title._anim-items._anim-no-hide We are proud of every single project we've built.
+          p.text_1.portfolioHero__description._anim-items._anim-no-hide 11 shipped products. From aggressive MVPs to enterprise AI platforms. Each one a story of grit, late nights, and genuine partnership.
+
+      //- PORTFOLIO GRID — reuses the exact same .cases CSS from the main page
+      section(data-color="white" id="ourWork").cases.wrapper.colorSection
+        .cases__wrapper
+          .cases__casesList
+            each project in projects
+              include ../../components/caseRecommendationCard/caseRecommendationCard
+              +caseRecommendationCard({ card: project })
+
+      //- CTA — invite to connect
+      section(data-color="dark").portfolioCta.colorSection
+        .portfolioCta__inner
+          h6.subtitle.portfolioCta__label._anim-items._anim-no-hide Want to be next?
+          h2.h2.portfolioCta__title._anim-items._anim-no-hide Let's build something we'll both be proud of.
+          a(href="/#contactUs").button_black.size_m.portfolioCta__button._anim-items._anim-no-hide
+            p Start the Conversation
+
+    include ../../components/footer/footer
+    +footer({ linksFooter: linksFooter, contactUs: '/#contactUs' })

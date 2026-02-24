@@ -1,0 +1,373 @@
+// =============================================
+// FOUNDER HERO — mirrors the .about section pattern
+// Light background, full viewport, centered content
+// =============================================
+.founderHero {
+  height: 100vh;
+  padding: 24px;
+
+  @media screen and (max-width: 1600px) {
+    padding: 16px;
+  }
+
+  @media screen and (max-width: 834px) {
+    height: unset;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 8px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    height: 100%;
+    padding: 80px 100px;
+    border-radius: 12px;
+    background-color: var(--yellowLight);
+    color: var(--black);
+    text-align: center;
+
+    @media screen and (max-width: 1600px) {
+      padding: 74px 100px;
+    }
+
+    @media screen and (max-width: 1280px) {
+      padding: 74px 48px;
+    }
+
+    @media screen and (max-width: 834px) {
+      padding: 80px 32px;
+      gap: 24px;
+    }
+
+    @media screen and (max-width: 600px) {
+      padding: 48px 16px;
+      text-align: left;
+      align-items: flex-start;
+    }
+  }
+
+  &__subtitle {
+    transform: translate(0px, 32px);
+    opacity: 0;
+    transition: all 0.6s ease 0s;
+
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+
+  &__title {
+    max-width: 800px;
+    transform: translate(0px, 64px);
+    opacity: 0;
+    transition: all 0.6s ease 0.1s;
+
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+
+  &__description {
+    max-width: 560px;
+    color: var(--black3);
+    transform: translate(0px, 64px);
+    opacity: 0;
+    transition: all 0.6s ease 0.2s;
+
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+}
+
+// =============================================
+// FOUNDER CARD — mirrors the .howWeWork__card pattern
+// Dark background, grid layout, yellow text
+// =============================================
+.founderCard {
+  padding: 0 24px 24px;
+
+  @media screen and (max-width: 1600px) {
+    padding: 0 16px 16px;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 0 8px 8px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 160px;
+    gap: 48px;
+    padding: 80px;
+    border-radius: 12px;
+    background: var(--black);
+
+    @media screen and (max-width: 1280px) {
+      padding: 64px 48px;
+    }
+
+    @media screen and (max-width: 834px) {
+      grid-template-columns: 1fr;
+      padding: 48px 32px;
+    }
+
+    @media screen and (max-width: 600px) {
+      padding: 32px 20px;
+      gap: 32px;
+    }
+
+    &--reversed {
+      grid-template-columns: 160px 1fr;
+
+      @media screen and (max-width: 834px) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  // Light variant: Irina's section — yellowLight background
+  &--light &__inner {
+    background: var(--yellowLight);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__role {
+    color: var(--yellow);
+    transform: translate(0px, 32px);
+    opacity: 0;
+    transition: all 0.6s ease 0s;
+
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+
+  &__name {
+    color: var(--yellowLight);
+    line-height: 90%;
+    transform: translate(0px, 48px);
+    opacity: 0;
+    transition: all 0.6s ease 0.1s;
+
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+
+    @media screen and (max-width: 1600px) {
+      font-size: 48px;
+      line-height: 52px;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+
+  &__story {
+    color: var(--yellowLight2);
+    line-height: 1.6;
+    transform: translate(0px, 48px);
+    opacity: 0;
+    transition: all 0.6s ease 0.15s;
+
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+
+  // Light variant: dark text
+  &--light &__role {
+    color: var(--black3);
+  }
+
+  &--light &__name {
+    color: var(--black);
+  }
+
+  &--light &__story {
+    color: var(--black3);
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+    transform: translate(0px, 32px);
+    opacity: 0;
+    transition: all 0.6s ease 0.2s;
+
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+
+  &__tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 20px;
+    border-radius: 1000px;
+    border: 1px solid var(--yellowLight2);
+    color: var(--yellowLight2);
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  &--light &__tag {
+    border-color: var(--black3);
+    color: var(--black);
+  }
+
+  // Large ordinal number on the side
+  &__number {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 8px;
+
+    @media screen and (max-width: 834px) {
+      display: none; // hide on mobile to save space
+    }
+  }
+
+  &__number_text {
+    font-size: 120px;
+    font-weight: 700;
+    color: var(--black5);
+    line-height: 1;
+    user-select: none;
+  }
+
+  &--light &__number_text {
+    color: var(--yellowLight2);
+  }
+}
+
+// =============================================
+// MANIFESTO — mirrors contactUs dark section pattern
+// Dark background, centered, CTA
+// =============================================
+.founderManifesto {
+  padding: 0 24px 24px;
+
+  @media screen and (max-width: 1600px) {
+    padding: 0 16px 16px;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 0 8px 8px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 120px 100px;
+    border-radius: 12px;
+    background: var(--black);
+    text-align: center;
+    color: var(--yellowWhite);
+
+    @media screen and (max-width: 1280px) {
+      padding: 80px 48px;
+    }
+
+    @media screen and (max-width: 834px) {
+      padding: 64px 32px;
+      gap: 24px;
+    }
+
+    @media screen and (max-width: 600px) {
+      padding: 48px 20px;
+      text-align: left;
+      align-items: flex-start;
+    }
+  }
+
+  &__label {
+    color: var(--yellow);
+    transform: translate(0px, 32px);
+    opacity: 0;
+    transition: all 0.6s ease 0s;
+
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+
+  &__title {
+    max-width: 720px;
+    color: var(--yellowLight);
+    transform: translate(0px, 48px);
+    opacity: 0;
+    transition: all 0.6s ease 0.1s;
+
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+
+    @media screen and (max-width: 1600px) {
+      font-size: 48px;
+      line-height: 52px;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 32px;
+      line-height: 36px;
+    }
+  }
+
+  &__text {
+    max-width: 600px;
+    color: var(--black1);
+    line-height: 1.7;
+    transform: translate(0px, 48px);
+    opacity: 0;
+    transition: all 0.6s ease 0.15s;
+
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+
+  &__cta {
+    margin-top: 8px;
+    transform: translate(0px, 32px);
+    opacity: 0;
+    transition: all 0.6s ease 0.25s;
+
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+}
