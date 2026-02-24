@@ -24,18 +24,18 @@
         align-items: center;
         justify-content: space-between;
         height: 100%;
-        padding: 80px 100px;
+        padding: 120px 100px 80px;
         border-radius: 12px;
         background-color: var(--yellowLight);
         color: var(--black);
         text-align: center;
 
         @media screen and (max-width: 1600px) {
-            padding: 74px 100px;
+            padding: 110px 100px 74px;
         }
 
         @media screen and (max-width: 1280px) {
-            padding: 74px 48px;
+            padding: 110px 48px 74px;
         }
 
         @media screen and (max-width: 834px) {
@@ -86,6 +86,7 @@
         max-width: 50%;
         margin: 0 0 0 auto;
         color: var(--black3);
+        text-align: left;
         transform: translate(0px, 64px);
         opacity: 0;
         transition: all 0.6s ease 0.2s;
@@ -121,13 +122,13 @@
         align-items: center;
         justify-content: center;
         gap: 32px;
-        padding: 120px 100px;
+        padding: 80px 48px;
         border-radius: 12px;
         background: var(--black);
         text-align: center;
 
         @media screen and (max-width: 1280px) {
-            padding: 80px 48px;
+            padding: 64px 48px;
         }
 
         @media screen and (max-width: 834px) {

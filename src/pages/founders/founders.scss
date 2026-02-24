@@ -24,18 +24,18 @@
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    padding: 80px 100px;
+    padding: 120px 100px 80px;
     border-radius: 12px;
     background-color: var(--yellowLight);
     color: var(--black);
     text-align: center;
 
     @media screen and (max-width: 1600px) {
-      padding: 74px 100px;
+      padding: 110px 100px 74px;
     }
 
     @media screen and (max-width: 1280px) {
-      padding: 74px 32px;
+      padding: 110px 32px 74px;
     }
 
     @media screen and (max-width: 834px) {
@@ -52,6 +52,7 @@
   }
 
   &__subtitle {
+    color: var(--textGray);
     transform: translate(0px, 32px);
     opacity: 0;
     transition: all 0.6s ease 0s;
@@ -168,6 +169,10 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+
+    @media screen and (max-width: 600px) {
+      gap: 16px;
+    }
   }
 
   &__role {
@@ -191,6 +196,32 @@
     &._active {
       transform: translate(0px, 0px);
       opacity: 1;
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 12px;
+    overflow: hidden;
+    transform: translate(0px, 32px);
+    opacity: 0;
+    transition: all 0.6s ease 0.1s;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+
+    @media screen and (max-width: 600px) {
+      max-width: 100%;
     }
   }
 
@@ -272,6 +303,13 @@
     color: var(--black5);
     line-height: 100%;
     user-select: none;
+
+    @media screen and (max-width: 1600px) {
+      font-size: 80px;
+    }
+    @media screen and (max-width: 1136px) {
+      font-size: 64px;
+    }
   }
 
   &--light &__number_text {
@@ -344,7 +382,7 @@
 
   &__text {
     max-width: 70%;
-    color: var(--black1);
+    color: var(--yellowLight2);
     transform: translate(0px, 48px);
     opacity: 0;
     transition: all 0.6s ease 0.15s;
