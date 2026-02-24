@@ -72,11 +72,6 @@
       transform: translate(0px, 0px);
       opacity: 1;
     }
-
-    @media screen and (max-width: 600px) {
-      font-size: 36px;
-      line-height: 40px;
-    }
   }
 
   &__description {
@@ -164,7 +159,6 @@
 
   &__name {
     color: var(--yellowLight);
-    line-height: 90%;
     transform: translate(0px, 48px);
     opacity: 0;
     transition: all 0.6s ease 0.1s;
@@ -173,21 +167,10 @@
       transform: translate(0px, 0px);
       opacity: 1;
     }
-
-    @media screen and (max-width: 1600px) {
-      font-size: 48px;
-      line-height: 52px;
-    }
-
-    @media screen and (max-width: 600px) {
-      font-size: 36px;
-      line-height: 40px;
-    }
   }
 
   &__story {
     color: var(--yellowLight2);
-    line-height: 1.6;
     transform: translate(0px, 48px);
     opacity: 0;
     transition: all 0.6s ease 0.15s;
@@ -229,12 +212,14 @@
   &__tag {
     display: inline-flex;
     align-items: center;
-    padding: 8px 20px;
+    padding: 12px 24px;
     border-radius: 1000px;
     border: 1px solid var(--yellowLight2);
     color: var(--yellowLight2);
-    font-size: 14px;
-    line-height: 1;
+    font-family: "Cygre-M";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 102%;
   }
 
   &--light &__tag {
@@ -255,10 +240,12 @@
   }
 
   &__number_text {
+    font-family: "Cygre-L";
+    font-weight: 300;
+    font-style: italic;
     font-size: 120px;
-    font-weight: 700;
     color: var(--black5);
-    line-height: 1;
+    line-height: 100%;
     user-select: none;
   }
 
@@ -333,22 +320,11 @@
       transform: translate(0px, 0px);
       opacity: 1;
     }
-
-    @media screen and (max-width: 1600px) {
-      font-size: 48px;
-      line-height: 52px;
-    }
-
-    @media screen and (max-width: 600px) {
-      font-size: 32px;
-      line-height: 36px;
-    }
   }
 
   &__text {
     max-width: 600px;
     color: var(--black1);
-    line-height: 1.7;
     transform: translate(0px, 48px);
     opacity: 0;
     transition: all 0.6s ease 0.15s;

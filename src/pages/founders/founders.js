@@ -5,14 +5,17 @@ import '../../components/header/header';
 import '../../components/footer/footer';
 
 import { animateItems } from '../../utils/animateItems';
+import { sectionActivation } from '../../utils/sectionActivation';
 
 document.addEventListener("DOMContentLoaded", function () {
 
     const DELAY = 300;
     const HEADER_HEIGHT = 55;
 
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
     const animItems = document.querySelectorAll('._anim-items');
     const header = document.querySelector('.header');
+    const sections = document.querySelectorAll('.colorSection');
 
     if (animItems.length > 0 && header) {
         window.addEventListener('scroll', animOnScroll);
@@ -24,6 +27,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 header.classList.remove('header-scroll');
             }
 
+            const activeSection = document.querySelector('.colorSection.activeSection');
+            if (activeSection && activeSection.getAttribute('data-color') === 'dark') {
+                header.classList.add('dark');
+                metaTheme.setAttribute('content', '#23221F');
+            } else {
+                header.classList.remove('dark');
+                metaTheme.setAttribute('content', '#FCFBF8');
+            }
+
+            sectionActivation(sections);
             animateItems(animItems);
         }
 

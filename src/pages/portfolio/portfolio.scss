@@ -66,11 +66,6 @@
             transform: translate(0px, 0px);
             opacity: 1;
         }
-
-        @media screen and (max-width: 600px) {
-            font-size: 36px;
-            line-height: 40px;
-        }
     }
 
     &__description {
@@ -150,16 +145,6 @@
         &._active {
             transform: translate(0px, 0px);
             opacity: 1;
-        }
-
-        @media screen and (max-width: 1600px) {
-            font-size: 48px;
-            line-height: 52px;
-        }
-
-        @media screen and (max-width: 600px) {
-            font-size: 32px;
-            line-height: 36px;
         }
     }
 
