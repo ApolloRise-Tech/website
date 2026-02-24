@@ -4,48 +4,50 @@
 // =============================================
 .founderHero {
   height: 100vh;
-  padding: 24px;
+  padding: 90px 24px 24px;
 
   @media screen and (max-width: 1600px) {
-    padding: 16px;
+    padding: 90px 16px 16px;
   }
 
   @media screen and (max-width: 834px) {
     height: unset;
+    padding: 90px 16px 16px;
   }
 
   @media screen and (max-width: 600px) {
-    padding: 8px;
+    padding: 80px 8px 8px;
   }
 
   &__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 40px;
     height: 100%;
-    padding: 120px 100px 80px;
+    padding: 80px 100px;
     border-radius: 12px;
     background-color: var(--yellowLight);
     color: var(--black);
     text-align: center;
 
     @media screen and (max-width: 1600px) {
-      padding: 110px 100px 74px;
+      padding: 64px 100px;
     }
 
     @media screen and (max-width: 1280px) {
-      padding: 110px 32px 74px;
+      padding: 64px 32px;
     }
 
     @media screen and (max-width: 834px) {
-      padding: 74px 16px;
-      gap: 320px;
+      padding: 64px 16px;
+      gap: 32px;
     }
 
     @media screen and (max-width: 600px) {
       padding: 32px 16px 34px;
-      gap: 120px;
+      gap: 24px;
       text-align: left;
       align-items: flex-start;
     }
@@ -94,17 +96,19 @@
     color: var(--black3);
     text-align: left;
 
-    transform: translate(0px, 128px);
+    transform: translate(0px, 64px);
     opacity: 0;
-    transition: all 0.6s ease 0s;
+    transition: all 0.6s ease 0.1s;
 
     @media screen and (max-width: 834px) {
-      transform: translate(0px, 104px);
+      max-width: 70%;
     }
 
     @media screen and (max-width: 600px) {
-      max-width: 75%;
-      transform: translate(0px, 64px);
+      flex: unset;
+      max-width: 90%;
+      margin: 0;
+      transform: translate(0px, 32px);
     }
 
     &._active {
@@ -131,28 +135,45 @@
 
   &__inner {
     display: grid;
-    grid-template-columns: 1fr 160px;
-    gap: 48px;
+    grid-template-columns: 420px 1fr;
+    gap: 64px;
     padding: 48px;
     border-radius: 12px;
     background: var(--black);
 
+    @media screen and (max-width: 1600px) {
+      grid-template-columns: 360px 1fr;
+      gap: 48px;
+      padding: 48px 32px;
+    }
+
     @media screen and (max-width: 1280px) {
+      grid-template-columns: 300px 1fr;
+      gap: 40px;
       padding: 48px 32px;
     }
 
     @media screen and (max-width: 834px) {
       grid-template-columns: 1fr;
+      gap: 32px;
       padding: 48px 32px;
     }
 
     @media screen and (max-width: 600px) {
       padding: 32px 16px;
-      gap: 32px;
+      gap: 24px;
     }
 
     &--reversed {
-      grid-template-columns: 160px 1fr;
+      grid-template-columns: 1fr 420px;
+
+      @media screen and (max-width: 1600px) {
+        grid-template-columns: 1fr 360px;
+      }
+
+      @media screen and (max-width: 1280px) {
+        grid-template-columns: 1fr 300px;
+      }
 
       @media screen and (max-width: 834px) {
         grid-template-columns: 1fr;
@@ -201,16 +222,16 @@
 
   &__photo {
     width: 100%;
-    max-width: 480px;
     border-radius: 12px;
     overflow: hidden;
     transform: translate(0px, 32px);
     opacity: 0;
     transition: all 0.6s ease 0.1s;
+    aspect-ratio: 3 / 4;
 
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
       display: block;
       object-fit: cover;
     }
@@ -220,8 +241,12 @@
       opacity: 1;
     }
 
+    @media screen and (max-width: 834px) {
+      aspect-ratio: 4 / 3;
+    }
+
     @media screen and (max-width: 600px) {
-      max-width: 100%;
+      aspect-ratio: 3 / 2;
     }
   }
 
@@ -283,37 +308,13 @@
     color: var(--black);
   }
 
-  // Large ordinal number on the side
+  // Photo column
   &__number {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding-bottom: 8px;
-
-    @media screen and (max-width: 834px) {
-      display: none; // hide on mobile to save space
-    }
+    display: none;
   }
 
   &__number_text {
-    font-family: "Cygre-L";
-    font-weight: 300;
-    font-style: italic;
-    font-size: 120px;
-    color: var(--black5);
-    line-height: 100%;
-    user-select: none;
-
-    @media screen and (max-width: 1600px) {
-      font-size: 80px;
-    }
-    @media screen and (max-width: 1136px) {
-      font-size: 64px;
-    }
-  }
-
-  &--light &__number_text {
-    color: var(--yellowLight2);
+    display: none;
   }
 }
 
