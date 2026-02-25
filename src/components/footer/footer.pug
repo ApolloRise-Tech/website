@@ -1,6 +1,23 @@
 mixin footer(options)
 
   footer(data-color="dark").footer.colorSection
+    .footer__govCert
+      span.footer__govBadge
+        svg(width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+          path(d="M12 2L14.09 8.26L20.18 8.27L15.27 12.14L17.18 18.4L12 14.76L6.82 18.4L8.73 12.14L3.82 8.27L9.91 8.26L12 2Z" fill="currentColor")
+        | U.S. Government Certified
+      .footer__govMeta
+        span.footer__govItem
+          span.footer__govLabel UEI
+          span.footer__govValue SSDXFF3XPPG6
+        span.footer__govDivider
+        span.footer__govItem
+          span.footer__govLabel CAGE
+          span.footer__govValue 16F39
+        span.footer__govDivider
+        span.footer__govItem
+          span.footer__govLabel NAICS
+          span.footer__govValue 518210 · 519290 · 541330 · 541511 · 541512 · 541690 · 541990
     .footer__background 
       .footer__wrapper 
         .footer__logo 

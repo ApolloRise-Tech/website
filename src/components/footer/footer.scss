@@ -134,6 +134,99 @@
     }
   }
 
+  &__govCert {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 24px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+
+    @media screen and (max-width: 1440px) {
+      padding: 10px 16px;
+    }
+
+    @media screen and (max-width: 744px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 14px 16px;
+    }
+
+    @media screen and (max-width: 600px) {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__govBadge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    border-radius: 999px;
+    background: rgba(252, 251, 248, 0.06);
+    border: 1px solid rgba(252, 251, 248, 0.18);
+    color: rgba(252, 251, 248, 0.75);
+    font-family: "Cygre-M";
+    font-size: 12px;
+    line-height: 1.2;
+    white-space: nowrap;
+    flex-shrink: 0;
+
+    svg {
+      display: none;
+    }
+  }
+
+  &__govMeta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px 0;
+
+    @media screen and (max-width: 744px) {
+      gap: 4px 0;
+    }
+  }
+
+  &__govItem {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__govLabel {
+    font-size: 11px;
+    line-height: 1.2;
+    font-family: "Cygre-M";
+    color: rgba(252, 251, 248, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  &__govValue {
+    font-size: 11px;
+    line-height: 1.2;
+    color: rgba(252, 251, 248, 0.72);
+
+    @media screen and (max-width: 600px) {
+      font-size: 10.5px;
+    }
+  }
+
+  &__govDivider {
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background: rgba(252, 251, 248, 0.15);
+    margin: 0 12px;
+
+    @media screen and (max-width: 744px) {
+      margin: 0 8px;
+    }
+  }
+
   &__socials  {
     display: flex;
     gap: 16px;
