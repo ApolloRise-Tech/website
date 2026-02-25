@@ -156,29 +156,23 @@
     @media screen and (max-width: 834px) {
       grid-template-columns: 1fr;
       gap: 32px;
-      padding: 48px 32px;
     }
 
     @media screen and (max-width: 600px) {
-      padding: 32px 16px;
-      gap: 24px;
+      padding: 32px 20px;
+      gap: 32px;
+      border-radius: 16px;
     }
+  }
 
-    &--reversed {
-      grid-template-columns: 1fr 420px;
+  &__photoSide {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
 
-      @media screen and (max-width: 1600px) {
-        grid-template-columns: 1fr 360px;
-      }
-
-      @media screen and (max-width: 1280px) {
-        grid-template-columns: 1fr 300px;
-      }
-
-      @media screen and (max-width: 834px) {
-        grid-template-columns: 1fr;
-      }
-    }
+  &__photoWrap {
+    position: relative;
   }
 
   // Light variant: Irina's section — yellowLight background
@@ -222,7 +216,7 @@
 
   &__photo {
     width: 100%;
-    border-radius: 12px;
+    border-radius: 12px 12px 0 0;
     overflow: hidden;
     transform: translate(0px, 32px);
     opacity: 0;
@@ -303,12 +297,110 @@
     line-height: 102%;
   }
 
-  &--light &__tag {
-    border-color: var(--black3);
-    color: var(--black);
+  &__socials {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    display: flex;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease 0.2s;
+
+    @media (max-width: 600px) {
+      right: 10px;
+      bottom: 10px;
+    }
+
+    &._active {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
-  // Photo column
+  &__socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    border: 1px solid var(--yellowLight);
+    background: transparent;
+    color: var(--yellowLight);
+    transition: transform 0.25s ease, filter 0.25s ease;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.12);
+    }
+  }
+
+  &__socialLink--linkedin {
+    background: transparent;
+  }
+
+  &__socialLink--instagram {
+    background: transparent;
+  }
+
+  &__socialLink--threads {
+    background: transparent;
+  }
+
+  &__whatsapp {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    font-size: 14px;
+    line-height: 1.35;
+    font-weight: 500;
+    color: var(--yellowLight);
+    padding: 12px 14px;
+    border-radius: 0 0 12px 12px;
+    background: #1f1f1f;
+    border: 1px solid rgba(234, 187, 85, 0.18);
+    border-top: 0;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #262626;
+      border-color: rgba(234, 187, 85, 0.34);
+    }
+  }
+
+  // Light variant overrides
+  &--light {
+    background-color: var(--yellowLight);
+    color: var(--black);
+
+    .founderCard__tag {
+      border-color: var(--yellowLight);
+      color: var(--yellowLight);
+    }
+
+    .founderCard__socialLink {
+      border-color: var(--yellowLight);
+      color: var(--yellowLight);
+    }
+
+    .founderCard__whatsapp {
+      color: var(--black);
+      background: #f1e6c8;
+      border-color: rgba(28, 28, 28, 0.1);
+
+      &:hover {
+        background: #eadcaf;
+        border-color: rgba(28, 28, 28, 0.2);
+      }
+    }
+  }
+
   &__number {
     display: none;
   }

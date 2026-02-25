@@ -100,17 +100,37 @@ html
       //- Yurii — dark card, photo left / content right
       section(data-color="dark").founderCard.colorSection
         .founderCard__inner
-          .founderCard__photo._anim-items._anim-no-hide
-            img(src=require('../../sources/images/yurii.png') alt="Yurii Kapkov" loading="lazy")
+          .founderCard__photoSide
+            .founderCard__photoWrap
+              .founderCard__photo._anim-items._anim-no-hide
+                img(src=require('../../sources/images/yurii.png') alt="Yurii Kapkov" loading="lazy")
+              .founderCard__socials._anim-items._anim-no-hide
+                a(href="https://www.linkedin.com/in/yurii-kapkov/" target="_blank" rel="noopener noreferrer" title="LinkedIn").founderCard__socialLink.founderCard__socialLink--linkedin
+                  svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    rect(x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.8")
+                    circle(cx="8" cy="8" r="1.2" fill="currentColor")
+                    path(d="M8 10.8V16.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round")
+                    path(d="M11.8 16.2V10.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round")
+                    path(d="M11.8 13.2C11.8 11.9 12.7 10.8 14.1 10.8C15.5 10.8 16.4 11.9 16.4 13.2V16.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round")
+                a(href="https://www.instagram.com/yuriikapkov/" target="_blank" rel="noopener noreferrer" title="Instagram").founderCard__socialLink.founderCard__socialLink--instagram
+                  svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    rect(x="3.4" y="3.4" width="17.2" height="17.2" rx="5" stroke="currentColor" stroke-width="1.8")
+                    circle(cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8")
+                    circle(cx="17" cy="7" r="1.1" fill="currentColor")
+                a(href="https://www.threads.com/@yuriikapkov" target="_blank" rel="noopener noreferrer" title="Threads").founderCard__socialLink.founderCard__socialLink--threads
+                  svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    path(d="M12 20C8.1 20 5.3 17.2 5.3 13.4C5.3 9.5 8.2 6.6 12.1 6.6C15.6 6.6 17.9 8.8 17.9 11.9C17.9 14.2 16.7 15.8 14.9 15.8C13.8 15.8 13 15.1 13.1 14L13.3 10.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round")
+                    path(d="M13.3 10.7C13 10 12.3 9.6 11.4 9.6C9.9 9.6 8.8 10.8 8.8 12.4C8.8 14 9.9 15.2 11.4 15.2C12.6 15.2 13.6 14.4 13.9 13.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round")
+            a(href="https://wa.me/14079600621" target="_blank" rel="noopener noreferrer").founderCard__whatsapp Have a question? Text me directly in WhatsApp →
           .founderCard__content
             h6.subtitle.founderCard__role._anim-items._anim-no-hide Founder & CEO
             h2.h2.founderCard__name._anim-items._anim-no-hide Yurii Kapkov
             p.text_2.founderCard__story._anim-items._anim-no-hide
-              | I grew up in Donetsk, Ukraine — a place that shaped my resilience early on. I wrote my first lines of code at 15 and never stopped. I graduated with a 96/100 GPA in Software Engineering, the highest in my faculty. I won sport programming championships. Led the Student Science Society. And from my very first year at university, I was shipping freelance projects every evening.
+              | I grew up in Ukraine — a place that shaped my resilience early on. I wrote my first lines of code at 15 and never stopped. I graduated with a 96/100 GPA in Software Engineering, the highest in my faculty. I won sport programming championships. Led the Student Science Society. And from my very first year at university, I was shipping freelance projects every evening.
             p.text_2.founderCard__story._anim-items._anim-no-hide
               | I've lived in nearly 20 countries. Now I split my time between Israel and the US — waking up early, going to sleep late. ApolloRise is my life's work. Every wall I hit, I climb over. Every limit, I push through. I believe authentic hard work always wins.
             .founderCard__tags._anim-items._anim-no-hide
-              span.founderCard__tag Donetsk → Israel & US
+              span.founderCard__tag Ukraine → Israel & US
               span.founderCard__tag 10+ Years in IT
               span.founderCard__tag Software Architect
               span.founderCard__tag Founder & Team Leader
@@ -119,15 +139,35 @@ html
       //- IRINA — light card (yellowLight), photo left / content right
       section(data-color="white").founderCard.founderCard--light.colorSection
         .founderCard__inner
-          .founderCard__photo._anim-items._anim-no-hide
-            img(src=require('../../sources/images/irina.png') alt="Irina Zakharchenko" loading="lazy")
+          .founderCard__photoSide
+            .founderCard__photoWrap
+              .founderCard__photo._anim-items._anim-no-hide
+                img(src=require('../../sources/images/irina.png') alt="Irina Zakharchenko" loading="lazy")
+              .founderCard__socials._anim-items._anim-no-hide
+                a(href="https://www.linkedin.com/in/irinaztech/" target="_blank" rel="noopener noreferrer" title="LinkedIn").founderCard__socialLink.founderCard__socialLink--linkedin
+                  svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    rect(x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.8")
+                    circle(cx="8" cy="8" r="1.2" fill="currentColor")
+                    path(d="M8 10.8V16.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round")
+                    path(d="M11.8 16.2V10.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round")
+                    path(d="M11.8 13.2C11.8 11.9 12.7 10.8 14.1 10.8C15.5 10.8 16.4 11.9 16.4 13.2V16.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round")
+                a(href="https://www.instagram.com/btb_beyondthebadge/" target="_blank" rel="noopener noreferrer" title="Instagram").founderCard__socialLink.founderCard__socialLink--instagram
+                  svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    rect(x="3.4" y="3.4" width="17.2" height="17.2" rx="5" stroke="currentColor" stroke-width="1.8")
+                    circle(cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8")
+                    circle(cx="17" cy="7" r="1.1" fill="currentColor")
+                a(href="https://www.threads.com/@btb_beyondthebadge" target="_blank" rel="noopener noreferrer" title="Threads").founderCard__socialLink.founderCard__socialLink--threads
+                  svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    path(d="M12 20C8.1 20 5.3 17.2 5.3 13.4C5.3 9.5 8.2 6.6 12.1 6.6C15.6 6.6 17.9 8.8 17.9 11.9C17.9 14.2 16.7 15.8 14.9 15.8C13.8 15.8 13 15.1 13.1 14L13.3 10.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round")
+                    path(d="M13.3 10.7C13 10 12.3 9.6 11.4 9.6C9.9 9.6 8.8 10.8 8.8 12.4C8.8 14 9.9 15.2 11.4 15.2C12.6 15.2 13.6 14.4 13.9 13.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round")
+            a(href="https://wa.me/16099011324" target="_blank" rel="noopener noreferrer").founderCard__whatsapp Have a question? Text me directly in WhatsApp →
           .founderCard__content
             h6.subtitle.founderCard__role._anim-items._anim-no-hide Co-Founder & COO
             h2.h2.founderCard__name._anim-items._anim-no-hide Irina Zakharchenko
             p.text_2.founderCard__story._anim-items._anim-no-hide
-              | Born in Ukraine and raised between there and Australia, Irina's path is a story of continuous reinvention. From working alongside Fortune 10 executives in NYC to spending two decades transforming healthcare, biotech, and tech organizations in New Jersey, she has always turned challenges into opportunities. Now in Central Florida, she leads ApolloRise with vision and heart.
+              | I was born in Ukraine and raised between there and Australia, and my path has always been about reinvention. From working alongside Fortune 10 executives in NYC to spending two decades transforming healthcare, biotech, and tech organizations in New Jersey, I learned how to turn challenges into opportunities. Now in Central Florida, I lead ApolloRise with vision and heart.
             p.text_2.founderCard__story._anim-items._anim-no-hide
-              | Irina is deeply committed to lifting others. As Senior Chapter Chair for Women in Tech & Entrepreneurs in Orlando and a thought leader on the Forbes Business Council, she mentors women to step into leadership. She proves that reinvention is possible at every stage of life, blending people, data, and innovation into everything we build.
+              | I am deeply committed to lifting others. As Senior Chapter Chair for Women in Tech & Entrepreneurs in Orlando and a thought leader in the Forbes Business Council, I mentor women to step into leadership. I believe reinvention is possible at every stage of life, and I bring that mindset into everything we build by blending people, data, and innovation.
             .founderCard__tags._anim-items._anim-no-hide
               span.founderCard__tag Ukraine → Australia → US
               span.founderCard__tag 20+ Years Experience
