@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack serve --env port=3003",
     "build:prod": "webpack --env mode=production",
-    "build:dev": "webpack --env mode=development"
+    "build:dev": "webpack --env mode=development",
+    "dev:blog": "php -S 127.0.0.1:8080 -t build build/blog/router.php"
   },
   "keywords": [],
   "author": "",

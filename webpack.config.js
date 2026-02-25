@@ -101,6 +101,18 @@ module.exports = (env) => {
             from: path.resolve(__dirname, 'src', 'sources', 'images', 'linkImage.png'),
             to: 'sources/images/linkImage.png',
           },
+          {
+            from: path.resolve(__dirname, 'src', 'blog'),
+            to: 'blog',
+          },
+          {
+            from: path.resolve(__dirname, 'src', 'blog-admin'),
+            to: 'blog-admin',
+          },
+          {
+            from: path.resolve(__dirname, 'src', 'blog-data'),
+            to: 'blog-data',
+          },
         ],
       }),
     ],

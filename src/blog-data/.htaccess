@@ -1,0 +1,9 @@
+# Deny access to JSON data files
+<FilesMatch "\.(json)$">
+    Deny from all
+</FilesMatch>
+
+# Allow access to uploaded images
+<FilesMatch "\.(jpg|jpeg|png|gif|webp|svg)$">
+    Allow from all
+</FilesMatch>

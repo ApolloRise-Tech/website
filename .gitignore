@@ -3,3 +3,11 @@ node_modules
 .git
 build
 .DS_Store
+
+# Blog runtime data (uploads, logs, rate limits)
+src/blog-data/uploads/*
+!src/blog-data/uploads/.gitkeep
+src/blog-data/.rate_limits.json
+src/blog-data/.throttle.json
+src/blog-data/.security.log
+src/blog-data/.security.log.old
