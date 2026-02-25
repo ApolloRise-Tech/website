@@ -90,13 +90,25 @@ html
     meta(name="keywords" content="AI development, Agentic AI, complex software, boutique engineering, technical partner, fractional CTO, PoC development, HealthTech, LegalTech, GenAI")
     meta(name="author" content="Yurii Kapkov")
 
+    <!-- Canonical -->
+    link(rel="canonical" href="https://apollorise.tech/")
+
     <!-- Open Graph -->
     meta(property="og:type" content="website")
-    meta(property="og:title" content="ApolloRise Tech: AI-Powered Solutions for Business Growth")
-    meta(property="og:description" content="We develop IT solutions of any complexity.")
+    meta(property="og:title" content="ApolloRise Tech | Engineering with a Soul. We Build Complex AI Products.")
+    meta(property="og:description" content="ApolloRise is a boutique AI engineering firm. We build complex digital products, Agentic AI systems, and MVPs for startups and enterprises. 3 years, 5+ own products, 10+ US PoCs.")
     meta(property="og:url" content="https://apollorise.tech/")
-    meta(property="og:image" content="https://apollorise.tech/sources/images/picture.png")
-    meta(property="og:site_name" content="apollorise.tech")
+    meta(property="og:image" content="https://apollorise.tech/sources/images/linkImage.png")
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    meta(property="og:site_name" content="ApolloRise Tech")
+
+    <!-- Twitter / X -->
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:title" content="ApolloRise Tech | Engineering with a Soul. We Build Complex AI Products.")
+    meta(name="twitter:description" content="ApolloRise is a boutique AI engineering firm. We build complex digital products, Agentic AI systems, and MVPs for startups and enterprises.")
+    meta(name="twitter:image" content="https://apollorise.tech/sources/images/linkImage.png")
+    meta(name="twitter:site" content="@apollorisetech")
 
     link(rel='stylesheet', href='../../sources/fonts/fonts.css')
 
@@ -109,6 +121,46 @@ html
     link(rel="apple-touch-icon" sizes="152x152" href=require('../../sources/images/apple-touch-icon-152x152.png'))
     link(rel="apple-touch-icon" sizes="180x180" href=require('../../sources/images/apple-touch-icon-180x180.png'))
   
+    <!-- Structured Data: Organization -->
+    script(type="application/ld+json").
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ApolloRise Tech",
+        "url": "https://apollorise.tech/",
+        "logo": "https://apollorise.tech/sources/images/linkImage.png",
+        "image": "https://apollorise.tech/sources/images/linkImage.png",
+        "description": "ApolloRise is a boutique AI engineering firm. We build complex digital products, Agentic AI systems, and MVPs for startups and enterprises.",
+        "foundingDate": "2022",
+        "founder": [
+          {
+            "@type": "Person",
+            "name": "Yurii Kapkov",
+            "jobTitle": "Founder & CEO"
+          },
+          {
+            "@type": "Person",
+            "name": "Irina Zakharchenko",
+            "jobTitle": "Founder & COO"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Orlando",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/apollorisetech",
+          "https://apollorise.tech/"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "url": "https://apollorise.tech/#contactUs"
+        }
+      }
+
     //- Google Tag Manager
     script.
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

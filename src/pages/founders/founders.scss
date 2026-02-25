@@ -380,8 +380,8 @@
     color: var(--black);
 
     .founderCard__tag {
-      border-color: var(--yellowLight);
-      color: var(--yellowLight);
+      border-color: rgba(28, 28, 28, 0.28);
+      color: rgba(28, 28, 28, 0.62);
     }
 
     .founderCard__socialLink {
@@ -415,14 +415,14 @@
 // Dark background, centered, CTA
 // =============================================
 .founderManifesto {
-  padding: 0 24px 24px;
+  padding: 24px 24px;
 
   @media screen and (max-width: 1600px) {
-    padding: 0 16px 16px;
+    padding: 16px 16px;
   }
 
   @media screen and (max-width: 600px) {
-    padding: 0 8px 8px;
+    padding: 8px 8px;
   }
 
   &__inner {

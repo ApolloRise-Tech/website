@@ -85,6 +85,22 @@ module.exports = (env) => {
               ignore: ['*.DS_Store'],
             },
           },
+          {
+            from: path.resolve(__dirname, 'src', 'public', 'robots.txt'),
+            to: 'robots.txt',
+          },
+          {
+            from: path.resolve(__dirname, 'src', 'public', 'sitemap.xml'),
+            to: 'sitemap.xml',
+          },
+          {
+            from: path.resolve(__dirname, 'src', 'public', '.htaccess'),
+            to: '.htaccess',
+          },
+          {
+            from: path.resolve(__dirname, 'src', 'sources', 'images', 'linkImage.png'),
+            to: 'sources/images/linkImage.png',
+          },
         ],
       }),
     ],
