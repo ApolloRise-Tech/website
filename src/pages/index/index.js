@@ -5,6 +5,7 @@ import '../../components/main/main';
 import '../../components/about/about';
 import '../../components/whatWeDo/whatWeDo';
 import '../../components/industries/industries';
+import '../../components/ourProducts/ourProducts.scss';
 import '../../components/caseRecommendationCard/caseRecommendationCard';
 import '../../components/howWeWork/howWeWork';
 import '../../components/ourCoreValues/ourCoreValues';
