@@ -21,6 +21,7 @@ module.exports = (env) => {
       successCareer: path.resolve(__dirname, 'src', 'pages', 'successCareer', 'successCareer.js'),
       successContact: path.resolve(__dirname, 'src', 'pages', 'successContact', 'successContact.js'),
       notFound: path.resolve(__dirname, 'src', 'pages', 'notFound', '404.js'),
+      privacyPolicy: path.resolve(__dirname, 'src', 'pages', 'privacyPolicy', 'privacyPolicy.js'),
     },
 
     output: {
@@ -71,6 +72,11 @@ module.exports = (env) => {
         template: path.resolve(__dirname, 'src', 'pages', 'portfolio', 'portfolio.pug'),
         filename: 'portfolio.html',
         chunks: ['portfolio'],
+      }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src', 'pages', 'privacyPolicy', 'privacyPolicy.pug'),
+        filename: 'privacy-policy.html',
+        chunks: ['privacyPolicy'],
       }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].[contenthash:8].css',

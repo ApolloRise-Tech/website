@@ -26,10 +26,12 @@ define('OG_IMAGE', SITE_URL . '/sources/images/linkImage.png');
 
 // Paths (relative to blog/ directory)
 define('BLOG_ROOT', __DIR__);
-define('DATA_DIR', dirname(__DIR__) . '/blog-data');
+define('SITE_ROOT', dirname(__DIR__)); // physical root where css/, js/, sources/ live
+define('DATA_DIR', SITE_ROOT . '/blog-data');
 define('POSTS_DIR', DATA_DIR . '/posts');
 define('UPLOADS_DIR', DATA_DIR . '/uploads');
 define('POSTS_INDEX', DATA_DIR . '/posts.json');
+
 
 // Admin auth
 // Default password: "ApolloRise2025!" — CHANGE THIS!

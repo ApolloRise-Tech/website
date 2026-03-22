@@ -3,6 +3,8 @@
  * Assets Helper
  * -------------
  * Resolves hashed CSS/JS filenames from webpack build output.
+ * Uses SITE_ROOT for filesystem lookups (works when DOCUMENT_ROOT != site root).
+ * URL paths stay root-relative — server .htaccess handles rewriting.
  */
 
 /**
@@ -10,7 +12,7 @@
  * Looks in /css/ directory for files matching pattern: {name}.{hash}.css
  */
 function find_css(string $entryName): string {
-    $cssDir = $_SERVER['DOCUMENT_ROOT'] . '/css';
+    $cssDir = SITE_ROOT . '/css';
     if (!is_dir($cssDir)) return '';
 
     $pattern = $cssDir . '/' . $entryName . '.*.css';
@@ -26,7 +28,7 @@ function find_css(string $entryName): string {
  * Find the hashed JS file for a given entry name
  */
 function find_js(string $entryName): string {
-    $jsDir = $_SERVER['DOCUMENT_ROOT'] . '/js';
+    $jsDir = SITE_ROOT . '/js';
     if (!is_dir($jsDir)) return '';
 
     $pattern = $jsDir . '/' . $entryName . '.*.js';

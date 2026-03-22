@@ -7,10 +7,10 @@
             <ul class="header__listLink">
                 <li class="header__link"><a href="/#about" class="menu_link linkWithUnderline">About</a></li>
                 <li class="header__link"><a href="/#whatWeDo" class="menu_link linkWithUnderline">Services</a></li>
-                <li class="header__link"><a href="/portfolio.html" class="menu_link linkWithUnderline">Our Work</a></li>
-                <li class="header__link"><a href="/founders.html" class="menu_link linkWithUnderline">Founders</a></li>
+                <li class="header__link"><a href="/portfolio" class="menu_link linkWithUnderline">Our Work</a></li>
+                <li class="header__link"><a href="/founders" class="menu_link linkWithUnderline">Founders</a></li>
                 <li class="header__link"><a href="/blog/" class="menu_link linkWithUnderline">Blog</a></li>
-                <li class="header__link"><a href="/career.html" class="menu_link linkWithUnderline">Careers</a></li>
+                <li class="header__link"><a href="/career" class="menu_link linkWithUnderline">Careers</a></li>
                 <li class="header__link header__connect">
                     <a href="/#contactUs" class="menu_link">Connect with us</a>
                 </li>
@@ -47,10 +47,10 @@
             <ul class="header__mobile_listLink">
                 <li class="header__mobile_link"><a href="/#about" class="linkWithUnderline">About</a></li>
                 <li class="header__mobile_link"><a href="/#whatWeDo" class="linkWithUnderline">Services</a></li>
-                <li class="header__mobile_link"><a href="/portfolio.html" class="linkWithUnderline">Our Work</a></li>
-                <li class="header__mobile_link"><a href="/founders.html" class="linkWithUnderline">Founders</a></li>
+                <li class="header__mobile_link"><a href="/portfolio" class="linkWithUnderline">Our Work</a></li>
+                <li class="header__mobile_link"><a href="/founders" class="linkWithUnderline">Founders</a></li>
                 <li class="header__mobile_link"><a href="/blog/" class="linkWithUnderline">Blog</a></li>
-                <li class="header__mobile_link"><a href="/career.html" class="linkWithUnderline">Careers</a></li>
+                <li class="header__mobile_link"><a href="/career" class="linkWithUnderline">Careers</a></li>
             </ul>
         </nav>
         <div class="header__mobile_link header__mobile_connect small-mobile">

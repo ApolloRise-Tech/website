@@ -32,20 +32,20 @@
                 <ul class="footer__navigate">
                     <li class="footer__link"><a href="/#about" class="linkWithUnderline">About</a></li>
                     <li class="footer__link"><a href="/#whatWeDo" class="linkWithUnderline">Services</a></li>
-                    <li class="footer__link"><a href="/portfolio.html" class="linkWithUnderline">Our Work</a></li>
-                    <li class="footer__link"><a href="/founders.html" class="linkWithUnderline">Founders</a></li>
+                    <li class="footer__link"><a href="/portfolio" class="linkWithUnderline">Our Work</a></li>
+                    <li class="footer__link"><a href="/founders" class="linkWithUnderline">Founders</a></li>
                     <li class="footer__link"><a href="/blog/" class="linkWithUnderline">Blog</a></li>
-                    <li class="footer__link"><a href="/career.html" class="linkWithUnderline">Career</a></li>
+                    <li class="footer__link"><a href="/career" class="linkWithUnderline">Career</a></li>
                     <li class="footer__link"><a href="/#contactUs" class="linkWithUnderline">Connect with us</a></li>
                 </ul>
             </nav>
             <div class="footer__contactsWrapper">
                 <div class="footer__contacts">
-                    <a href="mailto:team@apollorise.com" class="text_4">team@apollorise.com</a>
+                    <a href="mailto:team@apollorise.tech" class="text_4">team@apollorise.tech</a>
                     <a href="tel:14079600621" class="text_4">+1 (407) 960 06 21</a>
                 </div>
                 <div class="footer__socials">
-                    <a href="https://www.linkedin.com/company/apollorise-tech/" target="_blank">
+                    <a href="https://www.linkedin.com/company/apollorise/" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
                             <g clip-path="url(#clip_li_f)">
                                 <path d="M15.7646 31.5449V16.83H10.8711V31.5464H15.763L15.7646 31.5449ZM13.3179 14.8186C15.0229 14.8186 16.0867 13.6871 16.0867 12.2744C16.0553 10.8319 15.0229 9.73343 13.3524 9.73343C11.6757 9.73343 10.5836 10.8334 10.5836 12.2744C10.5836 13.6887 11.6459 14.8201 13.288 14.8201L13.3179 14.8186ZM33.4039 31.5449V23.1079C33.4039 18.5869 30.9901 16.4827 27.7734 16.4827C25.1743 16.4827 24.0114 17.9127 23.364 18.9137V16.8269H18.4721C18.5366 18.2097 18.4721 31.5449 18.4721 31.5449H23.364V23.3263C23.364 22.8863 23.3954 22.4463 23.5243 22.1351C23.8763 21.2551 24.6824 20.3453 26.0323 20.3453C27.8033 20.3453 28.5151 21.6936 28.5151 23.672V31.5464H33.4054L33.4039 31.5449ZM22 0C34.1503 0 44 9.84814 44 22C44 34.1503 34.1503 44 22 44C9.84814 44 0 34.1503 0 22C0 9.84814 9.84814 0 22 0Z" fill="#FCFBF8"/>

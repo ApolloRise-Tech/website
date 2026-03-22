@@ -133,12 +133,12 @@ html
     script(type="application/ld+json").
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": ["Organization", "ProfessionalService"],
         "name": "ApolloRise Tech",
         "url": "https://apollorise.tech/",
         "logo": "https://apollorise.tech/sources/images/linkImage.png",
         "image": "https://apollorise.tech/sources/images/linkImage.png",
-        "description": "ApolloRise is a boutique AI engineering firm. We build complex digital products, Agentic AI systems, and MVPs for startups and enterprises.",
+        "description": "ApolloRise is a boutique AI engineering firm based in Orlando, FL. We build complex digital products, Agentic AI systems, and MVPs for startups and enterprises.",
         "foundingDate": "2022",
         "founder": [
           {
@@ -158,13 +158,25 @@ html
           "addressRegion": "FL",
           "addressCountry": "US"
         },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 28.5383,
+          "longitude": -81.3792
+        },
+        "areaServed": "US",
+        "telephone": "+1-407-960-0621",
+        "email": "team@apollorise.com",
         "sameAs": [
-          "https://www.linkedin.com/company/apollorisetech",
-          "https://apollorise.tech/"
+          "https://www.linkedin.com/company/apollorise",
+          "https://x.com/ApolloRiseTech",
+          "https://www.instagram.com/apollorise.tech/",
+          "https://t.me/apollorise"
         ],
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "customer support",
+          "telephone": "+1-407-960-0621",
+          "email": "team@apollorise.com",
           "url": "https://apollorise.tech/#contactUs"
         }
       }
