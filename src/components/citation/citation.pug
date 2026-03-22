@@ -9,7 +9,7 @@ mixin citation({citation})
     .citation__writerWrapper 
       .citation__writer
         .citation__writerImage 
-          img(src=citation.writer.photo alt="writer")
+          img(src=citation.writer.photo alt=citation.writer.name)
         .citation__writerName 
           p.text_4= citation.writer.name
           p.text_5= citation.writer.position

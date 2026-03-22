@@ -1,0 +1,347 @@
+- 
+  const linksHeader = [
+    {
+      name: 'About', 
+      url: '/#about'
+    },
+    {
+      name: 'Services', 
+      url: '/#whatWeDo'
+    },
+    {
+      name: 'Our Work', 
+      url: '/portfolio'
+    },
+    {
+      name: 'Founders', 
+      url: '/founders'
+    },
+    {
+      name: 'Blog', 
+      url: '/blog/'
+    },
+    {
+      name: 'Careers', 
+      url: '/career'
+    },
+  ]
+
+  const linksFooter = [
+    {
+      name: 'About', 
+      url: '/#about'
+    },
+    {
+      name: 'Services', 
+      url: '/#whatWeDo'
+    },
+    {
+      name: 'Our Work', 
+      url: '/portfolio'
+    },
+    {
+      name: 'Founders', 
+      url: '/founders'
+    },
+    {
+      name: 'Blog', 
+      url: '/blog/'
+    },
+    {
+      name: 'Career', 
+      url: '/career'
+    },
+  ]
+
+  const pageContent = [
+    {
+      contentType: 'withoutTitle',
+      content: [{
+        name: 'Services',
+        text: `<ul>
+          <li class="h4">Product landing page</li>
+          <li class="h4">UX / UI design</li> 
+          <li class="h4">Frontend development</li> 
+          <li class="h4">Interactive prototyping</li>
+        </ul>`
+        },
+        {
+          name: 'Industries',
+          text: `<div class="h4">FinTech, B2B SaaS, Invoice Automation</div>`
+        }
+      ],
+    },
+    {
+      title: 'About',
+      contentType: 'text',
+      content: [{
+        type: 'text',
+        text: `<a href="https://parseon.apollorise.tech" target="_blank" class="bold">parseon.apollorise.tech</a> — a high-converting product landing page for Parseon, our own AI-powered invoice processing platform. In just two weeks, a tight three-person team turned a complex B2B AI product into a clean, interactive experience that sells itself. No stock illustrations, no generic copy — every pixel and every line of code was purpose-built to convert enterprise finance leaders into demo requests.`
+      }],
+    },
+    {
+      title: 'The Challenge',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Parseon solves a deeply technical problem — AI-powered OCR and data extraction from messy PDF invoices. The challenge? Translating that complexity into a page that makes a CFO think "I need this" within 10 seconds. No jargon walls. No feature dumps. Just clarity.`
+        },
+        {
+          type: 'text',
+          text: `The website had to do three things at once: show the product working (not just talk about it), earn enterprise trust, and convert visitors into qualified POC requests — all on a single, focused page. And we had two weeks to ship it.`
+        }
+      ],
+    },
+    {
+      title: 'Our Approach',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `We don't build brochure websites. We built an interactive product experience. The hero section is a fully functional app mockup — visitors click through Invoices, Templates, Export, and Settings tabs, exploring the real interface before they ever sign up. It's the kind of thing that makes competitors' landing pages look like PowerPoint slides.`
+        },
+        {
+          type: 'text',
+          text: `The "How It Works" section runs a live demo loop: four real invoice scenarios cycle automatically — raw PDF input transforms into structured output with a progress animation. Visitors understand exactly what Parseon does in seconds, without reading a single paragraph. Show, don't tell — taken to its logical extreme.`
+        }
+      ],
+    },
+    {
+      title: 'Team',
+      contentType: 'tag',
+      content: [
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_1.png')
+          ],
+          position: 'Product Designer'
+        },
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_4.png')
+          ],
+          position: 'Frontend Developer'
+        },
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_8.png')
+          ],
+          position: 'Project Manager'
+        },
+      ]
+    },
+    {
+      title: 'Project workflow',
+      contentType: 'list',
+      content: [
+        {
+          itemTitle: `Strategy & Copy <span>(days 1–3)</span>`,
+          itemDescription: `Nailed down the positioning in three days. Mapped the buyer journey for CFOs, Controllers, and AP Managers. Wrote every word on the page — hero headline, section copy, CTA microcopy, form labels — structured around the specific objections and questions enterprise finance leaders actually have. No filler, no lorem ipsum, no rewrites.`
+        },
+        {
+          itemTitle: `Design & Interactive Prototyping <span>(days 3–7)</span>`,
+          itemDescription: `While copy was being finalized, design kicked off in parallel. Created the full visual language — Cygre typeface, warm cream palette (#FCFBF8), gold accent (#FFC901) — and designed every section including the interactive app mockup, the live demo wireframes, animated counter layouts, comparison table, role cards, and bento-grid features. The designer and developer worked in tight sync — components were handed off as soon as they were ready, not after the full design was "approved."`
+        },
+        {
+          itemTitle: `Frontend Development <span>(days 5–12)</span>`,
+          itemDescription: `Development started on day 5, overlapping with design. Built the entire page on Webpack 5 + Pug + SCSS + vanilla JS: the interactive tabbed hero (Invoices, Templates, Export, Settings with clickable rows and detail panels), the typewriter-style demo loop cycling through four invoice types, IntersectionObserver reveal animations, animated scroll counters, smooth anchor navigation, and full responsive layout (600px, 834px breakpoints). The contact form was integrated with the backend, and the comparison table was built as a pure CSS component — no JS overhead.`
+        },
+        {
+          itemTitle: `SEO, QA & Launch <span>(days 12–14)</span>`,
+          itemDescription: `Final two days: JSON-LD structured data (SoftwareApplication schema), Open Graph & Twitter Cards, canonical URLs, semantic HTML audit, lazy loading, Google Analytics, cross-browser testing, and performance optimization. Shipped to production on day 14.`
+        },
+      ]
+    },
+    {
+      contentType: 'title', 
+      content: 'Key Sections',
+    },
+    {
+      title: 'Interactive Hero with App Mockup',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Most SaaS landing pages show a screenshot. We built the actual interface. The hero features a pixel-perfect app mockup with browser chrome, four navigable tabs, and a fully interactive invoice table — click a row and it expands into detailed extraction data with line items, confidence scores, and vendor metadata. All built in pure HTML/CSS/JS, no iframes, no embedded app.`
+        },
+        {
+          type: 'text',
+          text: `The result: visitors experience the product before they even talk to sales. Instead of reading about "structured data extraction," they see vendor names, amounts, confidence percentages, and line items in a clean, responsive table. The Templates, Export, and Settings tabs reveal additional depth on demand. It's a product demo disguised as a hero section.`
+        },
+      ],
+    },
+    {
+      title: 'Live Demo Section',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `The "See It In Action" section is the page's secret weapon. An automated loop cycles through four real-world invoice scenarios — restaurant supplier, medical equipment, construction materials, IT services — displaying raw PDF text on the left, running it through an animated progress bar, and revealing structured output on the right. It runs infinitely. Visitors get hooked watching messy invoices turn into clean data, over and over.`
+        },
+        {
+          type: 'text',
+          text: `Below, a pipeline visualization (Upload → AI Processing → Structured Data → Export) connects to six integration targets — Excel, PostgreSQL, MySQL, REST API, QuickBooks, and Custom ERP. The message is clear: Parseon drops into your existing stack. No migration, no vendor lock-in.`
+        },
+      ],
+    },
+    {
+      title: 'Problem Section with Animated Counters',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Three animated counters hit visitors right where it hurts: 73% of AP teams still process manually, $15–40 cost per invoice, 10+ hours wasted every week. The numbers count up as you scroll — a small JavaScript detail that makes the data feel alive. A real client quote ("We had three full-time employees doing nothing but typing invoice data into Excel") anchors the statistics in painful reality. This section doesn't explain Parseon — it makes you desperate for it.`
+        },
+      ],
+    },
+    {
+      title: 'Comparison Table',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Pure CSS comparison table, no JS overhead. Seven dimensions: cost per invoice ($15–40 → under $2), processing time (8–10 days → under 30 seconds), error rate (3–5% → below 0.5%), multi-invoice PDFs, custom templates, confidence scoring, Excel export. Three bold metrics (85% less cost, 10x faster, 0 manual hours) sit beside the table, ensuring even a quick scanner gets the message. Clean, scannable, devastating for the status quo.`
+        },
+      ],
+    },
+    {
+      title: 'Role-Based Messaging',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Enterprise buyers don't care about features — they care about their KPIs. Three cards speak to three personas: CFOs see cost reduction and scaling without headcount. Controllers see standardized data and audit-ready exports. AP Managers see 10x speed and exception-only workflows. Each card is written in their language, targeting the exact metrics they report on. This is the section that turns a curious visitor into an internal champion.`
+        },
+      ],
+    },
+    {
+      title: 'Bento-Grid Features',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Five capabilities, bento-grid layout, zero clutter. The hero card — Custom Extraction Templates — includes a live schema tree visualization: field names, types (string, number, array), and nested objects rendered as an interactive component. Visitors see exactly how templates work without reading documentation. The remaining four cards (Confidence Scoring, Batch Processing, Smart Page Splitting, Multi-Invoice Detection) are concise and punchy — one headline, one paragraph, done.`
+        },
+      ],
+    },
+    {
+      title: 'POC Request Form',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `The conversion endpoint. A three-step visual guide (Submit → Talk to Team → 7-Day Demo Access) removes uncertainty. The form captures name, email, company, job title, monthly volume, and current workflow — qualifying leads without feeling like an interrogation. Direct contact info (email + phone) sits alongside for senior buyers who skip forms entirely. No credit card, no commitment, just a conversation. Designed to lower every possible barrier to that first click.`
+        },
+      ],
+    },
+    {
+      title: 'Results',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Two weeks. Three people. One page that does the work of an entire sales deck. From first wireframe to production deployment in 14 days — that's what happens when a designer, a developer, and a PM operate as a single unit, not as a pipeline with handoff delays. Every day counted, every decision was made fast, and nothing went through three rounds of "feedback."`
+        },
+        {
+          type: 'text',
+          text: `The result: a fully responsive, SEO-optimized landing page with interactive product demos, live data visualizations, animated counters, a six-target integration showcase, role-based messaging, and a conversion-optimized POC request form. Not a static marketing page — a selling machine that replaces demo videos, pitch decks, and follow-up emails with a single URL: <a href="https://parseon.apollorise.tech" target="_blank" class="bold">parseon.apollorise.tech</a>`
+        }
+      ],
+    },
+    {
+      title: 'Tech Stack',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Webpack 5, Pug, SCSS, Vanilla JavaScript, Swiper.js, Babel, PostCSS / Autoprefixer, IntersectionObserver API, JSON-LD Structured Data`
+        }
+      ],
+    },
+  ]
+
+  const caseRecommendationsList = []
+
+html
+  head 
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1") 
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="mobile-web-app-capable" content="yes")
+
+    <!-- Status bar styles -->
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    meta(name="theme-color" content="#FCFBF8")
+
+    <!-- Title -->
+    title Parseon Website | High-Converting AI Product Landing Page — ApolloRise Tech
+    meta(name="description" content="How we designed and built parseon.tech — an interactive product landing page for an AI invoice processing platform. Interactive app mockup, live demo, and role-based messaging.")
+    meta(name="keywords" content="Parseon, product landing page, SaaS website, B2B landing page, interactive demo, AI product marketing, ApolloRise Tech")
+    meta(name="author" content="ApolloRise Tech")
+
+    <!-- Canonical -->
+    link(rel="canonical" href="https://apollorise.tech/cases/parseon-website")
+
+    <!-- Open Graph -->
+    meta(property="og:type" content="article")
+    meta(property="og:title" content="Parseon Website | High-Converting AI Product Landing Page — ApolloRise Tech")
+    meta(property="og:description" content="How we designed and built parseon.tech — an interactive product landing page for an AI invoice processing platform. Live demo, app mockup, conversion-optimized.")
+    meta(property="og:url" content="https://apollorise.tech/cases/parseon-website")
+    meta(property="og:image" content="https://apollorise.tech/sources/images/parseon_cover.png")
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    meta(property="og:site_name" content="ApolloRise Tech")
+
+    <!-- Twitter / X -->
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:title" content="Parseon Website | High-Converting AI Product Landing Page — ApolloRise Tech")
+    meta(name="twitter:description" content="Interactive product landing page for an AI invoice processing platform. Live demo, app mockup, conversion-optimized design.")
+    meta(name="twitter:image" content="https://apollorise.tech/sources/images/parseon_cover.png")
+    meta(name="twitter:site" content="@apollorisetech")
+
+    link(rel='stylesheet', href='../../../sources/fonts/fonts.css')
+
+    <!-- Favicons -->
+    link(rel="icon" type="image/png" href=require('../../../sources/images/favicon.png'))
+    link(rel="shortcut icon" href=require('../../../sources/images/favicon.ico'))
+
+    link(rel="apple-touch-icon" sizes="76x76" href=require('../../../sources/images/apple-touch-icon-76x76.png'))
+    link(rel="apple-touch-icon" sizes="120x120" href=require('../../../sources/images/apple-touch-icon-120x120.png'))
+    link(rel="apple-touch-icon" sizes="152x152" href=require('../../../sources/images/apple-touch-icon-152x152.png'))
+    link(rel="apple-touch-icon" sizes="180x180" href=require('../../../sources/images/apple-touch-icon-180x180.png'))
+  
+    //- Google Tag Manager
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PXHCM38Q');
+    //- End Google Tag Manager
+  body 
+
+    //-Google Tag Manager (noscript)
+    iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-PXHCM38Q" height="0" width="0" style="display:none;visibility:hidden")
+    //-  End Google Tag Manager (noscript)
+
+    include ../../../components/header/header
+    +header({ linksHeader: linksHeader, contactUs: '#contactUs' })
+
+    main 
+      section.caseHeader.wrapper.colorSection
+        .caseHeader__wrapper
+          .caseHeader__image._anim-items._anim-no-hide 
+            picture
+              img(src=require('../../../sources/images/parseon_website_cover.png') alt="Parseon — AI invoice processing product landing page" loading="lazy")
+          .caseHeader__text 
+            p.subtitle._anim-items._anim-no-hide Product Website, Orlando FL, 2026
+            h1.h1._anim-items._anim-no-hide Parseon | Product landing page for AI invoice platform
+
+      include ../../../components/casesContent/casesContent
+      +casesContent({ casesContent: pageContent })
+
+      include ../../../components/contactUs/contactUs
+
+    include ../../../components/footer/footer
+    +footer({ linksFooter: linksFooter, contactUs: '#contactUs' })

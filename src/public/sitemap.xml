@@ -37,6 +37,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://apollorise.tech/cases/parseon</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://apollorise.tech/cases/parseon-website</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://apollorise.tech/privacy-policy</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>yearly</changefreq>

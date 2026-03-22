@@ -6,5 +6,5 @@ mixin tags({tags})
         .tag__thumbnails   
           each thumbnail in tagItem.icons
             .tag__thumbnail   
-              img(src=thumbnail alt="thumbnail")
+              img(src=thumbnail alt=tagItem.position)
         p.text_4= tagItem.position

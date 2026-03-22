@@ -1,0 +1,365 @@
+- 
+  const linksHeader = [
+    {
+      name: 'About', 
+      url: '/#about'
+    },
+    {
+      name: 'Services', 
+      url: '/#whatWeDo'
+    },
+    {
+      name: 'Our Work', 
+      url: '/portfolio'
+    },
+    {
+      name: 'Founders', 
+      url: '/founders'
+    },
+    {
+      name: 'Blog', 
+      url: '/blog/'
+    },
+    {
+      name: 'Careers', 
+      url: '/career'
+    },
+  ]
+
+  const linksFooter = [
+    {
+      name: 'About', 
+      url: '/#about'
+    },
+    {
+      name: 'Services', 
+      url: '/#whatWeDo'
+    },
+    {
+      name: 'Our Work', 
+      url: '/portfolio'
+    },
+    {
+      name: 'Founders', 
+      url: '/founders'
+    },
+    {
+      name: 'Blog', 
+      url: '/blog/'
+    },
+    {
+      name: 'Career', 
+      url: '/career'
+    },
+  ]
+
+  const pageContent = [
+    {
+      contentType: 'withoutTitle',
+      content: [{
+        name: 'Services',
+        text: `<ul>
+          <li class="h4">Full-cycle product development</li>
+          <li class="h4">AI / OCR integration</li> 
+          <li class="h4">Product design</li> 
+          <li class="h4">Cloud infrastructure</li>
+        </ul>`
+        },
+        {
+          name: 'Industries',
+          text: `<div class="h4">FinTech, Accounting, B2B SaaS</div>`
+        }
+      ],
+    },
+    {
+      title: 'About',
+      contentType: 'text',
+      content: [{
+        type: 'text',
+        text: 'Parseon is an enterprise SaaS platform that automates data extraction from PDF documents — invoices, contracts, receipts — using AI-powered OCR. It replaces hours of manual data entry with structured, exportable results in seconds.'
+      }],
+    },
+    {
+      title: 'The Problem',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Finance teams and accountants spend countless hours manually typing data from invoices and receipts into spreadsheets. With hundreds of documents arriving weekly — each in a different format, layout, and quality — the process is slow, error-prone, and expensive.`
+        },
+        {
+          type: 'text',
+          text: `Existing OCR tools either lack accuracy on real-world scanned documents or require heavy manual correction. Companies needed a solution that could handle messy PDFs, extract exactly the fields they need, and export clean data ready for their accounting systems.`
+        }
+      ],
+    },
+    {
+      title: 'Our Solution',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `We built Parseon from the ground up — a full-stack SaaS platform where users upload PDFs, define custom extraction templates, and get structured data back automatically. The AI handles the rest: OCR, field recognition, data normalization, and Excel export.`
+        },
+        {
+          type: 'text',
+          text: `For low-quality scanned documents, we developed a dedicated Python microservice that pre-processes PDFs — correcting rotation, removing noise, and enhancing readability — before sending them to the AI engine. This dramatically improves extraction accuracy on real-world documents.`
+        }
+      ],
+    },
+    {
+      title: 'Team',
+      contentType: 'tag',
+      content: [
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_1.png')
+          ],
+          position: 'Product Designer'
+        },
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_2.png')
+          ],
+          position: 'Backend Developer'
+        },
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_4.png')
+          ],
+          position: 'Frontend Developer'
+        },
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_7.png')
+          ],
+          position: 'DevOps Engineer'
+        },
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_8.png')
+          ],
+          position: 'Project Manager'
+        },
+      ]
+    },
+    {
+      title: 'Project workflow',
+      contentType: 'list',
+      content: [
+        {
+          itemTitle: `Research & Architecture Design <span>(2 weeks)</span>`,
+          itemDescription: `Analyzed the document processing market, defined the core extraction pipeline, and designed the system architecture — from PDF upload to structured Excel output.`
+        },
+        {
+          itemTitle: `PDF Pre-Processing Microservice <span>(2 weeks)</span>`,
+          itemDescription: `Built a Python FastAPI service for scanned document enhancement: deskewing, noise removal, rotation correction, and grayscale optimization. This step was critical for real-world document quality.`
+        },
+        {
+          itemTitle: `Core Platform Development <span>(2 months)</span>`,
+          itemDescription: `Developed the full Laravel + React application: multi-tenant organizations, folder management, document upload to S3, and the OCR → Extract pipeline with async queue processing.`
+        },
+        {
+          itemTitle: `Custom Template Engine <span>(3 weeks)</span>`,
+          itemDescription: `Built a flexible template system allowing users to define exactly which fields to extract — with support for nested objects, arrays, table columns, and AI system prompts for context-specific extraction.`
+        },
+        {
+          itemTitle: `Smart Page Range Processing <span>(2 weeks)</span>`,
+          itemDescription: `Implemented intelligent document splitting for large PDFs (25+ pages) — automatic range detection, parallel processing of chunks, and result merging for accurate extraction at scale.`
+        },
+        {
+          itemTitle: `Excel Export & Reporting <span>(1 week)</span>`,
+          itemDescription: `Created styled Excel exports with color-coded headers, confidence highlighting, and per-folder batch export — ready to drop into any accounting system.`
+        },
+        {
+          itemTitle: `Infrastructure & Deployment <span>(1 week)</span>`,
+          itemDescription: `Containerized the entire stack with Docker Compose (app, Redis, PDF processor), configured Nginx, Supervisor, and Laravel Horizon for production-grade queue management.`
+        },
+      ]
+    },
+    {
+      contentType: 'title', 
+      content: 'Key Features',
+    },
+    {
+      title: 'AI-Powered Document Extraction',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `The core of Parseon is the OCR → Extract pipeline. Documents are first parsed with AI-powered OCR to extract raw text, then processed through a structured extraction engine that maps the content to user-defined field schemas.`
+        },
+        {
+          type: 'text',
+          text: `The system handles invoices, contracts, receipts, and any custom document type. Each extraction returns confidence scores so users can instantly see which fields need manual review and which are ready to export.`
+        },
+      ],
+    },
+    {
+      title: 'Custom Extraction Templates',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Users define templates that tell the AI exactly what to extract. Templates support field types (string, number, array, object), nested hierarchies for complex documents, and table column detection for line items.`
+        },
+        {
+          type: 'text',
+          text: `Each template can include a system prompt — up to 2,000 characters of natural language instructions that guide the AI's behavior. This means the same platform can handle a one-page receipt and a 50-page government contract with equal precision.`
+        },
+      ],
+    },
+    {
+      title: 'PDF Pre-Processing Engine',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Real-world scanned documents are often rotated, noisy, or low-contrast. Our dedicated Python microservice fixes these issues before the AI even sees the document — deskewing pages using multiple detection algorithms (Hough transform, baseline analysis, projection profiling), removing speckle noise, and optimizing contrast.`
+        },
+        {
+          type: 'text',
+          text: `This pre-processing step improved extraction accuracy by 15–25% on scanned documents compared to sending raw PDFs directly to the AI.`
+        },
+      ],
+    },
+    {
+      title: 'Smart Large Document Handling',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Documents over 25 pages are automatically split into optimally-sized chunks, processed in parallel across multiple queue workers, and then intelligently merged back into a single structured result. Users can also manually define page ranges for precise control over multi-section documents.`
+        },
+      ],
+    },
+    {
+      title: 'Organization & Folder Management',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Parseon is built for teams. Multi-tenant organizations can manage users, while the folder system (organized by company/vendor/project) keeps documents structured. Each folder shows real-time processing stats — total documents, processed, pending, and failed — giving operations managers full visibility.`
+        },
+      ],
+    },
+    {
+      title: 'Excel Export',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `One-click export turns extracted data into production-ready Excel reports. Exports include styled headers, color-coded confidence indicators, and support for both single-document and batch folder exports. The output is designed to drop directly into accounting and ERP systems with zero reformatting.`
+        },
+      ],
+    },
+    {
+      title: 'Results',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Parseon processes documents in under 60 seconds — replacing what used to take 15–30 minutes of manual data entry per invoice. The platform handles documents up to 50 MB with OCR confidence scoring that eliminates guesswork.`
+        },
+        {
+          type: 'text',
+          text: `Built as ApolloRise's own product, Parseon demonstrates our ability to take a complex AI/OCR challenge from zero to production SaaS — including architecture, AI pipeline, PDF processing, cloud infrastructure, and a polished user experience.`
+        }
+      ],
+    },
+    {
+      title: 'Tech Stack',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Laravel 12, React 19, TypeScript, Inertia.js, Tailwind CSS, Python, FastAPI, Redis, MySQL, AWS S3, Docker, Nginx, Laravel Horizon`
+        }
+      ],
+    },
+  ]
+
+  const caseRecommendationsList = []
+
+html
+  head 
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1") 
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="mobile-web-app-capable" content="yes")
+
+    <!-- Status bar styles -->
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    meta(name="theme-color" content="#FCFBF8")
+
+    <!-- Title -->
+    title Parseon | AI-Powered Invoice & Document OCR Platform — ApolloRise Tech
+    meta(name="description" content="Parseon automates invoice and document data extraction using AI-powered OCR. Upload PDFs, get structured data in seconds. Built by ApolloRise Tech in Orlando, FL.")
+    meta(name="keywords" content="Parseon, AI OCR, invoice processing, document extraction, PDF to Excel, FinTech, SaaS, ApolloRise Tech, Orlando")
+    meta(name="author" content="ApolloRise Tech")
+
+    <!-- Canonical -->
+    link(rel="canonical" href="https://apollorise.tech/cases/parseon")
+
+    <!-- Open Graph -->
+    meta(property="og:type" content="article")
+    meta(property="og:title" content="Parseon | AI-Powered Invoice & Document OCR Platform — ApolloRise Tech")
+    meta(property="og:description" content="Parseon automates invoice and document data extraction using AI-powered OCR. Upload PDFs, get structured data in seconds. From zero to production SaaS.")
+    meta(property="og:url" content="https://apollorise.tech/cases/parseon")
+    meta(property="og:image" content="https://apollorise.tech/sources/images/linkImage.png")
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    meta(property="og:site_name" content="ApolloRise Tech")
+
+    <!-- Twitter / X -->
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:title" content="Parseon | AI-Powered Invoice & Document OCR Platform — ApolloRise Tech")
+    meta(name="twitter:description" content="Parseon automates invoice and document data extraction using AI-powered OCR. Upload PDFs, get structured data in seconds.")
+    meta(name="twitter:image" content="https://apollorise.tech/sources/images/linkImage.png")
+    meta(name="twitter:site" content="@apollorisetech")
+
+    link(rel='stylesheet', href='../../../sources/fonts/fonts.css')
+
+    <!-- Favicons -->
+    link(rel="icon" type="image/png" href=require('../../../sources/images/favicon.png'))
+    link(rel="shortcut icon" href=require('../../../sources/images/favicon.ico'))
+
+    link(rel="apple-touch-icon" sizes="76x76" href=require('../../../sources/images/apple-touch-icon-76x76.png'))
+    link(rel="apple-touch-icon" sizes="120x120" href=require('../../../sources/images/apple-touch-icon-120x120.png'))
+    link(rel="apple-touch-icon" sizes="152x152" href=require('../../../sources/images/apple-touch-icon-152x152.png'))
+    link(rel="apple-touch-icon" sizes="180x180" href=require('../../../sources/images/apple-touch-icon-180x180.png'))
+  
+    //- Google Tag Manager
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PXHCM38Q');
+    //- End Google Tag Manager
+  body 
+
+    //-Google Tag Manager (noscript)
+    iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-PXHCM38Q" height="0" width="0" style="display:none;visibility:hidden")
+    //-  End Google Tag Manager (noscript)
+
+    include ../../../components/header/header
+    +header({ linksHeader: linksHeader, contactUs: '#contactUs' })
+
+    main 
+      section.caseHeader.wrapper.colorSection
+        .caseHeader__wrapper
+          .caseHeader__image._anim-items._anim-no-hide 
+            picture
+              img(src=require('../../../sources/images/parseon_cover.png') alt="Parseon — AI-powered invoice processing platform interface" loading="lazy")
+          .caseHeader__text 
+            p.subtitle._anim-items._anim-no-hide Own Product, Orlando FL, 2025
+            h1.h1._anim-items._anim-no-hide Parseon | AI-powered invoice & document OCR platform
+
+      include ../../../components/casesContent/casesContent
+      +casesContent({ casesContent: pageContent })
+
+      include ../../../components/contactUs/contactUs
+
+    include ../../../components/footer/footer
+    +footer({ linksFooter: linksFooter, contactUs: '#contactUs' })

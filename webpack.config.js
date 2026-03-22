@@ -22,6 +22,8 @@ module.exports = (env) => {
       successContact: path.resolve(__dirname, 'src', 'pages', 'successContact', 'successContact.js'),
       notFound: path.resolve(__dirname, 'src', 'pages', 'notFound', '404.js'),
       privacyPolicy: path.resolve(__dirname, 'src', 'pages', 'privacyPolicy', 'privacyPolicy.js'),
+      parseon: path.resolve(__dirname, 'src', 'pages', 'cases', 'parseon', 'cases.js'),
+      parseonWebsite: path.resolve(__dirname, 'src', 'pages', 'cases', 'parseonWebsite', 'cases.js'),
     },
 
     output: {
@@ -77,6 +79,16 @@ module.exports = (env) => {
         template: path.resolve(__dirname, 'src', 'pages', 'privacyPolicy', 'privacyPolicy.pug'),
         filename: 'privacy-policy.html',
         chunks: ['privacyPolicy'],
+      }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src', 'pages', 'cases', 'parseon', 'cases.pug'),
+        filename: 'cases/parseon.html',
+        chunks: ['parseon'],
+      }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src', 'pages', 'cases', 'parseonWebsite', 'cases.pug'),
+        filename: 'cases/parseon-website.html',
+        chunks: ['parseonWebsite'],
       }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].[contenthash:8].css',

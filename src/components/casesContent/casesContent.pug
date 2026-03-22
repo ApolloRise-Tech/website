@@ -42,4 +42,4 @@ mixin casesContent({casesContent})
               picture._anim-items._anim-no-hide
                 source(media="(min-width: 1137px)" srcset=image.image_1920)
                 source(media="(min-width: 491px)" srcset=image.image_1024)
-                img(src=image.image_600 alt="caseImage" loading="lazy")
+                img(src=image.image_600 alt=(image.alt || "Product screenshot") loading="lazy")
