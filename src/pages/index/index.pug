@@ -195,10 +195,14 @@ html
       include ../../components/about/about
       include ../../components/whatWeDo/whatWeDo
 
-      .ctaBanner.wrapper._anim-items._anim-no-hide
+      .ctaBanner._anim-items._anim-no-hide
         .ctaBanner__inner
-          p.text_1.ctaBanner__text Have a project in mind?
-          a(href="#contactUs").button_yellow.size_m Let's Talk
+          p.ctaBanner__text Have a project in mind?
+          a(href="#contactUs").ctaBanner__btn
+            span Let's Talk
+            svg(xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none")
+              path(d="M5 12H19" stroke="currentColor" stroke-width="1.5")
+              path(d="M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.5")
 
       include ../../components/industries/industries
 
@@ -218,10 +222,14 @@ html
               path(d="M5 12H19" stroke="#23221F" stroke-width="1.5")
               path(d="M13 6L19 12L13 18" stroke="#23221F" stroke-width="1.5")
 
-      .ctaBanner.wrapper._anim-items._anim-no-hide
+      .ctaBanner._anim-items._anim-no-hide
         .ctaBanner__inner
-          p.text_1.ctaBanner__text Ready to build something great?
-          a(href="#contactUs").button_yellow.size_m Start the Conversation
+          p.ctaBanner__text Ready to build something great?
+          a(href="#contactUs").ctaBanner__btn
+            span Start the Conversation
+            svg(xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none")
+              path(d="M5 12H19" stroke="currentColor" stroke-width="1.5")
+              path(d="M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.5")
 
       include ../../components/howWeWork/howWeWork
       include ../../components/ourCoreValues/ourCoreValues
