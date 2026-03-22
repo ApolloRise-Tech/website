@@ -64,7 +64,7 @@
       tags: ['Agentic AI', 'MVP → SaaS', 'LegalTech', 'UX/UI'],
     },
     {
-      picture: require('../../sources/images/parseon_cover.png'),
+      picture: require('../../sources/images/parseon_cover.jpg'),
       link: '/cases/parseon',
       targetLink: '_self',
       title: 'Parseon | AI-Powered Invoice & Document OCR',
@@ -194,6 +194,12 @@ html
       include ../../components/main/main 
       include ../../components/about/about
       include ../../components/whatWeDo/whatWeDo
+
+      .ctaBanner.wrapper._anim-items._anim-no-hide
+        .ctaBanner__inner
+          p.text_1.ctaBanner__text Have a project in mind?
+          a(href="#contactUs").button_yellow.size_m Let's Talk
+
       include ../../components/industries/industries
 
       include ../../components/ourProducts/ourProducts
@@ -211,6 +217,11 @@ html
             svg(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none")
               path(d="M5 12H19" stroke="#23221F" stroke-width="1.5")
               path(d="M13 6L19 12L13 18" stroke="#23221F" stroke-width="1.5")
+
+      .ctaBanner.wrapper._anim-items._anim-no-hide
+        .ctaBanner__inner
+          p.text_1.ctaBanner__text Ready to build something great?
+          a(href="#contactUs").button_yellow.size_m Start the Conversation
 
       include ../../components/howWeWork/howWeWork
       include ../../components/ourCoreValues/ourCoreValues

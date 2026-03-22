@@ -5,9 +5,9 @@ mixin caseRecommendationCard({card})
     a(href=card.link target=`${card.targetLink ? card.targetLink : '_blank'}`).caseRecommendationCard__imageWrapper(class=`${card.link ? '' : 'withoutLink'}`)
       .caseRecommendationCard__image
         if(card.picture)
-          img(src=card.picture alt=card.title)
+          img(src=card.picture alt=card.title loading="lazy")
         if(!card.picture)
-          img(src=require('../../sources/images/caseRecommendation.png') alt=card.title)
+          img(src=require('../../sources/images/caseRecommendation.png') alt=card.title loading="lazy")
         if(!card.link)
           .caseRecommendationCard__caseWithoutLink
             h4.h3 Coming soon

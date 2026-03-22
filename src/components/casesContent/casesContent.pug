@@ -18,7 +18,7 @@ mixin casesContent({casesContent})
                   if(contentItem.type === 'text')
                     p.text_4!= contentItem.text
                   if(contentItem.type === 'image')
-                    img(src=contentItem.image alt=contentItem.alt)
+                    img(src=contentItem.image alt=contentItem.alt loading="lazy")
             if(item.contentType === 'list')
               ul.caseContent__itemList._anim-items._anim-no-hide
                 each contentItem in item.content
