@@ -1,0 +1,351 @@
+- 
+  const linksHeader = [
+    {
+      name: 'About', 
+      url: '/#about'
+    },
+    {
+      name: 'Services', 
+      url: '/#whatWeDo'
+    },
+    {
+      name: 'Our Work', 
+      url: '/portfolio'
+    },
+    {
+      name: 'Founders', 
+      url: '/founders'
+    },
+    {
+      name: 'Blog', 
+      url: '/blog/'
+    },
+    {
+      name: 'Careers', 
+      url: '/career'
+    },
+  ]
+
+  const linksFooter = [
+    {
+      name: 'About', 
+      url: '/#about'
+    },
+    {
+      name: 'Services', 
+      url: '/#whatWeDo'
+    },
+    {
+      name: 'Our Work', 
+      url: '/portfolio'
+    },
+    {
+      name: 'Founders', 
+      url: '/founders'
+    },
+    {
+      name: 'Blog', 
+      url: '/blog/'
+    },
+    {
+      name: 'Career', 
+      url: '/career'
+    },
+  ]
+
+  const pageContent = [
+    {
+      contentType: 'withoutTitle',
+      content: [{
+        name: 'Services',
+        text: `<ul>
+          <li class="h4">Product landing page</li>
+          <li class="h4">UX / UI design</li> 
+          <li class="h4">3D art & animation</li> 
+          <li class="h4">Video production</li>
+          <li class="h4">Frontend development</li>
+        </ul>`
+        },
+        {
+          name: 'Industries',
+          text: `<div class="h4">Procurement, B2B SaaS, AI Analytics</div>`
+        }
+      ],
+    },
+    {
+      title: 'About',
+      contentType: 'text',
+      content: [{
+        type: 'text',
+        text: `<a href="https://pulsar.apollorise.tech" target="_blank" class="bold">pulsar.apollorise.tech</a> — the marketing website for Pulsar, our AI-powered procurement optimization platform. Not your average SaaS landing page — this is a cinematic experience built in one month, featuring custom 3D animations, 8 professional videos, a dark premium design, and interactive demos of the real product. When procurement software needs to look as exciting as the AI behind it, this is what you build.`
+      }],
+    },
+    {
+      title: 'The Challenge',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Procurement optimization is a hard sell. It's invisible work — comparing invoices, finding cheaper alternatives, calculating savings. The people who need it know they need it, but every competitor's website looks the same: white background, stock photos of handshakes, bullet points about "efficiency." We needed to break that pattern completely.`
+        },
+        {
+          type: 'text',
+          text: `The goal: make a B2B procurement tool feel like a premium product launch. Show the real platform in action. Use video and 3D to create a visual experience that signals "this company is serious about technology." And convert enterprise visitors into beta requests — all on a single page, shipped in one month.`
+        }
+      ],
+    },
+    {
+      title: 'Our Approach',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `We went cinematic. The entire website is built on a dark theme with deep blacks and blue gradient accents — the opposite of every B2B SaaS site you've ever seen. The hero opens with a professional product video auto-playing behind the headline. No stock footage. No generic animations. Every visual asset was produced specifically for Pulsar.`
+        },
+        {
+          type: 'text',
+          text: `We assembled a cross-functional team: a product designer for UX and layout, a frontend developer for implementation, 3D artists for custom animated assets, a video team for product demos and promotional content, and a project manager keeping the one-month timeline on track. Design, 3D production, video shoots, and development all ran in parallel — because when you have 30 days, you can't afford a waterfall.`
+        }
+      ],
+    },
+    {
+      title: 'Team',
+      contentType: 'tag',
+      content: [
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_1.png')
+          ],
+          position: 'Product Designer'
+        },
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_4.png')
+          ],
+          position: 'Frontend Developer'
+        },
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_3.png')
+          ],
+          position: '3D Artist'
+        },
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_5.png')
+          ],
+          position: 'Video Creator'
+        },
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_8.png')
+          ],
+          position: 'Project Manager'
+        },
+      ]
+    },
+    {
+      title: 'Project workflow',
+      contentType: 'list',
+      content: [
+        {
+          itemTitle: `Concept & Storyboarding <span>(week 1)</span>`,
+          itemDescription: `Defined the website's narrative arc — from the "revolution in procurement" hook to the five-step product walkthrough to the beta signup form. Mapped out which sections need video, which need 3D assets, and where interactive elements would have the most impact. Wrote all copy with a focus on procurement pain points and clear ROI messaging.`
+        },
+        {
+          itemTitle: `Design & 3D / Video Production <span>(weeks 1–3)</span>`,
+          itemDescription: `Created the dark, premium visual language — deep blacks and blues with gradient accents. While the UI was being designed, the 3D artists were producing custom animated assets — including an animated compass visualization for the key differentiator section. In parallel, the video team was shooting and editing the hero background loop, five step-by-step product demos, and a promotional video. Three creative streams running simultaneously.`
+        },
+        {
+          itemTitle: `Frontend Development <span>(weeks 2–4)</span>`,
+          itemDescription: `Built the full website on Webpack 5 + Pug + SCSS with Swiper.js for the advantages carousel and the tabbed "Personalized Offers" section. Integrated 8 custom videos across the page — hero preview, 5 step-by-step demos, responsive CTA background (desktop/tablet/mobile variants), and a modal video player. Added scroll-triggered reveal animations, an animated FAQ accordion with "Load more" functionality, and an international phone input for the beta signup form.`
+        },
+        {
+          itemTitle: `QA & Launch <span>(week 4)</span>`,
+          itemDescription: `Cross-browser testing, responsive validation across all breakpoints, video preload optimization (lazy loading for below-fold content), SEO setup with Open Graph and Twitter Cards, and final performance tuning. Deployed to production on schedule — 30 days from kickoff to live.`
+        },
+      ]
+    },
+    {
+      contentType: 'title', 
+      content: 'Key Sections',
+    },
+    {
+      title: 'Cinematic Hero with Video',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `The page opens with a bold headline — "Revolution in procurement cost optimization" — layered over a professional product video that auto-plays on loop. The video shows the actual Pulsar interface in action, not a mockup. A prominent "Try beta version" CTA sits above the fold, and a play button triggers a full-screen modal with the complete promotional video. First impression: this isn't another boring B2B page.`
+        },
+      ],
+    },
+    {
+      title: 'Advantages Carousel',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Six value propositions cycle through a smooth Swiper carousel: labor savings ($4,000 eliminated), fast data analysis (1 minute per invoice), error minimization (AI + human oversight), real-time analysis (vs. 7-day manual cycles), high data security (AWS encrypted), and easy integration (no specific knowledge needed). Each card has a clear headline, a concrete metric, and a one-paragraph explanation. Visitors get the full value story in a single scroll.`
+        },
+      ],
+    },
+    {
+      title: '3D Animated Key Differentiator',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `The "100x faster than manual processing" claim gets its own showcase section with a custom 3D-animated compass that rotates and responds to the viewport. The 3D artists created both desktop and mobile versions of the animation. This section bridges the gap between the "what" (advantages) and the "how" (step-by-step) — a visual anchor that makes the speed claim feel tangible and memorable.`
+        },
+      ],
+    },
+    {
+      title: 'Five-Step Video Walkthrough',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `This is where the website becomes a product demo. Five sequential steps — Import Price Lists, Import Invoices, Data Processing, Report Generation, Implement Recommendations — each with its own embedded video showing the actual platform. Visitors watch real data flowing through the system. No screenshots, no wireframes. Five professional demo videos, each focused on one clear action. By the end of this section, visitors understand exactly how Pulsar works — because they just watched it work.`
+        },
+      ],
+    },
+    {
+      title: 'Tabbed Audience Messaging',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Four tabs speak to four distinct audiences: companies with their own supplier databases, partners looking to offer procurement solutions to their clients, companies needing custom solutions, and investors. Each tab has its own visual, its own messaging angle, and its own CTA. The Swiper-powered transitions keep the section compact while giving each audience a tailored experience — a small UX detail that shows the level of care in the page's conversion architecture.`
+        },
+      ],
+    },
+    {
+      title: 'FAQ Accordion',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Twelve questions covering everything from data security to integration to pricing — organized in an expanding accordion with a "Load more" button that reveals additional questions. Every answer is written for a procurement professional, not a developer. Clear, jargon-free, and focused on business outcomes. This section handles objections that might otherwise prevent a form submission.`
+        },
+      ],
+    },
+    {
+      title: 'Video CTA & Conversion Form',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `The closing section pairs a video-background CTA ("Make better decisions with Pulsar") with a conversion form that captures name, company, email, phone (with international formatting), and a free-text field. The video plays responsively — desktop, tablet, and mobile versions load based on screen size for optimal performance. The form submits to the backend and redirects to a thank-you page. Every element is designed to minimize friction at the moment of highest intent.`
+        },
+      ],
+    },
+    {
+      title: 'Results',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `One month. A designer, a developer, a PM, plus 3D artists and a video production team — all working in parallel. The result: a cinematic B2B website with 8 custom videos, a 3D animated asset, four tabbed audience views, a 12-question FAQ, scroll-triggered animations, and zero stock photography. Every visual was made for Pulsar. Every word was written for procurement professionals.`
+        },
+        {
+          type: 'text',
+          text: `The website drives beta signups with a combination of real product demos, clear ROI messaging, and a visual quality that enterprise buyers don't expect from a procurement tool. When a visitor lands on <a href="https://pulsar.apollorise.tech" target="_blank" class="bold">pulsar.apollorise.tech</a>, they know within seconds that this team builds things differently.`
+        }
+      ],
+    },
+    {
+      title: 'Tech Stack',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Webpack 5, Pug, SCSS, Vanilla JavaScript, Swiper.js, Babel, PostCSS / Autoprefixer, Custom 3D animations, Professional video production (8 videos), intl-tel-input`
+        }
+      ],
+    },
+  ]
+
+  const caseRecommendationsList = []
+
+html
+  head 
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1") 
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="mobile-web-app-capable" content="yes")
+
+    <!-- Status bar styles -->
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    meta(name="theme-color" content="#FCFBF8")
+
+    <!-- Title -->
+    title Pulsar Website | Cinematic B2B Landing Page with 3D & Video — ApolloRise Tech
+    meta(name="description" content="How we built pulsar.apollorise.tech — a cinematic marketing website for an AI procurement platform. 8 custom videos, 3D animations, dark premium design, and five-step product demo. Shipped in 1 month.")
+    meta(name="keywords" content="Pulsar, product website, B2B landing page, 3D animation, video production, cinematic web design, procurement SaaS, ApolloRise Tech")
+    meta(name="author" content="ApolloRise Tech")
+
+    <!-- Canonical -->
+    link(rel="canonical" href="https://apollorise.tech/cases/pulsar-website")
+
+    <!-- Open Graph -->
+    meta(property="og:type" content="article")
+    meta(property="og:title" content="Pulsar Website | Cinematic B2B Landing Page with 3D & Video — ApolloRise Tech")
+    meta(property="og:description" content="Dark premium website with videos, 3D animated assets, five-step product demo, and tabbed audience messaging. Shipped in 1 month with 3D artists and video team.")
+    meta(property="og:url" content="https://apollorise.tech/cases/pulsar-website")
+    meta(property="og:image" content="https://apollorise.tech/sources/images/pulsar_cover.png")
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    meta(property="og:site_name" content="ApolloRise Tech")
+
+    <!-- Twitter / X -->
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:title" content="Pulsar Website | Cinematic B2B Landing Page with 3D & Video — ApolloRise Tech")
+    meta(name="twitter:description" content="Cinematic marketing website for an AI procurement platform. 8 videos, 3D animations, dark design. Shipped in 1 month.")
+    meta(name="twitter:image" content="https://apollorise.tech/sources/images/pulsar_cover.png")
+    meta(name="twitter:site" content="@apollorisetech")
+
+    link(rel='stylesheet', href='../../../sources/fonts/fonts.css')
+
+    <!-- Favicons -->
+    link(rel="icon" type="image/png" href=require('../../../sources/images/favicon.png'))
+    link(rel="shortcut icon" href=require('../../../sources/images/favicon.ico'))
+
+    link(rel="apple-touch-icon" sizes="76x76" href=require('../../../sources/images/apple-touch-icon-76x76.png'))
+    link(rel="apple-touch-icon" sizes="120x120" href=require('../../../sources/images/apple-touch-icon-120x120.png'))
+    link(rel="apple-touch-icon" sizes="152x152" href=require('../../../sources/images/apple-touch-icon-152x152.png'))
+    link(rel="apple-touch-icon" sizes="180x180" href=require('../../../sources/images/apple-touch-icon-180x180.png'))
+  
+    //- Google Tag Manager
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PXHCM38Q');
+    //- End Google Tag Manager
+  body 
+
+    //-Google Tag Manager (noscript)
+    iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-PXHCM38Q" height="0" width="0" style="display:none;visibility:hidden")
+    //-  End Google Tag Manager (noscript)
+
+    include ../../../components/header/header
+    +header({ linksHeader: linksHeader, contactUs: '#contactUs' })
+
+    main 
+      section.caseHeader.wrapper.colorSection
+        .caseHeader__wrapper
+          .caseHeader__image._anim-items._anim-no-hide 
+            video(src="https://pulsar.apollorise.tech/PulsarMain.mp4" autoplay loop muted playsinline poster=require('../../../sources/images/pulsar_cover.png'))
+          .caseHeader__text 
+            p.subtitle._anim-items._anim-no-hide Product Website, Orlando FL, 2025
+            h1.h1._anim-items._anim-no-hide Pulsar | Product Website
+
+      include ../../../components/casesContent/casesContent
+      +casesContent({ casesContent: pageContent })
+
+      include ../../../components/contactUs/contactUs
+
+    include ../../../components/footer/footer
+    +footer({ linksFooter: linksFooter, contactUs: '#contactUs' })

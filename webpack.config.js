@@ -24,6 +24,8 @@ module.exports = (env) => {
       privacyPolicy: path.resolve(__dirname, 'src', 'pages', 'privacyPolicy', 'privacyPolicy.js'),
       parseon: path.resolve(__dirname, 'src', 'pages', 'cases', 'parseon', 'cases.js'),
       parseonWebsite: path.resolve(__dirname, 'src', 'pages', 'cases', 'parseonWebsite', 'cases.js'),
+      pulsar: path.resolve(__dirname, 'src', 'pages', 'cases', 'pulsar', 'cases.js'),
+      pulsarWebsite: path.resolve(__dirname, 'src', 'pages', 'cases', 'pulsarWebsite', 'cases.js'),
     },
 
     output: {
@@ -89,6 +91,16 @@ module.exports = (env) => {
         template: path.resolve(__dirname, 'src', 'pages', 'cases', 'parseonWebsite', 'cases.pug'),
         filename: 'cases/parseon-website.html',
         chunks: ['parseonWebsite'],
+      }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src', 'pages', 'cases', 'pulsar', 'cases.pug'),
+        filename: 'cases/pulsar.html',
+        chunks: ['pulsar'],
+      }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src', 'pages', 'cases', 'pulsarWebsite', 'cases.pug'),
+        filename: 'cases/pulsar-website.html',
+        chunks: ['pulsarWebsite'],
       }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].[contenthash:8].css',

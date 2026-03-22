@@ -1,0 +1,331 @@
+- 
+  const linksHeader = [
+    {
+      name: 'About', 
+      url: '/#about'
+    },
+    {
+      name: 'Services', 
+      url: '/#whatWeDo'
+    },
+    {
+      name: 'Our Work', 
+      url: '/portfolio'
+    },
+    {
+      name: 'Founders', 
+      url: '/founders'
+    },
+    {
+      name: 'Blog', 
+      url: '/blog/'
+    },
+    {
+      name: 'Careers', 
+      url: '/career'
+    },
+  ]
+
+  const linksFooter = [
+    {
+      name: 'About', 
+      url: '/#about'
+    },
+    {
+      name: 'Services', 
+      url: '/#whatWeDo'
+    },
+    {
+      name: 'Our Work', 
+      url: '/portfolio'
+    },
+    {
+      name: 'Founders', 
+      url: '/founders'
+    },
+    {
+      name: 'Blog', 
+      url: '/blog/'
+    },
+    {
+      name: 'Career', 
+      url: '/career'
+    },
+  ]
+
+  const pageContent = [
+    {
+      contentType: 'withoutTitle',
+      content: [{
+        name: 'Services',
+        text: `<ul>
+          <li class="h4">Full-cycle product development</li>
+          <li class="h4">AI / ML integration</li> 
+          <li class="h4">Product design</li> 
+          <li class="h4">Cloud infrastructure</li>
+        </ul>`
+        },
+        {
+          name: 'Industries',
+          text: `<div class="h4">Procurement, B2B SaaS, AI Analytics</div>`
+        }
+      ],
+    },
+    {
+      title: 'About',
+      contentType: 'text',
+      content: [{
+        type: 'text',
+        text: `Pulsar is our own AI-powered procurement optimization platform. It analyzes supplier invoices at scale, finds cheaper alternatives using semantic AI search, and generates savings reports — turning a process that takes procurement teams weeks into minutes. Built in 4 months by a five-person team, Pulsar handles up to 500,000 products in a single analysis run.`
+      }],
+    },
+    {
+      title: 'The Problem',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Procurement teams at mid-size and large companies spend hundreds of hours every month doing one thing: comparing prices. They receive invoices from current suppliers, then manually search through price lists from alternative vendors, trying to find the same or equivalent products at lower cost. With 100,000+ products across dozens of suppliers, it's a nightmare of spreadsheets, guesswork, and missed savings.`
+        },
+        {
+          type: 'text',
+          text: `Manual analysis of 100,000 products takes roughly 100 hours — about $4,000 in labor costs. Each invoice takes 15 minutes to cross-reference. And by the time the analysis is done, the recommendations are already outdated. Companies needed a tool that could do this instantly, accurately, and at any scale.`
+        }
+      ],
+    },
+    {
+      title: 'Our Solution',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `We built Pulsar from the ground up as a full-stack AI platform. Users upload supplier price lists — the system indexes every product, generates AI embeddings, and stores them in a vector database. When an invoice comes in, Pulsar reads each line item, searches semantically across all indexed suppliers, and finds the closest alternatives. Not just by name — by meaning. "Atlantic Cod Fillet 40cs" matches "Cod Fish Fillets, case of 40" because the AI understands they're the same product.`
+        },
+        {
+          type: 'text',
+          text: `But finding matches is only half the job. Pulsar's AI then evaluates each alternative — comparing units of measurement, package sizes, and prices — calculates exact savings, and generates a clean report highlighting the best option for every product. Procurement managers get a ready-to-act report instead of a mountain of data.`
+        }
+      ],
+    },
+    {
+      title: 'Team',
+      contentType: 'tag',
+      content: [
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_1.png')
+          ],
+          position: 'Product Designer'
+        },
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_2.png')
+          ],
+          position: 'Backend Developer'
+        },
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_4.png')
+          ],
+          position: 'Frontend Developer'
+        },
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_7.png')
+          ],
+          position: 'DevOps Engineer'
+        },
+        {
+          icons: [
+            require('../../../sources/images/thumbnail_8.png')
+          ],
+          position: 'Project Manager'
+        },
+      ]
+    },
+    {
+      title: 'Project workflow',
+      contentType: 'list',
+      content: [
+        {
+          itemTitle: `Discovery & Architecture <span>(3 weeks)</span>`,
+          itemDescription: `Deep dive into the procurement world. We interviewed procurement managers, studied how they compare prices, mapped out the data flow from invoice to savings report, and designed the full system architecture — including the vector search pipeline, AI filtering stages, and multi-tenant data model. Every decision was made before a single line of code was written.`
+        },
+        {
+          itemTitle: `Core Platform — Import & Indexing <span>(5 weeks)</span>`,
+          itemDescription: `Built the foundation: supplier management, price list import (CSV, XLSX, PDF), product normalization, and the full embedding pipeline. Every product gets vectorized and stored in a semantic search database. We also built the project/folder system where users organize their procurement analysis by vendor, department, or time period.`
+        },
+        {
+          itemTitle: `AI Search & Matching Engine <span>(4 weeks)</span>`,
+          itemDescription: `The brain of Pulsar. A multi-stage pipeline that takes each product from an invoice, searches semantically across all supplier databases, filters candidates through AI (evaluating match quality, package compatibility, and unit conversion), and calculates exact savings. The pipeline runs through 9 sequential stages — from embedding generation to final report assembly.`
+        },
+        {
+          itemTitle: `Reports, Instructions & Polish <span>(4 weeks)</span>`,
+          itemDescription: `Built the reporting layer: per-product savings breakdown, best alternative highlighting, manual override capability, and batch export. Added the Instructions system — project-specific rules that guide the AI's matching behavior (e.g., "only match organic products with organic alternatives"). Final round of UX polish, edge case handling, and performance optimization for large datasets.`
+        },
+      ]
+    },
+    {
+      contentType: 'title', 
+      content: 'Key Features',
+    },
+    {
+      title: 'Smart Supplier Database',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Companies onboard their suppliers into Pulsar and import price lists in any format — CSV, Excel, or PDF. The system parses every line item, normalizes units of measurement (converting between kilograms, pounds, cases, packs), generates semantic embeddings for each product, and indexes everything in a vector database. When new price lists arrive, the system updates the index automatically, keeping recommendations fresh.`
+        },
+      ],
+    },
+    {
+      title: 'Semantic AI Search',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Traditional procurement tools match by SKU or exact product name. Pulsar matches by meaning. "Wagyu Chuck Roll 18cs" finds "Premium Wagyu Beef Chuck, 18-case pack" even if the vendor uses completely different naming conventions. The vector search returns ranked candidates with similarity scores, then an AI filter evaluates each match — checking if the products are truly interchangeable, not just similarly named.`
+        },
+      ],
+    },
+    {
+      title: 'Intelligent Cost Comparison',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Finding alternatives is useless if you can't compare prices accurately. Pulsar handles the hardest part: unit conversion. It compares products across different package sizes and measurement units — calculating how many packages of Alternative B you need to replace Product A, what the total cost would be, and exactly how much you save. Every comparison is apples-to-apples, even when the suppliers use completely different formats.`
+        },
+      ],
+    },
+    {
+      title: 'Project Instructions for AI',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Every procurement team has rules: "Never substitute branded products with generics," "Only match organic with organic," "Prioritize local suppliers." Pulsar's Instructions feature lets users define these rules per project. The AI incorporates them into its matching logic — so recommendations aren't just mathematically optimal, they're contextually correct for that specific business.`
+        },
+      ],
+    },
+    {
+      title: 'Actionable Savings Reports',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `The output isn't a raw data dump — it's a decision-ready report. For each product, Pulsar shows the current cost, all viable alternatives ranked by savings, match confidence, and a recommended "best pick." Procurement managers review exceptions, approve the best options, and export. What used to take a team a week now takes one person an afternoon.`
+        },
+      ],
+    },
+    {
+      title: 'Results',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Four months from first line of code to production. Pulsar processes each invoice in under 1 minute (vs. 15 minutes manually), handles up to 500,000 products in a single analysis run, and generates structured savings reports that procurement teams can act on immediately. The 9-stage AI pipeline delivers match accuracy that manual analysis simply can't replicate — because it understands product semantics, not just keywords.`
+        },
+        {
+          type: 'text',
+          text: `Built as ApolloRise's own product, Pulsar demonstrates our ability to take a complex AI challenge — semantic search, vector databases, multi-stage filtering, unit normalization — and ship it as a polished, enterprise-ready SaaS platform. From architecture to deployment, every layer was built by our team.`
+        }
+      ],
+    },
+    {
+      title: 'Tech Stack',
+      contentType: 'text',
+      content: [
+        {
+          type: 'text',
+          text: `Laravel 11, React 18, TypeScript, Redux Toolkit, PostgreSQL, Redis, Qdrant (Vector DB), OpenAI & Anthropic APIs, Python FastAPI, Docker, Nginx, Minio (S3), Laravel Horizon`
+        }
+      ],
+    },
+  ]
+
+  const caseRecommendationsList = []
+
+html
+  head 
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1") 
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="mobile-web-app-capable" content="yes")
+
+    <!-- Status bar styles -->
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    meta(name="theme-color" content="#FCFBF8")
+
+    <!-- Title -->
+    title Pulsar | AI-Powered Procurement Optimization Platform — ApolloRise Tech
+    meta(name="description" content="How we built Pulsar — an AI platform that analyzes supplier invoices, finds cheaper alternatives using semantic vector search, and generates savings reports. 500K products, 100x faster than manual.")
+    meta(name="keywords" content="Pulsar, AI procurement, invoice analysis, supplier optimization, cost reduction, vector search, semantic matching, B2B SaaS, ApolloRise Tech")
+    meta(name="author" content="ApolloRise Tech")
+
+    <!-- Canonical -->
+    link(rel="canonical" href="https://apollorise.tech/cases/pulsar")
+
+    <!-- Open Graph -->
+    meta(property="og:type" content="article")
+    meta(property="og:title" content="Pulsar | AI-Powered Procurement Optimization Platform — ApolloRise Tech")
+    meta(property="og:description" content="AI platform that finds cheaper supplier alternatives using semantic search. Built in 4 months. Processes 500K products per run.")
+    meta(property="og:url" content="https://apollorise.tech/cases/pulsar")
+    meta(property="og:image" content="https://apollorise.tech/sources/images/pulsar_preview.png")
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    meta(property="og:site_name" content="ApolloRise Tech")
+
+    <!-- Twitter / X -->
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:title" content="Pulsar | AI-Powered Procurement Optimization Platform — ApolloRise Tech")
+    meta(name="twitter:description" content="AI platform that finds cheaper supplier alternatives using semantic search. Built in 4 months.")
+    meta(name="twitter:image" content="https://apollorise.tech/sources/images/pulsar_preview.png")
+    meta(name="twitter:site" content="@apollorisetech")
+
+    link(rel='stylesheet', href='../../../sources/fonts/fonts.css')
+
+    <!-- Favicons -->
+    link(rel="icon" type="image/png" href=require('../../../sources/images/favicon.png'))
+    link(rel="shortcut icon" href=require('../../../sources/images/favicon.ico'))
+
+    link(rel="apple-touch-icon" sizes="76x76" href=require('../../../sources/images/apple-touch-icon-76x76.png'))
+    link(rel="apple-touch-icon" sizes="120x120" href=require('../../../sources/images/apple-touch-icon-120x120.png'))
+    link(rel="apple-touch-icon" sizes="152x152" href=require('../../../sources/images/apple-touch-icon-152x152.png'))
+    link(rel="apple-touch-icon" sizes="180x180" href=require('../../../sources/images/apple-touch-icon-180x180.png'))
+  
+    //- Google Tag Manager
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PXHCM38Q');
+    //- End Google Tag Manager
+  body 
+
+    //-Google Tag Manager (noscript)
+    iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-PXHCM38Q" height="0" width="0" style="display:none;visibility:hidden")
+    //-  End Google Tag Manager (noscript)
+
+    include ../../../components/header/header
+    +header({ linksHeader: linksHeader, contactUs: '#contactUs' })
+
+    main 
+      section.caseHeader.wrapper.colorSection
+        .caseHeader__wrapper
+          .caseHeader__image._anim-items._anim-no-hide 
+            picture
+              img(src=require('../../../sources/images/pulsar_preview.png') alt="Pulsar — AI-powered procurement optimization platform" loading="lazy")
+          .caseHeader__text 
+            p.subtitle._anim-items._anim-no-hide Own Product, Orlando FL, 2024
+            h1.h1._anim-items._anim-no-hide Pulsar | AI-powered procurement optimization platform
+
+      include ../../../components/casesContent/casesContent
+      +casesContent({ casesContent: pageContent })
+
+      include ../../../components/contactUs/contactUs
+
+    include ../../../components/footer/footer
+    +footer({ linksFooter: linksFooter, contactUs: '#contactUs' })
