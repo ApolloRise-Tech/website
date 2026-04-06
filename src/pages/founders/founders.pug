@@ -103,6 +103,41 @@ html
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-PXHCM38Q');
 
+    script(type="application/ld+json").
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "Founders — ApolloRise Tech",
+        "description": "Meet Yurii Kapkov (CEO) and Irina Zakharchenko (COO) — the founders of ApolloRise Tech.",
+        "url": "https://apollorise.tech/founders",
+        "mainEntity": [
+          {
+            "@type": "Person",
+            "name": "Yurii Kapkov",
+            "jobTitle": "Founder & CEO",
+            "worksFor": { "@type": "Organization", "name": "ApolloRise Tech" },
+            "sameAs": ["https://www.linkedin.com/in/yurii-kapkov/"]
+          },
+          {
+            "@type": "Person",
+            "name": "Irina Zakharchenko",
+            "jobTitle": "Founder & COO",
+            "worksFor": { "@type": "Organization", "name": "ApolloRise Tech" },
+            "sameAs": ["https://www.linkedin.com/in/irina-zakharchenko/"]
+          }
+        ]
+      }
+
+    script(type="application/ld+json").
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apollorise.tech" },
+          { "@type": "ListItem", "position": 2, "name": "Founders", "item": "https://apollorise.tech/founders" }
+        ]
+      }
+
   body
     iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-PXHCM38Q" height="0" width="0" style="display:none;visibility:hidden")
 
@@ -208,5 +243,6 @@ html
           a(href="/#contactUs").button_yellow.size_m.founderManifesto__cta._anim-items._anim-no-hide
             p Let's Build Together
 
+    include ../../components/quickContact/quickContact
     include ../../components/footer/footer
     +footer({ linksFooter: linksFooter, contactUs: '/#contactUs' })

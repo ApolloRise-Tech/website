@@ -111,6 +111,26 @@ html
       })(window,document,'script','dataLayer','GTM-PXHCM38Q');
     //- End Google Tag Manager
 
+    script(type="application/ld+json").
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Careers at ApolloRise Tech",
+        "description": "Join ApolloRise Tech — a boutique AI engineering firm building complex digital products. We're always open to exceptional engineers, designers, and product thinkers.",
+        "url": "https://apollorise.tech/career",
+        "isPartOf": { "@type": "WebSite", "name": "ApolloRise Tech", "url": "https://apollorise.tech" }
+      }
+
+    script(type="application/ld+json").
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apollorise.tech" },
+          { "@type": "ListItem", "position": 2, "name": "Careers", "item": "https://apollorise.tech/career" }
+        ]
+      }
+
   body 
     //-Google Tag Manager (noscript) -->
     iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-PXHCM38Q" height="0" width="0" style="display:none;visibility:hidden")
@@ -120,5 +140,6 @@ html
     +header({ linksHeader: linksHeader, contactUs: '/#contactUs' })
     main 
       include ../../components/careerBlock/careerBlock
+    include ../../components/quickContact/quickContact
     include ../../components/footer/footer
     +footer({ linksFooter: linksFooter, contactUs: '/#contactUs' })

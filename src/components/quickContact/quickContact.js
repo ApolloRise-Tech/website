@@ -11,7 +11,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const checkbox = root.querySelector(".quickContact__checkbox");
   const submit = root.querySelector(".quickContact__submit");
 
+  const LABEL_KEY = "qc_label_shown";
+  if (!sessionStorage.getItem(LABEL_KEY)) {
+    setTimeout(() => {
+      root.classList.add("show-label");
+      setTimeout(() => {
+        root.classList.remove("show-label");
+        sessionStorage.setItem(LABEL_KEY, "1");
+      }, 4000);
+    }, 3000);
+  }
+
   trigger.addEventListener("click", () => {
+    root.classList.remove("show-label");
     root.classList.toggle("is-open");
   });
 
@@ -68,6 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
         headers: { Accept: "application/json" },
         body: formData,
       });
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: "form_submit", form_name: "quick_contact" });
       root.classList.add("is-sent");
       setTimeout(() => {
         root.classList.remove("is-open");

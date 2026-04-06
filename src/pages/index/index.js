@@ -6,12 +6,15 @@ import '../../components/about/about';
 import '../../components/whatWeDo/whatWeDo';
 import '../../components/industries/industries';
 import '../../components/ourProducts/ourProducts.scss';
+import '../../components/numbers/numbers.scss';
 import '../../components/trustedBy/trustedBy.scss';
 import '../../components/caseRecommendationCard/caseRecommendationCard';
+import '../../components/faq/faq';
 import '../../components/howWeWork/howWeWork';
 import '../../components/ourCoreValues/ourCoreValues';
 import '../../components/contactUs/contactUs';
 import '../../components/quickContact/quickContact';
+import '../../components/exitIntent/exitIntent';
 import '../../components/footer/footer';
 
 import './index.scss';
@@ -19,6 +22,7 @@ import './index.scss';
 import { animateItems } from '../../utils/animateItems';
 import { sectionActivation } from '../../utils/sectionActivation';
 import { navigateToAnchorBlock } from '../../utils/navigateToAnchorBlock';
+import '../../utils/webVitals';
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -71,4 +75,11 @@ document.addEventListener("DOMContentLoaded", function() {
   navigateToAnchorBlock(anchorHeaderLinks);
   navigateToAnchorBlock(anchorHeaderMobileLinks);
   navigateToAnchorBlock(anchorFooterLinks);
+
+  document.querySelectorAll('a[href*="contactUs"], .ctaBanner__btn').forEach(el => {
+    el.addEventListener('click', () => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'cta_click', cta_text: el.textContent.trim() });
+    });
+  });
 })

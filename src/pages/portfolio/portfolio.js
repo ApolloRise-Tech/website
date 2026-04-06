@@ -3,6 +3,7 @@ import './portfolio.scss';
 
 import '../../components/header/header';
 import '../../components/caseRecommendationCard/caseRecommendationCard';
+import '../../components/quickContact/quickContact';
 import '../../components/footer/footer';
 
 import { animateItems } from '../../utils/animateItems';

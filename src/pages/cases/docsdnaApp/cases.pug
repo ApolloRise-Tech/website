@@ -467,7 +467,7 @@ html
     meta(property="og:title" content="DocsDNA | Agentic AI Document Review Platform — ApolloRise Tech")
     meta(property="og:description" content="DocsDNA turns hours of manual document review into minutes. AI-powered contract analysis, creation and processing — at a fraction of the cost. From idea to production SaaS.")
     meta(property="og:url" content="https://apollorise.tech/cases/docsdna-app")
-    meta(property="og:image" content="https://apollorise.tech/sources/images/linkImage.png")
+    meta(property="og:image" content="https://apollorise.tech/sources/images/docsdna_preview.png")
     meta(property="og:image:width" content="1200")
     meta(property="og:image:height" content="630")
     meta(property="og:site_name" content="ApolloRise Tech")
@@ -476,7 +476,7 @@ html
     meta(name="twitter:card" content="summary_large_image")
     meta(name="twitter:title" content="DocsDNA | Agentic AI Document Review Platform — ApolloRise Tech")
     meta(name="twitter:description" content="DocsDNA turns hours of manual document review into minutes. AI-powered contract analysis — at a fraction of the cost. From idea to production SaaS.")
-    meta(name="twitter:image" content="https://apollorise.tech/sources/images/linkImage.png")
+    meta(name="twitter:image" content="https://apollorise.tech/sources/images/docsdna_preview.png")
     meta(name="twitter:site" content="@apollorisetech")
 
     link(rel='stylesheet', href='../../../sources/fonts/fonts.css')
@@ -498,6 +498,31 @@ html
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-PXHCM38Q');
     //- End Google Tag Manager
+
+    script(type="application/ld+json").
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "DocsDNA | Agentic AI Document Review Platform",
+        "description": "How ApolloRise built an AI-powered contract analysis SaaS from idea to production — turning hours of manual document review into minutes.",
+        "author": { "@type": "Organization", "name": "ApolloRise Tech", "url": "https://apollorise.tech" },
+        "publisher": { "@type": "Organization", "name": "ApolloRise Tech", "url": "https://apollorise.tech", "logo": { "@type": "ImageObject", "url": "https://apollorise.tech/sources/images/linkImage.png" } },
+        "url": "https://apollorise.tech/cases/docsdna-app",
+        "mainEntityOfPage": "https://apollorise.tech/cases/docsdna-app",
+        "datePublished": "2024-06-01",
+        "image": "https://apollorise.tech/sources/images/docsdna_preview.png"
+      }
+
+    script(type="application/ld+json").
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apollorise.tech" },
+          { "@type": "ListItem", "position": 2, "name": "Our Work", "item": "https://apollorise.tech/portfolio" },
+          { "@type": "ListItem", "position": 3, "name": "DocsDNA", "item": "https://apollorise.tech/cases/docsdna-app" }
+        ]
+      }
   body 
 
     //-Google Tag Manager (noscript) -->
@@ -533,5 +558,6 @@ html
 
       include ../../../components/contactUs/contactUs
 
+    include ../../../components/quickContact/quickContact
     include ../../../components/footer/footer
     +footer({ linksFooter: linksFooter, contactUs: '#contactUs' })

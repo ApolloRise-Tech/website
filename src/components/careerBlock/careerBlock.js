@@ -52,6 +52,8 @@ document.addEventListener("DOMContentLoaded", function() {
       try {
         buttonSubmit.disabled = true;
         await fetch(url, requestOptions);
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'form_submit', form_name: 'career' });
         window.location.replace(`successCareer.html`);
       } catch (e) {
         buttonSubmit.disabled = false;

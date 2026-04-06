@@ -81,6 +81,12 @@ html
     meta(name="apple-mobile-web-app-capable" content="yes")
     meta(name="mobile-web-app-capable" content="yes")
 
+    <!-- Preconnect -->
+    link(rel="preconnect" href="https://www.googletagmanager.com" crossorigin)
+    link(rel="preconnect" href="https://www.google-analytics.com" crossorigin)
+    link(rel="dns-prefetch" href="https://www.googletagmanager.com")
+    link(rel="dns-prefetch" href="https://www.google-analytics.com")
+
     <!-- Status bar styles -->
     meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
     meta(name="theme-color" content="#FCFBF8")
@@ -158,7 +164,7 @@ html
         },
         "areaServed": "US",
         "telephone": "+1-407-960-0621",
-        "email": "team@apollorise.com",
+        "email": "team@apollorise.tech",
         "sameAs": [
           "https://www.linkedin.com/company/apollorise",
           "https://x.com/ApolloRiseTech",
@@ -169,7 +175,7 @@ html
           "@type": "ContactPoint",
           "contactType": "customer support",
           "telephone": "+1-407-960-0621",
-          "email": "team@apollorise.com",
+          "email": "team@apollorise.tech",
           "url": "https://apollorise.tech/#contactUs"
         }
       }
@@ -209,6 +215,7 @@ html
       include ../../components/ourProducts/ourProducts
       +ourProducts()
 
+      include ../../components/numbers/numbers
       include ../../components/trustedBy/trustedBy
 
       section(data-color="white" id="ourWork").cases.wrapper.colorSection 
@@ -233,9 +240,11 @@ html
               path(d="M5 12H19" stroke="currentColor" stroke-width="1.5")
               path(d="M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.5")
 
+      include ../../components/faq/faq
       include ../../components/howWeWork/howWeWork
       include ../../components/ourCoreValues/ourCoreValues
       include ../../components/contactUs/contactUs
     include ../../components/quickContact/quickContact
+    include ../../components/exitIntent/exitIntent
     include ../../components/footer/footer
     +footer({ linksFooter: linksFooter, contactUs: '#contactUs' })

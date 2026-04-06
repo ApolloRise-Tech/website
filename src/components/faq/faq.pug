@@ -1,0 +1,94 @@
+section(data-color="white" id="faq").faq.colorSection
+  .faq__wrapper
+    .faq__header._anim-items._anim-no-hide
+      h6.subtitle.faq__subtitle FAQ
+      h2.h2.faq__title Frequently asked questions
+
+    .faq__list._anim-items._anim-no-hide
+      .faq__item
+        button.faq__question
+          span What types of projects do you work on?
+          svg.faq__icon(width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+            path(d="M12 5v14M5 12h14")
+        .faq__answer
+          p We specialize in complex AI products, Agentic AI systems, and full-cycle software development — from MVP to production SaaS. Our sweet spot is Hospitality, Procurement & Supply Chain, FinTech, EdTech, and enterprise automation. If it involves AI and real engineering challenges, we're in.
+
+      .faq__item
+        button.faq__question
+          span How long does a typical project take?
+          svg.faq__icon(width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+            path(d="M12 5v14M5 12h14")
+        .faq__answer
+          p It depends on scope. A focused PoC or MVP can be ready in 2–6 weeks. Larger products with full design, backend, and AI pipelines typically take 3–6 months. We always start with a clear scope and timeline before writing any code.
+
+      .faq__item
+        button.faq__question
+          span Do you work with startups or enterprises?
+          svg.faq__icon(width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+            path(d="M12 5v14M5 12h14")
+        .faq__answer
+          p Both. We've co-created 30+ projects — from pre-seed startups building their first product to established US companies modernizing legacy systems with AI. What matters to us is the challenge and the people behind it, not the stage.
+
+      .faq__item
+        button.faq__question
+          span What's your pricing model?
+          svg.faq__icon(width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+            path(d="M12 5v14M5 12h14")
+        .faq__answer
+          p We work on a fixed-scope or monthly retainer basis — depending on the project. No hourly billing, no surprises. We estimate honestly and communicate proactively. Every engagement starts with a free discovery call.
+
+      .faq__item
+        button.faq__question
+          span Can you work as a fractional CTO or technical partner?
+          svg.faq__icon(width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+            path(d="M12 5v14M5 12h14")
+        .faq__answer
+          p Absolutely. Several of our clients rely on us as their long-term technical leadership. We handle architecture, hiring guidance, tech strategy, and hands-on development — like an in-house team, but without the overhead.
+
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What types of projects do you work on?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We specialize in complex AI products, Agentic AI systems, and full-cycle software development — from MVP to production SaaS. Our sweet spot is HealthTech, LegalTech, FinTech, and enterprise automation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a typical project take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A focused PoC or MVP can be ready in 4–8 weeks. Larger products with full design, backend, and AI pipelines typically take 3–6 months. We always start with a clear scope and timeline before writing any code."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with startups or enterprises?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both. We've co-created 30+ projects — from pre-seed startups building their first product to established US companies modernizing legacy systems with AI."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's your pricing model?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We work on a fixed-scope or monthly retainer basis — depending on the project. No hourly billing, no surprises. Every engagement starts with a free discovery call."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you work as a fractional CTO or technical partner?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Several of our clients rely on us as their long-term technical leadership. We handle architecture, hiring guidance, tech strategy, and hands-on development — like an in-house team, but without the overhead."
+          }
+        }
+      ]
+    }

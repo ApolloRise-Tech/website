@@ -303,6 +303,31 @@ html
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-PXHCM38Q');
     //- End Google Tag Manager
+
+    script(type="application/ld+json").
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Pulsar | AI-Powered Procurement Intelligence Platform",
+        "description": "How ApolloRise built an AI-powered procurement analytics platform with semantic search, automated RFP generation, and intelligent supplier discovery.",
+        "author": { "@type": "Organization", "name": "ApolloRise Tech", "url": "https://apollorise.tech" },
+        "publisher": { "@type": "Organization", "name": "ApolloRise Tech", "url": "https://apollorise.tech", "logo": { "@type": "ImageObject", "url": "https://apollorise.tech/sources/images/linkImage.png" } },
+        "url": "https://apollorise.tech/cases/pulsar",
+        "mainEntityOfPage": "https://apollorise.tech/cases/pulsar",
+        "datePublished": "2024-01-01",
+        "image": "https://apollorise.tech/sources/images/pulsar_preview.png"
+      }
+
+    script(type="application/ld+json").
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apollorise.tech" },
+          { "@type": "ListItem", "position": 2, "name": "Our Work", "item": "https://apollorise.tech/portfolio" },
+          { "@type": "ListItem", "position": 3, "name": "Pulsar", "item": "https://apollorise.tech/cases/pulsar" }
+        ]
+      }
   body 
 
     //-Google Tag Manager (noscript)
@@ -327,5 +352,6 @@ html
 
       include ../../../components/contactUs/contactUs
 
+    include ../../../components/quickContact/quickContact
     include ../../../components/footer/footer
     +footer({ linksFooter: linksFooter, contactUs: '#contactUs' })

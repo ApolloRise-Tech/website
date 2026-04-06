@@ -319,6 +319,31 @@ html
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-PXHCM38Q');
     //- End Google Tag Manager
+
+    script(type="application/ld+json").
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Parseon Website | High-Converting Product Landing Page",
+        "description": "How ApolloRise designed and built a conversion-focused product website for Parseon — an AI-powered document OCR platform.",
+        "author": { "@type": "Organization", "name": "ApolloRise Tech", "url": "https://apollorise.tech" },
+        "publisher": { "@type": "Organization", "name": "ApolloRise Tech", "url": "https://apollorise.tech", "logo": { "@type": "ImageObject", "url": "https://apollorise.tech/sources/images/linkImage.png" } },
+        "url": "https://apollorise.tech/cases/parseon-website",
+        "mainEntityOfPage": "https://apollorise.tech/cases/parseon-website",
+        "datePublished": "2024-09-01",
+        "image": "https://apollorise.tech/sources/images/parseon_website_cover.png"
+      }
+
+    script(type="application/ld+json").
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apollorise.tech" },
+          { "@type": "ListItem", "position": 2, "name": "Our Work", "item": "https://apollorise.tech/portfolio" },
+          { "@type": "ListItem", "position": 3, "name": "Parseon Website", "item": "https://apollorise.tech/cases/parseon-website" }
+        ]
+      }
   body 
 
     //-Google Tag Manager (noscript)
@@ -343,5 +368,6 @@ html
 
       include ../../../components/contactUs/contactUs
 
+    include ../../../components/quickContact/quickContact
     include ../../../components/footer/footer
     +footer({ linksFooter: linksFooter, contactUs: '#contactUs' })

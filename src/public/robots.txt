@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /successContact.html
+Disallow: /successCareer.html
 
 Sitemap: https://apollorise.tech/sitemap.xml

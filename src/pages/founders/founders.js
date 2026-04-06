@@ -2,6 +2,7 @@ import "../../style/index.scss";
 import './founders.scss';
 
 import '../../components/header/header';
+import '../../components/quickContact/quickContact';
 import '../../components/footer/footer';
 
 import { animateItems } from '../../utils/animateItems';

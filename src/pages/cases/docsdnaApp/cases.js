@@ -4,7 +4,9 @@ import '../../../components/header/header';
 import '../../../components/casesContent/casesContent';
 import '../../../components/caseRecommendationCard/caseRecommendationCard';
 import '../../../components/contactUs/contactUs';
+import '../../../components/quickContact/quickContact';
 import '../../../components/footer/footer';
+import '../../../components/readingProgress/readingProgress';
 import './cases.scss';
 
 import { animateItems } from '../../../utils/animateItems';

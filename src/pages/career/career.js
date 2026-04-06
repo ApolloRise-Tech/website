@@ -2,6 +2,7 @@ import "../../style/index.scss";
 
 import '../../components/header/header';
 import '../../components/careerBlock/careerBlock';
+import '../../components/quickContact/quickContact';
 import '../../components/footer/footer';
 
 import { animateItems } from '../../utils/animateItems';

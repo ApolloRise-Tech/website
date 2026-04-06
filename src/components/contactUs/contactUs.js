@@ -43,6 +43,8 @@ document.addEventListener("DOMContentLoaded", function() {
       buttonSubmit.disabled = true;
       try {
         await fetch(url, requestOptions);
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'form_submit', form_name: 'contact' });
         window.location.href = '/successContact.html';
       } catch (e) {
         buttonSubmit.disabled = false;

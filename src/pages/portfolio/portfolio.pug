@@ -167,6 +167,26 @@ html
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-PXHCM38Q');
 
+    script(type="application/ld+json").
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Our Work — ApolloRise Tech Portfolio",
+        "description": "Explore AI products, SaaS platforms, and MVPs built by ApolloRise Tech — from concept to production.",
+        "url": "https://apollorise.tech/portfolio",
+        "isPartOf": { "@type": "WebSite", "name": "ApolloRise Tech", "url": "https://apollorise.tech" }
+      }
+
+    script(type="application/ld+json").
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apollorise.tech" },
+          { "@type": "ListItem", "position": 2, "name": "Our Work", "item": "https://apollorise.tech/portfolio" }
+        ]
+      }
+
   body
     iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-PXHCM38Q" height="0" width="0" style="display:none;visibility:hidden")
 
@@ -198,5 +218,6 @@ html
           a(href="/#contactUs").button_yellow.size_m.portfolioCta__button._anim-items._anim-no-hide
             p Start the Conversation
 
+    include ../../components/quickContact/quickContact
     include ../../components/footer/footer
     +footer({ linksFooter: linksFooter, contactUs: '/#contactUs' })
