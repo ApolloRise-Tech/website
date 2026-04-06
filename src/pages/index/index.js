@@ -82,4 +82,27 @@ document.addEventListener("DOMContentLoaded", function() {
       window.dataLayer.push({ event: 'cta_click', cta_text: el.textContent.trim() });
     });
   });
+
+  // Scroll depth tracking
+  const scrollThresholds = [25, 50, 75, 100];
+  const scrollFired = {};
+  window.addEventListener('scroll', () => {
+    const pct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+    scrollThresholds.forEach(t => {
+      if (pct >= t && !scrollFired[t]) {
+        scrollFired[t] = true;
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'scroll_depth', depth: t });
+      }
+    });
+  }, { passive: true });
+
+  // Outbound link clicks
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href]');
+    if (link && link.hostname && link.hostname !== window.location.hostname) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'outbound_click', outbound_url: link.href, outbound_text: link.textContent.trim() });
+    }
+  });
 })

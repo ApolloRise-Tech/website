@@ -24,7 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   trigger.addEventListener("click", () => {
     root.classList.remove("show-label");
+    const willOpen = !root.classList.contains("is-open");
     root.classList.toggle("is-open");
+    if (willOpen) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: "quick_contact_open" });
+    }
   });
 
   document.addEventListener("click", (e) => {

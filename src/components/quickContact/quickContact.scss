@@ -25,7 +25,7 @@
     }
   }
 
-  &__label {
+  &__tooltip {
     white-space: nowrap;
     background: var(--yellowWhite, #FCFBF8);
     color: var(--black, #23221F);
@@ -52,7 +52,7 @@
     }
   }
 
-  &.show-label &__label {
+  &.show-label &__tooltip {
     opacity: 1;
     transform: translateY(0);
   }

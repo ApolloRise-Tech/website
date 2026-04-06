@@ -2,7 +2,7 @@ mixin caseRecommendationCard({card})
   section.caseRecommendationCard._anim-items._anim-no-hide
   
     //- target может быть _self и _blank, по умолчанию _blank, если его не задать в конфиге
-    a(href=card.link target=`${card.targetLink ? card.targetLink : '_blank'}`).caseRecommendationCard__imageWrapper(class=`${card.link ? '' : 'withoutLink'}`)
+    a(href=card.link target=`${card.targetLink ? card.targetLink : '_blank'}` class=`caseRecommendationCard__imageWrapper ${card.link ? '' : 'withoutLink'}`)
       .caseRecommendationCard__image
         if(card.picture)
           img(src=card.picture alt=card.title loading="lazy")

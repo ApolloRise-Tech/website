@@ -10,7 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
         el.classList.remove("is-open");
       });
 
-      if (!wasOpen) item.classList.add("is-open");
+      if (!wasOpen) {
+        item.classList.add("is-open");
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: "faq_open", faq_question: btn.querySelector("span").textContent.trim() });
+      }
     });
   });
 });

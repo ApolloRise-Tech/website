@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (shown) return;
     shown = true;
     root.classList.add("is-visible");
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: "exit_intent_shown" });
   }
 
   function dismiss() {
