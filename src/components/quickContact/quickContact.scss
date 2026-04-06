@@ -1,0 +1,337 @@
+.quickContact {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  font-family: inherit;
+
+  @media screen and (max-width: 600px) {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  // Trigger button
+  &__trigger {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    background: var(--black);
+    color: var(--yellowWhite);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(35, 34, 31, 0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+      transform: scale(1.06);
+      box-shadow: 0 6px 28px rgba(35, 34, 31, 0.22);
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &__triggerIcon {
+    position: absolute;
+    transition: opacity 0.2s ease, transform 0.25s ease;
+
+    &--chat {
+      opacity: 1;
+      transform: scale(1);
+    }
+    &--close {
+      opacity: 0;
+      transform: scale(0.6) rotate(-90deg);
+    }
+  }
+
+  &.is-open &__triggerIcon {
+    &--chat {
+      opacity: 0;
+      transform: scale(0.6) rotate(90deg);
+    }
+    &--close {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+  }
+
+  // Panel
+  &__panel {
+    position: absolute;
+    bottom: 68px;
+    right: 0;
+    width: 400px;
+    max-height: 0;
+    overflow: hidden;
+    background: var(--yellowWhite);
+    border-radius: 16px;
+    box-shadow: 0 12px 48px rgba(35, 34, 31, 0.12), 0 0 0 1px rgba(35, 34, 31, 0.06);
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+    transform-origin: bottom right;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.25s ease,
+                transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 600px) {
+      width: calc(100vw - 32px);
+      right: 0;
+      bottom: 60px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+  }
+
+  &.is-open &__panel {
+    max-height: calc(100vh - 120px);
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+    overflow-y: auto;
+
+    @media screen and (max-width: 600px) {
+      max-height: calc(100vh - 100px);
+    }
+  }
+
+  // Header
+  &__header {
+    padding: 24px 24px 0;
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--black);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    color: var(--black1);
+    margin: 6px 0 0;
+    line-height: 1.5;
+  }
+
+  // Form
+  &__form {
+    padding: 16px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    @media screen and (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+
+    &--full {
+      width: 100%;
+    }
+  }
+
+  &__label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--black4);
+    line-height: 1;
+  }
+
+  &__input {
+    width: 100%;
+    height: 38px;
+    padding: 0 12px;
+    border: 1px solid rgba(35, 34, 31, 0.12);
+    border-radius: 10px;
+    background: white;
+    font-size: 14px;
+    color: var(--black);
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+    outline: none;
+    box-sizing: border-box;
+
+    &:focus {
+      border-color: var(--black);
+    }
+
+    &::placeholder {
+      color: var(--black1);
+    }
+  }
+
+  &__textarea {
+    height: auto;
+    min-height: 68px;
+    padding: 10px 12px;
+    resize: none;
+    line-height: 1.45;
+  }
+
+  // Footer
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 2px;
+  }
+
+  &__policy {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--black1);
+    cursor: pointer;
+    flex-wrap: wrap;
+
+    a {
+      color: var(--black);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+  }
+
+  &__checkbox {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    border: 1.5px solid rgba(35, 34, 31, 0.25);
+    border-radius: 4px;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.2s ease, background 0.2s ease;
+    flex-shrink: 0;
+
+    &:checked {
+      background: var(--black);
+      border-color: var(--black);
+    }
+
+    &:checked::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 5px;
+      width: 4px;
+      height: 8px;
+      border: solid var(--yellowWhite);
+      border-width: 0 1.5px 1.5px 0;
+      transform: rotate(45deg);
+    }
+
+    &:hover {
+      border-color: var(--black);
+    }
+  }
+
+  &__submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 1000px;
+    background: var(--black);
+    color: var(--yellowWhite);
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: opacity 0.2s ease, transform 0.15s ease;
+    flex-shrink: 0;
+
+    &:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    &:not(:disabled):hover {
+      transform: scale(1.03);
+    }
+
+    &:not(:disabled):active {
+      transform: scale(0.97);
+    }
+  }
+
+  // Success state
+  &__success {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 48px 28px;
+    gap: 12px;
+  }
+
+  &.is-sent &__form {
+    display: none;
+  }
+  &.is-sent &__header {
+    display: none;
+  }
+  &.is-sent &__success {
+    display: flex;
+  }
+
+  &__successIcon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--yellowLight2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+  }
+
+  &__successTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--black);
+    margin: 0;
+  }
+
+  &__successText {
+    font-size: 14px;
+    color: var(--black1);
+    margin: 0;
+  }
+
+  // Validation error
+  &__field.has-error &__input {
+    border-color: var(--redLight);
+  }
+}

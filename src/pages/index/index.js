@@ -6,10 +6,12 @@ import '../../components/about/about';
 import '../../components/whatWeDo/whatWeDo';
 import '../../components/industries/industries';
 import '../../components/ourProducts/ourProducts.scss';
+import '../../components/trustedBy/trustedBy.scss';
 import '../../components/caseRecommendationCard/caseRecommendationCard';
 import '../../components/howWeWork/howWeWork';
 import '../../components/ourCoreValues/ourCoreValues';
 import '../../components/contactUs/contactUs';
+import '../../components/quickContact/quickContact';
 import '../../components/footer/footer';
 
 import './index.scss';

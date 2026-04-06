@@ -4,6 +4,12 @@
   # Serve static root files directly (sitemap, robots) — no rewriting
   RewriteRule ^(sitemap\.xml|robots\.txt)$ - [L]
 
+  # 301 redirects for old/broken URLs
+  RewriteRule ^solutions$ / [L,R=301]
+  RewriteRule ^contact$ /#contactUs [L,R=301,NE]
+  RewriteRule ^case-studies$ /portfolio [L,R=301]
+  RewriteRule ^why$ / [L,R=301]
+
   # Force HTTPS
   RewriteCond %{HTTPS} off
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
@@ -47,7 +53,6 @@
   <FilesMatch "\.(xml)$">
     Header set Cache-Control "no-cache, no-store, must-revalidate"
     Header set Content-Type "application/xml; charset=UTF-8"
-    Header set X-Robots-Tag "noindex"
   </FilesMatch>
 
   <FilesMatch "\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf)$">

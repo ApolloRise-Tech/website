@@ -1,0 +1,48 @@
+.quickContact
+  //- Floating trigger button
+  button.quickContact__trigger(aria-label="Contact us")
+    svg.quickContact__triggerIcon.quickContact__triggerIcon--chat(width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+      path(d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z")
+    svg.quickContact__triggerIcon.quickContact__triggerIcon--close(width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+      path(d="M18 6L6 18M6 6l12 12")
+
+  //- Form panel
+  .quickContact__panel
+    .quickContact__header
+      h4.quickContact__title Get in touch
+      p.quickContact__subtitle We usually respond within a few hours.
+
+    form.quickContact__form(id="quickContactForm")
+      .quickContact__row
+        label.quickContact__field
+          span.quickContact__label Name *
+          input.quickContact__input(type="text" name="qc_name" required)
+        label.quickContact__field
+          span.quickContact__label E-mail *
+          input.quickContact__input(type="email" name="qc_email" required)
+      .quickContact__row
+        label.quickContact__field
+          span.quickContact__label Phone
+          input.quickContact__input(type="tel" name="qc_phone")
+        label.quickContact__field
+          span.quickContact__label Job title
+          input.quickContact__input(type="text" name="qc_position")
+      label.quickContact__field.quickContact__field--full
+        span.quickContact__label Message *
+        textarea.quickContact__input.quickContact__textarea(name="qc_details" rows="3" required)
+      .quickContact__footer
+        label.quickContact__policy
+          input.quickContact__checkbox(type="checkbox" name="qc_policy")
+          span I accept the&nbsp;
+          a(href="/privacy-policy" target="_blank") privacy policy
+        button.quickContact__submit(type="submit" disabled)
+          span Send message
+          svg(width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+            path(d="M5 12h14M13 6l6 6-6 6")
+
+    .quickContact__success
+      .quickContact__successIcon
+        svg(width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#23221F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+          path(d="M20 6L9 17l-5-5")
+      h4.quickContact__successTitle Message sent
+      p.quickContact__successText We'll get back to you shortly.

@@ -179,7 +179,7 @@ module.exports = (env) => {
           use: ['style-loader', 'css-loader'],
         },
         {
-          test: /\.(png|jpe?g|gif|ico)$/i,
+          test: /\.(png|jpe?g|gif|ico|webp)$/i,
           type: 'asset/resource',
           generator: {
             filename: path.join('sources', 'images', '[name].[contenthash][ext]'),
